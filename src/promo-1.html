@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+
+  <div class="content">
+
+    @@include('components/_header.html')
+
+    <section class="section">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <a class="page-nav__item" href="/promo.html">Акции</a>
+          <span class="page-nav__item">Скидка 10% на все аксессуары до 3 000 ₽ при покупке вместе с устройством</span>
+        </nav>
+
+        <div class="promo">
+          <div class="promo-img">
+            <img class="lazyload" data-src="images/promo-1-big.png" alt="1">
+          </div>
+          <div class="promo-inner">
+            <span class="promo-data">Длительность акции: 7 – 31 августа</span>
+            <h1 class="title">Скидка 10% на все аксессуары до 3 000 ₽ при покупке вместе с устройством</h1>
+            <p class="promo-text">При единовременной покупке устройства (смартфоны, планшеты, ноутбуки и так далее) и аксессуаров, на аксессуары стоимостью до 3000 ₽ распространяется скидка 10%.</p>
+            <a href="/promo.html" class="button">Назад к списку акций</a>
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

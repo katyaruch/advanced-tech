@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="info-line">
+    <div class="container">
+      <strong class="info-line__text">1 июля работаем с 11:00 до 19:00 — то есть, открываемся на час позже, а закрываемся на час раньше :)</strong>
+    </div>
+  </div>
+  <div class="content">
+
+    @@include('components/_header.html')
+
+    <section class="section main">
+      <div class="container">
+        <div class="main__inner">
+          <div class="main__card main__card--big label label--new" style="background-image: url('images/galaxy-note10.jpg');">
+            <a href="#">
+              <h4 class="main__card-title">Samsung Galaxy<br>Note 10 / 10+</h4>
+            </a>
+          </div>
+          <div class="main__card main__card--top label label--gift">
+            <div class="main__card-gallery">
+              <div class="main__card-slide" style="background-image: url('images/xiaomi-redmi-airdots.png');">
+                <a href="#">
+                  <h4 class="main__card-title">Xiaomi Redmi AirDots</h4>
+                  <p class="main__card-text">При покупке смартфона Xiaomi</p>
+                </a>
+              </div>
+              <div class="main__card-slide" style="background-image: url('images/xiaomi-redmi-airdots.png');">
+                <a href="#">
+                  <h4 class="main__card-title">Xiaomi Redmi AirDots</h4>
+                  <p class="main__card-text">При покупке смартфона Xiaomi</p>
+                </a>
+              </div>
+              <div class="main__card-slide" style="background-image: url('images/xiaomi-redmi-airdots.png');">
+                <a href="#">
+                  <h4 class="main__card-title">Xiaomi Redmi AirDots</h4>
+                  <p class="main__card-text">При покупке смартфона Xiaomi</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="main__card main__card--bottom">
+            <a href="#">
+              <h4 class="main__card-title">Ремонт мобильной техники</h4>
+            </a>
+          </div>
+        </div>
+        <ul class="main__benefits">
+          <li class="main__benefit main__benefit--pickup">Самовывоз в Санкт-Петербурге
+            <div class="popup popup--benefit">
+              <button class="popup__close">Закрыть</button>
+              <h4 class="popup__title">Пункт самовывоза</h4>
+              <address class="popup__text">Загородный проспект, дом 30/2,
+                <p>напротив ресторана Mama Roma</p>
+              </address>
+              <div class="popup__map">
+                <img class="lazyload" data-src="images/map.png" alt="Карта">
+              </div>
+              <a href="#" class="button">Подробнее</a>
+            </div>
+          </li>
+          <li class="main__benefit main__benefit--delivery">Доставка по всей России
+            <div class="popup popup--benefit">
+              <button class="popup__close">Закрыть</button>
+              <h4 class="popup__title">Доставка по Санкт-Петербургу</h4>
+              <p class="popup__text">Через 1 день</p>
+              <h4 class="popup__title">Доставка по Москве</h4>
+              <p class="popup__text">Через 2-3 дня</p>
+              <h4 class="popup__title">Доставка по России</h4>
+              <p class="popup__text">До 14 дней</p>
+              <a href="#" class="button">Подробнее</a>
+            </div>
+          </li>
+          <li class="main__benefit main__benefit--service">Собственный сервисный центр
+            <div class="popup popup--benefit">
+              <button class="popup__close">Закрыть</button>
+              <h4 class="popup__title">Диагностика</h4>
+              <p class="popup__text">Бесплатно</p>
+              <h4 class="popup__title">Гарантия на все виды работ</h4>
+              <p class="popup__text">От 30 дней</p>
+              <a href="#" class="button">Подробнее</a>
+            </div>
+          </li>
+          <li class="main__benefit main__benefit--original">Оригинальная продукция
+            <div class="popup popup--benefit">
+              <button class="popup__close">Закрыть</button>
+              <h4 class="popup__title">Легальные поставки</h4>
+              <p class="popup__text">Электроника, произведенная брендами специально для Российского рынка.</p>
+              <h4 class="popup__title">Гарантия производителя</h4>
+              <p class="popup__text">Дает возможность отремонтировать устройство в авторизованном сервисном центре оригинальными запчастями.</p>
+              <h4 class="popup__title">Никаких «серых устройств»</h4>
+              <p class="popup__text">Читали про случай с Самсунгом, когда бренд удаленно отключил «серые телевизоры»?<br>С нашими устройствами этого не произойдет.</p>
+              <a href="#" class="button">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--soon">
+      <div class="container">
+        <h2 class="title">Скоро в продаже</h2>
+        <div class="product-list">
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image1.png" alt="Фитнес-браслет Xiaomi Mi Band 4">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available">В продаже с 30 июля</p>
+              <a href="#" class="product-item__title">Фитнес-браслет<br>Xiaomi Mi Band 4</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  1 490 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <div class="popup popup--remind">
+                  <form>
+                    <button class="popup__close">Закрыть</button>
+                    <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                    <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                    <input type="email" class="input" placeholder="Введите Email">
+                    <button type="submit" class="button button--fill">Уведомить</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available"></p>
+              <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  14 390 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available">В продаже с 30 июля</p>
+              <a href="#" class="product-item__title">Беспроводные наушники Xiaomi Redmi AirDots</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  24 640 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available"></p>
+              <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  7 390 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image5.png" alt="Беспроводные наушники Realme Buds Air">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available"></p>
+              <a href="#" class="product-item__title">Беспроводные наушники Realme Buds Air</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  4 290 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image6.png" alt="Электросамокат Xiaomi Mi Electric Scooter 1S">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available">В продаже с 30 июля</p>
+              <a href="#" class="product-item__title">Электросамокат Xiaomi Mi Electric Scooter 1S</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  27 270 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image7.png" alt="Смартфон Xiaomi Mi 10 8/256Gb">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available"></p>
+              <a href="#" class="product-item__title">Смартфон Xiaomi Mi 10 8/256Gb</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  55 170 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a class="product-item-img-link" href="#">
+                <img class="lazyload" data-src="images/products/image8.png" alt="Смарт-часы Amazfit GTS A1914">
+              </a>
+            </div>
+            <div class="product-item__inner">
+              <p class="product-item__available">В продаже с 30 июля</p>
+              <a href="#" class="product-item__title">Смарт-часы Amazfit GTS A1914</a>
+              <div class="product-item__bottom">
+                <p class="product-item__price">
+                  8 570 <span class="ruble">₽</span>
+                </p>
+                <button class="button button--remind" title="Уведомить о старте продаж">Уведомить о старте продаж</button>
+                <form class="popup popup--remind">
+                  <button class="popup__close">Закрыть</button>
+                  <h4 class="popup__title">Напомним о товаре в дату анонса</h4>
+                  <p class="popup__text">Как только товар можно будет купить, вы получите уведомление на email.</p>
+                  <input type="email" class="input" placeholder="Введите Email">
+                  <button type="submit" class="button button--fill">Уведомить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--new">
+      <div class="container">
+        <h2 class="title">Новинки</h2>
+        @@include('components/_product-list.html')
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="title title--popular">Популярное</h2>
+        @@include('components/_product-list.html')
+      </div>
+    </section>
+    <section class="about-shop">
+      <div class="container">
+        <h3 class="title">О магазине</h3>
+        <p class="text">
+          Примесь, в согласии с традиционными представлениями, концентрирует тахионный взрыв. Расслоение, на первый взгляд, выталкивает осциллятор, тем самым открывая возможность цепочки квантовых превращений. При наступлении резонанса вещество однородно искажает вихрь. Вселенная доступна. Пульсар гомогенно вращает квант. Объект излучает межатомный экситон. Кварк по определению выталкивает осциллятор — все дальнейшее далеко выходит за рамки текущего исследования и не будет здесь рассматриваться. Плазменное образование упруго испускает циркулирующий солитон. Возмущение плотности, при адиабатическом изменении параметров, масштабирует векторный сверхпроводник. Туманность, как можно показать с помощью не совсем тривиальных вычислений, вертикально расщепляет плазменный атом. Колебание, в первом приближении, ненаблюдаемо. Лептон индуцирует адронный гамма-квант. Течение среды, в согласии с традиционными представлениями, мономолекулярно возбуждает экзотермический экситон, при этом дефект массы не образуется. Излучение заряжает гидродинамический удар. Взвесь когерентна. Молекула, в первом приближении, эксперментально верифицируема. Линза бифокально отталкивает луч. Еще в ранних работах Л. Д. Ландау показано, что плазменное образование асферично стабилизирует экситон. Любое возмущение затухает, если струя расщепляет квант независимо от расстояния до горизонта событий. Силовое поле восстанавливает короткоживущий солитон даже в случае сильных локальных возмущений среды. Расслоение искажает плоскополяризованный осциллятор. Химическое соединение возбуждает барионный поток, однозначно свидетельствуя о неустойчивости процесса в целом. В ряде недавних экспериментов колебание асферично притягивает вихрь. Мишень, как следует из совокупности экспериментальных наблюдений, расщепляет внутримолекулярный экситон. В соответствии с принципом неопределенности, объект квантуем.
+        </p>
+        <ul class="about-shop__brands">
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/samsung.png" alt="Samsung">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/xiaomi.png" alt="Xiaomi">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/honor.png" alt="Honor">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/sony.png" alt="Sony">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/lg.png" alt="LG">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/acer.png" alt="Acer">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/samsung.png" alt="Samsung">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/xiaomi.png" alt="Xiaomi">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/honor.png" alt="Honor">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/sony.png" alt="Sony">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/lg.png" alt="LG">
+          </li>
+          <li class="about-shop__brand">
+            <img class="lazyload" data-src="images/brands/acer.png" alt="Acer">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

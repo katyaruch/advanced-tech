@@ -1,0 +1,77 @@
+h1, .title {
+  // display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 48px;
+  color: #103861;
+
+  &--popular:before {
+    content: "";
+
+    display: inline-block;
+    width: 39px;
+    height: 52px;
+    margin-right: 15px;
+
+    background: url("../images/icon-popular.svg") no-repeat center / contain;
+    transform: translateY(5px);
+  }
+
+  &--underline {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #DAE1E7;
+  }
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+@media (max-width: 425px) {
+  .title {
+    // font-size: 24px;
+    font-size: 36px;
+    margin-bottom: 15px;
+
+    &--underline {
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .title--2 {
+    font-size: 18px;
+  }
+
+  .title--popular:before {
+    width: 33px;
+    height: 44px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}

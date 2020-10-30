@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+
+    <section>
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <a class="page-nav__item" href="#">Мобильная электроника</a>
+          <a class="page-nav__item" href="catalog.html">Смартфоны</a>
+          <span class="page-nav__item">Apple iPhone 11</span>
+        </nav>
+        <div class="product-card">
+          <h2 class="title">Apple iPhone 11</h2>
+          <div class="product-photos-slider">
+            <a class="product-big-photo" href="#">
+              <img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+              <img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+              <img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+              <img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+              <img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+              <img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
+            </a>
+            <div class="product-small-photos">
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-1.png" alt="">
+              </button>
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-2.png" alt="">
+              </button>
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-3.png" alt="">
+              </button>
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-1.png" alt="">
+              </button>
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-2.png" alt="">
+              </button>
+              <button class="product-small-photo">
+                <img class="lazyload" data-src="images/products/iphone11-grey-small-3.png" alt="">
+              </button>
+            </div>
+          </div>
+          <div class="product-content">
+            <div class="product-rating">
+              <div class="value" style="width: 80%;"></div>
+            </div>
+            <span class="product-votes">23 отзыва</span>
+            <div class="user-nav">
+              <a href="#" class="user-link user-link--compare">
+                @@include('images/icon-compare.svg')
+                Добавить к сравнению
+              </a>
+              <a href="#" class="user-link user-link--fav">
+                @@include('images/icon-fav.svg')
+                Добавить в избранное
+              </a>
+            </div>
+            <fieldset class="product-parameter">
+              <legend class="product-parameter__title">Объем памяти</legend>
+              <div class="product-parameter__list">
+                <label>
+                  <input class="input" type="radio" name="product-parameter-1" checked>
+                  <span class="product-parameter__text input">64 GB</span>
+                </label>
+                <label>
+                  <input class="input" type="radio" name="product-parameter-1">
+                  <span class="product-parameter__text input">128 GB</span>
+                </label>
+                <label>
+                  <input class="input" type="radio" name="product-parameter-1">
+                  <span class="product-parameter__text input">256 GB</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="product-parameter product-color">
+              <legend class="product-parameter__title">Цвет</legend>
+              <label>
+                <input type="radio" name="product-color" checked>
+                <span class="product-color__button" style="background-image: url('/images/color/black.svg');"></span>
+              </label>
+              <label>
+                <input type="radio" name="product-color">
+                <span class="product-color__button" style="background-image: url('/images/color/white.svg');"></span>
+              </label>
+            </fieldset>
+            <fieldset class="product-parameter product-region">
+              <legend class="product-parameter__title">Регион</legend>
+              <label>
+                <input type="radio" name="product-region" checked>
+                <span class="product-region__button" style="background-image: url('/images/regions/russia.svg');"></span>
+              </label>
+              <label>
+                <input type="radio" name="product-region">
+                <span class="product-region__button" style="background-image: url('/images/regions/european-union.svg');"></span>
+              </label>
+              <label>
+                <input type="radio" name="product-region">
+                <span class="product-region__button" style="background-image: url('/images/regions/china.svg');"></span>
+              </label>
+            </fieldset>
+            <div class="product-content__bottom">
+              <div class="product-content__col">
+                <span class="product-content__title">Цена</span>
+                <div class="product-content__line">
+                  <div class="product-card-price">
+                    59 999 
+                    <span class="ruble">₽</span>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <div class="product-bonus">
+                      <span class="product-bonus__title">AT-Бонус</span>
+                      <strong class="product-bonus__value">149 <span class="ruble">₽</span></strong>
+                    </div>
+                    <div class="popup popup--bonus">
+                      <button class="popup__close">Закрыть</button>
+                      <h4 class="popup__title">АТ-Бонус</h4>
+                      <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
+                      <a href="#" class="button button--fill">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <a class="button button--basket" href="#">Добавить в корзину</a>
+                <a class="button" href="#">Купить в 1 клик</a>
+              </div>
+              <div class="product-content__col">
+                <p class="product-card-article">Артикул: 1394855032</p>
+                <div class="product-card-credit">Кредит онлайн за 15 минут
+                </div>
+                <div class="popup popup--credit">
+                  <button class="popup__close"></button>
+                  <p class="popup__title">Как купить в кредит онлайн?</p>
+                  <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                  <a href="#" class="button">Нужна помощь?</a>
+                </div>
+                <p class="product-card-credit-sum">5 849 ₽ в месяц</p>
+                <ul class="product-card-info">
+                  <li class="product-card-info__item product-card-pickups">Доступен для самовывоза <span class="underline">в 2 точках</span>
+                  </li>
+                  <li class="product-card-info__item">Доставка по СПб <span class="underline">от 100 ₽</span>
+                    <div class="popup">
+                      <button class="popup__close">Закрыть</button>
+                      <p class="popup__title">Курьером</p>
+                      <p class="popup__text">290 ₽ • Завтра 14 августа</p>
+                      <p class="popup__title">VIP-доставка</p>
+                      <p class="popup__text">Сегодня через 3 часа</p>
+                      <p class="popup__title">Доставка по России</p>
+                      <p class="popup__text">От 500 ₽ • До 14 дней</p>
+                    </div>
+                  </li>
+                  <li class="product-card-info__item">Гарантия <span class="underline">производителя</span>: 12 месяцев
+                    <div class="popup">
+                      <button class="popup__close">Закрыть</button>
+                      <p class="popup__title">Гарантия производителя: 12 месяцев</p>
+                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--pickup">
+            <div class="popup">
+              <button class="popup__close"></button>
+              <p class="popup__title-b">Точки, доступные для самовывоза данного товара</p>
+              <div class="popup__inner">
+                <div class="popup__buttons">
+                  <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                  <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                </div>
+                <div class="popup__info">
+                  <p class="popup__title">Режим работы пункта самовывоза</p>
+                  <div class="popup__info-list">
+                    <div class="popup__info-item">
+                      <div class="popup__col">
+                        <span class="popup__days">Будние дни</span>
+                        <span class="popup__time">10:00 – 20:00</span>
+                      </div>
+                      <div class="popup__col">
+                        <span class="popup__days">Выходные и праздники</span>
+                        <span class="popup__time">11:00 – 19:00</span>
+                      </div>
+                      <div class="popup__map">
+                        <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                      </div>
+                    </div>
+                    <div class="popup__info-item">
+                      <div class="popup__col">
+                        <span class="popup__days">Будние дни</span>
+                        <span class="popup__time">10:00 – 20:00</span>
+                      </div>
+                      <div class="popup__col">
+                        <span class="popup__days">Выходные и праздники</span>
+                        <span class="popup__time">11:00 – 19:00</span>
+                      </div>
+                      <div class="popup__map">
+                        <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-tabs">
+            <div class="product-tab-btn product-tab-btn--description">Описание</div>
+            <div class="product-tab-btn product-tab-btn--specifications">Характеристики</div>
+            <div class="product-tab-btn product-tab-btn--responds">Отзывы <span>23</span></div>
+            <div class="product-tab-btn product-tab-btn--questions">Вопросы <span>6</span></div>
+            <div class="product-tab-btn product-tab-btn--reviews">Обзоры <span>4</span></div>
+            <div class="product-tab product-tab--description">
+              <button class="popup__close">Закрыть</button>
+              <h2 class="title title--underline">Описание</h2>
+              <img class="lazyload" data-src="images/products/iphone11-descr-1.png" alt="">
+              <h3>Ничего лишнего, только самое</h3>
+              <p>Новая система двух камер не оставит никого из ваших друзей за кадром. Самый быстрый процессор iPhone и мощный аккумулятор позволят больше делать и тратить меньше времени на подзарядку. А высочайшее качество видео на iPhone означает, что ваши истории станут еще ярче и детальнее.</p>
+              <img class="lazyload" data-src="images/products/iphone11-descr-2.png" alt="">
+              <h3>Плохое фото не выйдет</h3>
+              <p>Новая система двух камер. Можно делать фотоснимки с широким и сверхшироким углом обзора. Обновленный интерфейс и новая сверхширокоугольная камера позволят увидеть и снять то, что происходит за пределами кадра. Снимать и редактировать видеоролики теперь так же легко, как фотографии. Это по-прежнему невероятно популярная камера, но с совершенно новыми перспективами.</p>
+              <img class="lazyload" data-src="images/products/iphone11-descr-3.png" alt="">
+              <h3>Снимайте видео высочайшего качества и редактируйте его</h3>
+              <p>На все камеры iPhone 11 можно снимать невероятно четкое видео 4K с частотой 60 кадров/﻿с. С объективом сверхшироко­угольной камеры область изображения в четыре раза больше. Поэтому камера отлично подходит для съемки сцен с движением - например, как ваша собака гоняется за мячом. А если, скажем, вы записываете выступление ребенка на концерте и приближаете изображение, звук приближается тоже. Кроме того, редактировать видео теперь так же легко, как фото.</p>
+              <img class="lazyload" data-src="images/products/iphone11-descr-4.png" alt="">
+              <h3>Знакомьтесь, ночной режим</h3>
+              <p>Плохое освещение не помеха хорошему фото. Ночной режим автоматически включается при низкой освещенности и позволяет делать великолепные фотографии. Вспышка не понадобится. Цвета будут выглядеть естественно, а сами фотографии — ярче.</p>
+            </div>
+            <div class="product-tab product-tab--specifications">
+              <button class="popup__close">Закрыть</button>
+              <h2 class="title title--underline">Характеристики</h2>
+              <h3>Общие параметры</h3>
+              <table class="product-props-table">
+                <tr>
+                  <td>Код производителя</td>
+                  <td>MWLU2RU/A</td>
+                </tr>
+                <tr>
+                  <td>Год выпуска</td>
+                  <td>2019</td>
+                </tr>
+              </table>
+              <h3>Внешний вид</h3>
+              <table class="product-props-table">
+                <tr>
+                  <td>Цвет задней панели</td>
+                  <td>белый</td>
+                </tr>
+                <tr>
+                  <td>Цвет передней панели</td>
+                  <td>черный</td>
+                </tr>
+                <tr>
+                  <td>Цвет граней</td>
+                  <td>белый</td>
+                </tr>
+                <tr>
+                  <td>Цвет, заявленный производителем</td>
+                  <td>белый</td>
+                </tr>
+              </table>
+              <h3>Мобильная связь</h3>
+              <table class="product-props-table">
+                <tr>
+                  <td>Поддержка сетей 2G</td>
+                  <td>GSM 1900, GSM 900, GSM 850, GSM 1800</td>
+                </tr>
+                <tr>
+                  <td>Поддержка сетей 3G </td>
+                  <td>UMTS 1900, UMTS 850, UMTS 2100, UMTS 900</td>
+                </tr>
+                <tr>
+                  <td>Поддержка сетей 4G (LTE)</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td>Диапазоны частот LTE</td>
+                  <td>LTE 850 (B18), LTE 1700 (B4), LTE 1900 (B25), LTE 800 (B26), LTE 800 (B29), LTE 2300 (B30), LTE 700 (B17), LTE 700 (B13), LTE 850 (B5), LTE 1900 (B2), LTE 1800 (B3), LTE 900 (B8), LTE 2100 (B1), LTE 800 (B20), LTE 700 (B28), LTE 700 (B12), LTE 2600 (B7)</td>
+                </tr>
+                <tr>
+                  <td>Формат SIM-карт</td>
+                  <td>Nano-SIM (12.3x8.8x0.67 мм)</td>
+                </tr>
+                <tr>
+                  <td>Количество SIM-карт</td>
+                  <td>1 SIM</td>
+                </tr>
+              </table>
+            </div>
+            <div class="product-tab product-tab--responds">
+              <button class="popup__close">Закрыть</button>
+              <h2 class="title title--underline">Отзывы</h2>
+              <div class="row">
+                <div>
+                  <h3>Средняя оценка</h3>
+                  <div class="product-rating">
+                    <div class="value" style="width: 80%;"></div>
+                  </div>
+                  <span class="product-votes">Всего отзывов: 23</span>
+                </div>
+                <button class="button button--respond">Написать отзыв</button>
+              </div>
+              <div class="responds">
+                <article class="respond-item">
+                  <div class="respond-item__header">
+                    <p class="respond-item__name">Светлана</p>
+                    <div class="rating-stars">
+                        <div class="value" style="width: 80%"></div>
+                    </div>
+                    <p class="respond-item__from">Отзыв из Яндекс Маркета</p>
+                    <p class="respond-item__data">30.11.2019</p>
+                  </div>
+                  <p class="respond-item__text">
+                    Недели две ждала IPhone 11, Цвет фиолетовый на 128 Гб. Не могу нарадоваться!!!
+                    1. Очень приятно держать в руках, цвет очень красивый, экран по сравнению с моей 6-ой огромный и радует красками))
+                    2. Камера хорошая, много возможностей.
+                    3. Батареи при активном пользовании хватает на 1,5 - 2 дня.
+                  </p>
+                </article>
+                <article class="respond-item">
+                  <div class="respond-item__header">
+                    <p class="respond-item__name">Регина</p>
+                    <div class="rating-stars">
+                        <div class="value" style="width: 100%"></div>
+                    </div>
+                    <p class="respond-item__from"></p>
+                    <p class="respond-item__data">30.11.2019</p>
+                  </div>
+                  <p class="respond-item__text">
+                    Долго искала в своём городе 11 iphone лилового цвета.. И он нашелся в одном из магазинов эльдорадо. Очень быстро оформили заказ. Товаром довольна.
+
+                    Смартфон, по моему мнению, очень достойно держит заряд (мне хватает на 2 дня использования)
+                    Лиловый цвет просто бомбезный!
+                    Я брала к нему чехол apple черного цвета
+                    Идеальное сочетание
+
+                    К сервису магазина притензий нет. Очень довольна общением с оператором-помог найти в наличии нужный цвет за 5 минут
+                  </p>
+                </article>
+                <article class="respond-item">
+                  <div class="respond-item__header">
+                    <p class="respond-item__name">Светлана</p>
+                    <div class="rating-stars">
+                        <div class="value" style="width: 80%"></div>
+                    </div>
+                    <p class="respond-item__from">Отзыв из Яндекс Маркета</p>
+                    <p class="respond-item__data">30.11.2019</p>
+                  </div>
+                  <p class="respond-item__text">
+                    Недели две ждала IPhone 11, Цвет фиолетовый на 128 Гб. Не могу нарадоваться!!!
+                    1. Очень приятно держать в руках, цвет очень красивый, экран по сравнению с моей 6-ой огромный и радует красками))
+                    2. Камера хорошая, много возможностей.
+                    3. Батареи при активном пользовании хватает на 1,5 - 2 дня.
+                  </p>
+                </article>
+                <article class="respond-item">
+                  <div class="respond-item__header">
+                    <p class="respond-item__name">Регина</p>
+                    <div class="rating-stars">
+                        <div class="value" style="width: 100%"></div>
+                    </div>
+                    <p class="respond-item__from"></p>
+                    <p class="respond-item__data">30.11.2019</p>
+                  </div>
+                  <p class="respond-item__text">
+                    Долго искала в своём городе 11 iphone лилового цвета.. И он нашелся в одном из магазинов эльдорадо. Очень быстро оформили заказ. Товаром довольна.
+
+                    Смартфон, по моему мнению, очень достойно держит заряд (мне хватает на 2 дня использования)
+                    Лиловый цвет просто бомбезный!
+                    Я брала к нему чехол apple черного цвета
+                    Идеальное сочетание
+
+                    К сервису магазина притензий нет. Очень довольна общением с оператором-помог найти в наличии нужный цвет за 5 минут
+                  </p>
+                </article>
+              </div>
+            </div>
+            <div class="product-tab product-tab--questions">
+              <button class="popup__close">Закрыть</button>
+              <h2 class="title title--underline">Вопросы</h2>
+              <button class="button button--ask">Задать вопрос</button>
+              <div class="questions">
+                <article class="questions-item">
+                  <h3>Вопрос 1</h3>
+                  <div class="questions-item__inner">
+                    <p class="questions-item__name">Светлана</p>
+                    <p class="questions-item__text">Ой, а там туда в него прямо флешку можно вставить? А гигабайт сколько, если можно? Я просто айфоны эти ваши и не покупала ни разу, а фото люблю делать.</p>
+                    <p class="questions-item__answer">
+                      <span class="questions-item__answer-shop">Ответ магазина</span>
+                      Флешку вставить нельзя. Память у айфона 128 GB.</p>
+                  </div>
+                </article>
+                <article class="questions-item">
+                  <h3>Вопрос 2</h3>
+                  <div class="questions-item__inner">
+                    <p class="questions-item__name">Светлана</p>
+                    <p class="questions-item__text">Ой, а там туда в него прямо флешку можно вставить? А гигабайт сколько, если можно? Я просто айфоны эти ваши и не покупала ни разу, а фото люблю делать.</p>
+                    <p class="questions-item__answer">
+                      <span class="questions-item__answer-shop">Ответ магазина</span>
+                      Флешку вставить нельзя. Память у айфона 128 GB.</p>
+                  </div>
+                </article>
+                <article class="questions-item">
+                  <h3>Вопрос 3</h3>
+                  <div class="questions-item__inner">
+                    <p class="questions-item__name">Светлана</p>
+                    <p class="questions-item__text">Ой, а там туда в него прямо флешку можно вставить? А гигабайт сколько, если можно? Я просто айфоны эти ваши и не покупала ни разу, а фото люблю делать.</p>
+                    <p class="questions-item__answer">
+                      <span class="questions-item__answer-shop">Ответ магазина</span>
+                      Флешку вставить нельзя. Память у айфона 128 GB.</p>
+                  </div>
+                </article>
+                <article class="questions-item">
+                  <h3>Вопрос 4</h3>
+                  <div class="questions-item__inner">
+                    <p class="questions-item__name">Светлана</p>
+                    <p class="questions-item__text">Ой, а там туда в него прямо флешку можно вставить? А гигабайт сколько, если можно? Я просто айфоны эти ваши и не покупала ни разу, а фото люблю делать.</p>
+                    <p class="questions-item__answer">
+                      <span class="questions-item__answer-shop">Ответ магазина</span>
+                      Флешку вставить нельзя. Память у айфона 128 GB.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="product-tab product-tab--reviews">
+              <button class="popup__close">Закрыть</button>
+              <h2 class="title title--underline">Обзоры</h2>
+              <div class="reviews">
+                <a class="reviews-item reviews-item--video" href="#">
+                  <span class="reviews-item__img">
+                    <img class="lazyload" data-src="images/products/iphone11-review-1.png" alt="1">
+                  </span>
+                  <span class="reviews-item__type">Видео-обзор</span>
+                  <p class="reviews-item__title">Обзор iPhone 11. Комплектация и внешний вид</p>
+                </a>
+                <a class="reviews-item reviews-item--video" href="#">
+                  <span class="reviews-item__img">
+                    <img class="lazyload" data-src="images/products/iphone11-review-2.png" alt="1">
+                  </span>
+                  <span class="reviews-item__type">Видео-обзор</span>
+                  <p class="reviews-item__title">Обзор iPhone 11. Снова в точку?</p>
+                </a>
+                <a class="reviews-item reviews-item--text" href="#">
+                  <span class="reviews-item__img">
+                    <img class="lazyload" data-src="images/products/iphone11-review-3.png" alt="1">
+                  </span>
+                  <span class="reviews-item__type">Текстовый обзор</span>
+                  <p class="reviews-item__title">Сравнение iPhone 11 и iPhone XR — обзор и отличия двух смартфонов</p>
+                </a>
+                <a class="reviews-item reviews-item--text" href="#">
+                  <span class="reviews-item__img">
+                    <img class="lazyload" data-src="images/products/iphone11-review-4.png" alt="1">
+                  </span>
+                  <span class="reviews-item__type">Текстовый обзор</span>
+                  <p class="reviews-item__title">Обзор iPhone 11 — самого доступного смартфона из новинок Apple</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @@include('components/_accessories.html')
+      </div>
+    </section>
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

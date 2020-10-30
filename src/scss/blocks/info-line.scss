@@ -1,0 +1,14 @@
+.info-line {
+  padding: 12px 0;
+  text-align: center;
+
+  background: #F2C94C;
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.2;
+
+    opacity: 0.9;
+  }
+}

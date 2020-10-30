@@ -1,0 +1,376 @@
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: none;
+  width: 570px;
+  padding: 30px;
+
+  background: #FFFFFF;
+  border: 1px solid #DAE1E7;
+  border-radius: 20px;
+  
+  z-index: 10;
+  animation: 'right-to-left' 0.6s;
+
+  &.popup--open {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    float: right;
+
+    font-size: 0;
+
+    background: transparent url("../images/icon-close.svg") no-repeat center / 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__buttons {
+    // display: flex;
+    // flex-direction: column;
+    width: 370px;
+    height: 450px;
+    margin-right: 30px;
+
+    .button {
+      width: 370px;
+      height: 106px;
+      padding: 30px;
+      margin-bottom: 10px;
+
+      font-weight: 400;
+      color: #000000;
+      border: 1px solid #DAE1E7;
+    }
+
+    .button.active,
+    .slick-current .button {
+      font-weight: 500;
+      color: #025BB1;
+      border: 2px solid #025BB1;
+    }
+
+    .slick-slide {
+      width: 370px;
+      height: 106px;
+      margin-bottom: 10px;
+
+      // height: auto;
+    }
+
+    .slick-track {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__info-list {
+    max-width: 710px;
+  }
+
+  &__block {
+    padding: 20px 30px;
+    border-bottom: 1px solid #DAE1E7;
+
+    &:last-child {
+      border: none;
+    }
+
+    &--tel {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__title-b {
+    margin-bottom: 30px;
+
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__tel {
+    font-size: 36px;
+  }
+
+  &__col {
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #DAE1E7;
+    }
+  }
+
+  &__days {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    line-height: 1.45;
+    opacity: 0.7;
+  }
+
+  &__time {
+    font-size: 24px;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+
+  &__list {
+    margin: 20px 0;
+    list-style: none;
+    counter-reset: myCounter;
+
+    li {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+
+      height: 40px;
+      padding-left: 50px;
+      margin-bottom: 10px;
+
+      font-size: 16px;
+
+      &:after {
+        counter-increment: myCounter;
+        content: counter(myCounter, decimal);
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #025BB1;
+        border-radius: 50%;
+
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    li:last-child:after {
+      content: '∞';
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 390px;
+    margin-bottom: 20px;
+
+    // font-size: 16px;
+    font-style: normal;
+    line-height: 145%;
+  }
+
+  &__map {
+    margin: 20px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .input {
+    width: 100%;
+
+    background: #FCFCFD;
+    border-radius: 15px;
+  }
+}
+
+.popup--about-tel {
+  left: auto;
+  right: 0;
+  top: 70px;
+
+  width: 580px;
+  padding: 0;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  .popup__close {
+    display: none;
+  }
+
+  .popup__title {
+    font-weight: bold;
+  }
+}
+
+.popup--benefit {
+  top: 64px;
+  cursor: auto;
+
+  .popup__close {
+    display: none;
+  }
+}
+
+.popup--remind {
+  top: auto;
+  left: 65%;
+  bottom: 67px;
+}
+
+.popup--bonus {
+  top: auto;
+  bottom: 46px;
+}
+
+.popup--credit {
+  top: 30px;
+}
+
+// .popup--pickup {
+//   left: auto;
+//   right: 0;
+//   top: 30px;
+
+//   width: 1170px;
+// }
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: none;
+
+  z-index: 10;
+
+  &--open {
+    display: block;
+  }
+
+  .popup {
+    top: 20%;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .popup {
+    width: 100%;
+    padding: 60px 25px;
+
+    &__close {
+      border-left: 1px solid #DAE1E7;
+      border-bottom: 1px solid #DAE1E7;
+      border-bottom-left-radius: 10px;
+
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__buttons {
+      // width: 100%;
+      height: 240px;
+      margin-right: auto;
+    }
+
+    &__tel {
+      font-size: 30px;
+    }
+
+    &__list li:last-child:after {
+      font-size: 15px;
+    }
+
+    &__col:first-of-type {
+      // width: auto;
+      margin: 0 10px 10px 0;
+      padding-right: 10px;
+    }
+
+    &__days {
+      font-size: 12px;
+    }
+
+    &__time {
+      font-size: 20px;
+    }
+
+    &__block {
+      padding: 20px 0;
+    }
+
+    &__block--tel {
+      display: block;
+    }
+  }
+
+  .popup--about-tel {
+    top: 60px;
+    width: 100%;
+    padding: 40px 25px;
+
+    .popup__close {
+      display: block;
+    }
+  }
+
+  .popup--benefit,
+  .popup--bonus {
+    position: fixed;
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    animation: 'bottom-to-center' 0.3s linear;
+
+    .popup__close {
+      display: block;
+    }
+  }
+
+  .modal--pickup .popup {
+    top: 10%;
+  }
+}

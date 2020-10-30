@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+
+    <div class="section cart">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Корзина</span>
+        </nav>
+        <div class="cart__top-line">
+          <h1 class="title">Корзина</h1>
+          <span class="cart__count">Товаров в корзине: 3</span>
+        </div>
+        
+        <div class="cart-wrapper">
+          <table class="cart-table">
+            <tbody>
+              <tr class="bk_product">
+                <td>
+                  <a target="_blank" class="cart-table-image" href="#">
+                    <img class="bk_image" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+                  </a>
+                </td>
+                <td>
+                  <a target="_blank" href="#" class="bk_name">Смарт-часы Amazfit GTS A1914</a>
+                </td>
+                <td class="custom">
+                  <div class="cart-table__line">
+                    <a href="#" class="user-link user-link--fav">
+                      @@include('images/icon-fav.svg')
+                      Добавить в избранное
+                    </a>
+                    <input class="cart-spinner" name="quantity" value="1" readonly>
+                  </div>
+                  <p class="available">В наличии: <a href="#" class="underline">в 1 точке</a>
+                  </p>
+                  <div class="modal modal--pickup">
+                    <div class="popup popup--pickup">
+                      <button class="popup__close"></button>
+                      <p class="popup__title-b">Точка, доступная для самовывоза данного товара</p>
+                      <div class="popup__inner">
+                        <div class="popup__buttons">
+                          <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                        </div>
+                        <div class="popup__info">
+                          <p class="popup__title">Режим работы пункта самовывоза</p>
+                          <div class="popup__info-list">
+                            <div class="popup__info-item">
+                              <div class="popup__col">
+                                <span class="popup__days">Будние дни</span>
+                                <span class="popup__time">10:00 – 20:00</span>
+                              </div>
+                              <div class="popup__col">
+                                <span class="popup__days">Выходные и праздники</span>
+                                <span class="popup__time">11:00 – 19:00</span>
+                              </div>
+                              <div class="popup__map">
+                                <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="price">
+                    8 570 <span class="ruble">₽</span>
+                  </span>
+                </td>
+                <td>
+                  <button class="cart-remove">Очистить</button>
+                </td>
+              </tr>
+              <tr class="bk_product">
+                <td>
+                  <a target="_blank" class="cart-table-image" href="#">
+                    <img class="bk_image" src="images/products/zte-thumb.png" alt="Смартфон ZTE Blade A7 (2020)">
+                  </a>
+                </td>
+                <td>
+                  <a target="_blank" href="#" class="bk_name">Смартфон ZTE Blade A7 (2020)</a>
+                </td>
+                <td class="custom">
+                  <div class="cart-table__line">
+                    <a href="#" class="user-link user-link--fav">
+                      @@include('images/icon-fav.svg')
+                      Добавить в избранное
+                    </a>
+                    <input class="cart-spinner" name="quantity" value="1" readonly>
+                  </div>
+                  <p class="available">В наличии: <a href="#" class="underline">в 2 точках</a></p>
+                  <div class="modal modal--pickup">
+                    <div class="popup popup--pickup">
+                      <button class="popup__close"></button>
+                      <p class="popup__title-b">Точки, доступные для самовывоза данного товара</p>
+                      <div class="popup__inner">
+                        <div class="popup__buttons">
+                          <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                          <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                        </div>
+                        <div class="popup__info">
+                          <p class="popup__title">Режим работы пункта самовывоза</p>
+                          <div class="popup__info-list">
+                            <div class="popup__info-item">
+                              <div class="popup__col">
+                                <span class="popup__days">Будние дни</span>
+                                <span class="popup__time">10:00 – 20:00</span>
+                              </div>
+                              <div class="popup__col">
+                                <span class="popup__days">Выходные и праздники</span>
+                                <span class="popup__time">11:00 – 19:00</span>
+                              </div>
+                              <div class="popup__map">
+                                <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                              </div>
+                            </div>
+                            <div class="popup__info-item">
+                              <div class="popup__col">
+                                <span class="popup__days">Будние дни</span>
+                                <span class="popup__time">10:00 – 20:00</span>
+                              </div>
+                              <div class="popup__col">
+                                <span class="popup__days">Выходные и праздники</span>
+                                <span class="popup__time">11:00 – 19:00</span>
+                              </div>
+                              <div class="popup__map">
+                                <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="price">
+                    <span class="bk_price">7 390</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </td>
+                <td>
+                  <button class="cart-remove">Очистить</button>
+                </td>
+              </tr>
+              <tr class="bk_product">
+                <td>
+                  <a target="_blank" class="cart-table-image" href="#">
+                    <img class="bk_image" src="images/products/samokat-thumb.png" alt="Электросамокат Xiaomi  Mi Electric Scooter 1S">
+                  </a>
+                </td>
+                <td>
+                  <a target="_blank" href="#" class="bk_name">Электросамокат Xiaomi Mi Electric Scooter 1S</a>
+                </td>
+                <td class="custom">
+                  <div class="cart-table__line">
+                    <a href="#" class="user-link user-link--fav">
+                      @@include('images/icon-fav.svg')
+                      Добавить в избранное
+                    </a>
+                    <input class="cart-spinner" name="quantity" value="1" readonly>
+                  </div>
+                  <p class="available">В наличии: <a href="#" class="underline">в 1 точке</a>
+                  </p>
+                  <div class="modal modal--pickup">
+                    <div class="popup popup--pickup">
+                      <button class="popup__close"></button>
+                      <p class="popup__title-b">Точка, доступная для самовывоза данного товара</p>
+                      <div class="popup__inner">
+                        <div class="popup__buttons">
+                          <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                        </div>
+                        <div class="popup__info">
+                          <p class="popup__title">Режим работы пункта самовывоза</p>
+                          <div class="popup__info-list">
+                            <div class="popup__info-item">
+                              <div class="popup__col">
+                                <span class="popup__days">Будние дни</span>
+                                <span class="popup__time">10:00 – 20:00</span>
+                              </div>
+                              <div class="popup__col">
+                                <span class="popup__days">Выходные и праздники</span>
+                                <span class="popup__time">11:00 – 19:00</span>
+                              </div>
+                              <div class="popup__map">
+                                <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="price">
+                    <span class="bk_price">27 270</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </td>
+                <td>
+                  <button class="cart-remove">Очистить</button>
+                </td>
+              </tr>
+              <tr class="bk_product">
+                <td>
+                  <a target="_blank" class="cart-table-image" href="#">
+                    <img class="bk_image" src="images/products/chehol.png" alt="Чехол-накладка Leather Cover  для Samsung Galaxy S20 Ultra">
+                  </a>
+                </td>
+                <td>
+                  <a target="_blank" href="#" class="bk_name">Чехол-накладка Leather Cover для Samsung Galaxy S20 Ultra</a>
+                </td>
+                <td class="custom">
+                  <div class="cart-table__line">
+                    <a href="#" class="user-link user-link--fav">
+                      @@include('images/icon-fav.svg')
+                      Добавить в избранное
+                    </a>
+                    <input class="cart-spinner" name="quantity" value="1" readonly>
+                  </div>
+                  <p class="available">В наличии: <a href="#" class="underline">в 1 точке</a>
+                  </p>
+                  <div class="modal modal--pickup">
+                    <div class="popup popup--pickup">
+                      <button class="popup__close"></button>
+                      <p class="popup__title-b">Точка, доступная для самовывоза данного товара</p>
+                      <div class="popup__inner">
+                        <div class="popup__buttons">
+                          <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                        </div>
+                        <div class="popup__info">
+                          <p class="popup__title">Режим работы пункта самовывоза</p>
+                          <div class="popup__info-list">
+                            <div class="popup__info-item">
+                              <div class="popup__col">
+                                <span class="popup__days">Будние дни</span>
+                                <span class="popup__time">10:00 – 20:00</span>
+                              </div>
+                              <div class="popup__col">
+                                <span class="popup__days">Выходные и праздники</span>
+                                <span class="popup__time">11:00 – 19:00</span>
+                              </div>
+                              <div class="popup__map">
+                                <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="price-old">
+                    <span class="bk_price">2 990</span>
+                    <span class="ruble">₽</span>
+                    <span class="price-sale">-10%</span>
+                  </span>
+                  <span class="price">
+                    <span class="bk_price">2 691</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </td>
+                <td>
+                  <button class="cart-remove">Очистить</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="cart-total">
+            <h2 class="cart-total__title">Оформление заказа</h2>
+            <p class="cart-total__subtitle">Итого к оплате</p>
+            <span class="cart-total__sum">
+              43 230 <span class="ruble">₽</span>
+            </span>
+
+            <!-- Для зарегистрированных -->
+            <label>
+              <input type="checkbox" name="pay-bonus">
+              <p class="cart-total__bonus-pay">Оплатить АТ-Бонусами
+                <strong class="cart-total__bonus-value">690 <span class="ruble">₽</span></strong>
+              </p>
+            </label>
+            <!-- // -->
+            
+            <div class="product-bonus-wrapper">
+              <div class="product-bonus">
+                <span class="product-bonus__title">AT-Бонусов начислим</span>
+                <strong class="product-bonus__value">432 <span class="ruble">₽</span></strong>
+              </div>
+              <div class="popup popup--bonus">
+                <button class="popup__close">Закрыть</button>
+                <h4 class="popup__title">AT-Бонус</h4>
+                <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
+                <a href="#" class="button button--fill">Подробнее</a>
+              </div>
+            </div>
+            <button class="button button--fill">Оформить заказ</button>
+            <button class="button">Купить в 1 клик</button>
+            <p class="cart-total__text">Нажмите «Оформить заказ», чтобы сохранить АТ-Бонусы и отслеживать статус заказа в личном кабинете</p>
+          </div>
+        </div>
+
+        @@include('components/_accessories.html')
+      </div>
+    </div>
+
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

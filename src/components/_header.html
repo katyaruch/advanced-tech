@@ -1,0 +1,265 @@
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <ul class="site-nav__list">
+        <li><a href="/promo.html">Акции</a></li>
+        <li><a href="/delivery.html">Доставка и оплата</a></li>
+        <li><a href="/garant.html">Гарантия и ремонт</a></li>
+        <li><a href="/about.html">О компании</a></li>
+        <li><a href="/news.html">Новости</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+      </ul>
+      <ul class="site-nav__contacts">
+        <li class="site-nav__email"><a href="#">Напишите нам на Email</a></li>
+        <li class="site-nav__wa"><a href="#">Напишите нам в WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="sticky">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="logo">
+            <picture>
+              <source data-srcset="images/logo-mobile.png" media="(max-width: 425px)">
+              <img class="lazyload" data-src="images/logo.png" alt="Advanced Technology">
+            </picture>
+          </a>
+        </div>
+        <form class="header__search">
+          <input id="search" type="text" placeholder="Поиск">
+          <button class="header__search-btn" type="submit">Поиск</button>
+        </form>
+        <div class="header__user-nav user-nav">
+          <a href="#" class="header__tel user-link user-link--tel">
+            @@include('../images/icon-tel.svg')
+            <span class="header__tel-text">По всем вопросам</span>
+            +7 (812) 770-47-99
+          </a>
+          <a href="#" class="user-link user-link--compare">
+            @@include('../images/icon-compare.svg')
+            Сравнить
+            <span class="user-link__count">3</span>
+          </a>
+          <a href="#" class="user-link user-link--fav">
+            @@include('../images/icon-fav.svg')
+            Избранное
+            <span class="user-link__count">19</span>
+          </a>
+          <a href="#" class="user-link user-link--login">
+            @@include('../images/icon-profile.svg')
+            Войти
+          </a>
+          <a href="/cart.html" class="user-cart">Сумма
+            @@include('../images/icon-basket.svg')
+            <span class="user-cart__count">2</span>
+            <span class="user-cart__sum">70 980 Р</span>
+          </a>
+        </div>
+        <div class="popup popup--about-tel">
+          <button class="popup__close"></button>
+          <div class="popup__block popup__block--tel">
+            <p class="popup__title">Контактный телефон</p>
+            <a href="tel:88127704799" class="popup__tel">+7 (812) 770-47-99</a>
+          </div>
+          <div class="popup__block">
+            <p class="popup__title">Звоните в рабочее время</p>
+            <div class="popup__col">
+              <span class="popup__days">Будние дни</span>
+              <span class="popup__time">10:00 – 20:00</span>
+            </div>
+            <div class="popup__col">
+              <span class="popup__days">Выходные и праздники</span>
+              <span class="popup__time">11:00 – 19:00</span>
+            </div>
+          </div>
+          <div class="popup__block">
+            <p class="popup__title">Обратитесь к нам с любым вопросом</p>
+            <ol class="popup__list">
+              <li>Оформление заказа</li>
+              <li>Доставка, самовывоз и оплата</li>
+              <li>Гарантия и возврат</li>
+              <li>Любые другие вопросы</li>
+            </ol>
+            <button class="button button--stroke">Обратный звонок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="menu">
+    <div class="container">
+      <div class="menu__inner">
+        <button class="menu__btn">Каталог</button>
+        <ul class="menu__list">
+          <li class="menu__cat"><a href="/catalog.html">
+            @@include('../images/icons-category/icon-mobile.svg')
+            <span>Мобильная электроника</span></a>
+          </li>
+          <li class="menu__cat"><a href="#">
+            @@include('../images/icons-category/icon-audio.svg')
+            <span>Аудио- и видеотехника</span></a>
+          </li>
+          <li class="menu__cat"><a href="#">
+            @@include('../images/icons-category/icon-home.svg')
+            <span>Умный дом</span></a>
+          </li>
+          <li class="menu__cat"><a href="#">
+            @@include('../images/icons-category/icon-game.svg')
+            <span>Игры и развлечения</span></a>
+          </li>
+          <li class="menu__cat"><a href="#">
+            @@include('../images/icons-category/icon-computer.svg')
+            <span>Компьютерная техника</span></a>
+          </li>
+          <li class="menu__cat"><a href="#">
+            @@include('../images/icons-category/icon-auto.svg')
+            <span>Авто- вело- мото- электроника</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="full-menu-wrapper">
+    <div class="full-menu container">
+      <div class="full-menu__inner">
+        <ul class="full-menu__list">
+          <li><a href="/catalog.html" class="full-menu__cat">
+            @@include('../images/icons-category/icon-mobile.svg')
+            <span>Мобильная электроника</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li>
+                  <a href="/catalog.html" class="full-menu__link">Смартфоны</a>
+                  <ul>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Huawei</a></li>
+                    <li><a href="#">Xiaomi</a></li>
+                    <li><a href="#">Honor</a></li>
+                    <li><a href="#">Realme</a></li>
+                    <li><a href="/catalog.html">Все</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="full-menu__link">Мобильные телефоны</a></li>
+                <li><a href="#" class="full-menu__link">Планшеты</a></li>
+                <li><a href="#" class="full-menu__link">Электронные книги</a></li>
+                <li><a href="#" class="full-menu__link">Умные часы и браслеты</a></li>
+                <li>
+                  <a href="#" class="full-menu__link">Аксессуары</a>
+                  <ul>
+                    <li><a href="#">Чехлы для смартфонов</a></li>
+                    <li><a href="#">Чехлы для планшетов</a></li>
+                    <li><a href="#">Чехлы для электронных книг</a></li>
+                    <li><a href="#">Защитные стекла и пленки</a></li>
+                    <li><a href="#">Внешние аккумуляторы</a></li>
+                    <li><a href="#">Карты памяти</a></li>
+                    <li><a href="#">Кабели и адаптеры</a></li>
+                    <li><a href="#">Автомобильные держатели и зарядные устройства</a></li>
+                    <li><a href="#">Зарядные устройства и док-станции</a></li>
+                    <li><a href="#">Аксессуары для браслетов и умных часов</a></li>
+                    <li><a href="#">Гарнитуры</a></li>
+                    <li><a href="#">Моноподы и стэдикамы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-audio.svg')
+            <span>Аудио- и видеотехника</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-home.svg')
+            <span>Умный дом</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-game.svg')
+            <span>Игры и развлечения</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-computer.svg')
+            <span>Компьютерная техника</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-auto.svg')
+            <span>Авто- вело- мото- электроника</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-personal.svg')
+            <span>Персональный транспорт</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="full-menu__cat">
+            @@include('../images/icons-category/icon-health.svg')
+            <span>Товары для здоровья и СИЗ</span></a>
+            <div class="full-menu__sublist-wrapper">
+              <ul class="full-menu__sublist">
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+                <li><a href="#">Ссылка</a></li>
+              </ul>
+            </div>
+          </li>
+          <div class="site-nav">
+            <ul class="site-nav__list">
+              <li><a href="/promo.html">Акции</a></li>
+              <li><a href="/delivery.html">Доставка и оплата</a></li>
+              <li><a href="/garant.html">Гарантия и ремонт</a></li>
+              <li><a href="/about.html">О компании</a></li>
+              <li><a href="/news.html">Новости</a></li>
+              <li><a href="/contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="site-nav__contacts">
+              <li class="site-nav__email"><a href="#">Напишите нам на Email</a></li>
+              <li class="site-nav__wa"><a href="#">Напишите нам в WhatsApp</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

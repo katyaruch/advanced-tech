@@ -1,0 +1,47 @@
+@import 'vars.scss';
+@import 'fonts';
+@import 'global';
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'blocks/info-line';
+
+@import 'blocks/site-nav';
+@import 'blocks/user-nav';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/title';
+
+@import 'blocks/popup';
+@import 'blocks/button';
+
+@import 'blocks/main';
+@import 'blocks/product';
+@import 'blocks/about-shop';
+@import 'blocks/slick';
+
+@import 'blocks/catalog';
+@import 'blocks/filters';
+
+@import 'blocks/product-card';
+@import 'blocks/accessories';
+
+@import 'blocks/cart';
+@import 'blocks/promo';
+@import 'blocks/delivery';
+@import 'blocks/garant';
+
+@import 'blocks/footer';
+
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'media';

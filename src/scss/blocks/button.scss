@@ -1,0 +1,95 @@
+.button {
+  position: relative;
+  display: inline-block;
+  // width: 210px;
+  // width: 100%;
+  // padding: 14px 25px;
+  padding: 14px 35px;
+
+  // font-size: 16px;
+  font-weight: bold;
+  color: #025BB1;
+  line-height: 125%;
+  text-align: center;
+
+  border: 2px solid #025BB1;
+  border-radius: 15px;
+  background-color: #fff;
+
+  cursor: pointer;
+
+  &--fill {
+  color: #fff;
+  background-color: #025BB1;
+  }
+
+  &--noborder {
+    width: auto;
+    border: none;
+    padding: 20px 0 0;
+    margin-bottom: 20px;
+  }
+
+  &--remind {
+    width: 55px;
+    height: 57px;
+    padding: 0;
+
+    font-size: 0;
+    background-image: url("../images/icon-remind.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--basket {
+    width: 100%;
+    padding: 14px 55px 14px 0;
+    // margin-bottom: 10px;
+
+    color: #fff;
+    background-color: rgba(2, 91, 177, 0.9);
+
+    &:after {
+      content: "";
+      
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 53px;
+      height: 100%;
+
+      border-radius: 12px;
+      background: #025BB1 url("../images/icon-basket.svg") no-repeat 40% center;
+    }
+
+    &.added {
+      color: #025BB1;
+      background: #fff;
+
+      &:after {
+        background: transparent url("../images/icon-basket-check.svg") no-repeat center;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  .button {
+    // padding: 14px 15px;
+
+    &--basket,
+    &--remind {
+      width: 45px;
+      height: 45px;
+      background-size: 25px;
+    }
+
+    &--basket-big {
+      padding: 19px 60px 19px 56px;
+      font-size: 14px;
+    }
+  }
+}

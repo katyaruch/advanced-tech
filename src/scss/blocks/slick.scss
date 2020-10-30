@@ -1,0 +1,60 @@
+
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 38px;
+  height: 38px;
+  margin: auto 0;
+
+  font-size: 0;
+
+  background: #FFFFFF;
+  border: 1px solid #DAE1E7;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -58px;
+  background-image: url("../images/icon-arrow-right.svg");
+  transform: rotate(180deg);
+}
+
+.slick-next {
+  right: -58px;
+  background-image: url("../images/icon-arrow-right.svg");
+}
+
+.slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -36px;
+
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  button {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+
+    font-size: 0;
+
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slick-active button {
+    background: #025BB1;
+    border: none;
+  }
+}
