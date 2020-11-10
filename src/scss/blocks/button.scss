@@ -17,10 +17,15 @@
   background-color: #fff;
 
   cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &--fill {
-  color: #fff;
-  background-color: #025BB1;
+    color: #fff;
+    background-color: #025BB1;
   }
 
   &--noborder {
@@ -31,23 +36,24 @@
   }
 
   &--remind {
-    width: 55px;
-    height: 57px;
+    width: 46px;
+    height: 46px;
     padding: 0;
 
     font-size: 0;
-    background-image: url("../images/icon-remind.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/icon-remind.svg") no-repeat center / 25px;
   }
 
   &--basket {
     width: 100%;
-    padding: 14px 55px 14px 0;
+    padding: 19px 80px 19px 20px;
     // margin-bottom: 10px;
 
+    font-size: 16px;
+    line-height: 22px;
     color: #fff;
     background-color: rgba(2, 91, 177, 0.9);
+    border: none;
 
     &:after {
       content: "";
@@ -57,7 +63,7 @@
       top: 0;
       bottom: 0;
       display: inline-block;
-      width: 53px;
+      width: 60px;
       height: 100%;
 
       border-radius: 12px;
@@ -67,23 +73,28 @@
     &.added {
       color: #025BB1;
       background: #fff;
+      border: 2px solid #025BB1;
 
       &:after {
         background: transparent url("../images/icon-basket-check.svg") no-repeat center;
       }
     }
   }
+
+  &--one-click {
+    padding: 19px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 
 @media (max-width: 425px) {
   .button {
-    // padding: 14px 15px;
+    &--basket {
+    }
 
-    &--basket,
     &--remind {
-      width: 45px;
-      height: 45px;
       background-size: 25px;
     }
 

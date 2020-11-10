@@ -5,12 +5,17 @@
     font-size: 36px;
   }
 
+  .promo-data {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DAE1E7;
+  }
+
   .promo-title {
     margin-bottom: 15px;
     width: 50%;
   }
 
-  .text {
+  .promo-text {
     width: 60%;
     margin-bottom: 25px;
 
@@ -21,7 +26,6 @@
   
   .button--more {
     width: 100%;
-    margin-top: 30px;
   }
 }
 
@@ -63,8 +67,17 @@
     }
 
     .promo-title,
-    .text {
+    .promo-text {
       width: 100%;
+    }
+
+    .promo-text {
+      line-height: 145%;
+    }
+
+    .promo-data {
+      padding-bottom: 0;
+      border: none;
     }
   }
 

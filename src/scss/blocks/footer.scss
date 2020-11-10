@@ -20,6 +20,10 @@
 
     li {
       margin-bottom: 20px;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -95,6 +99,10 @@
     display: block;
     margin-bottom: 10px;
     font-size: 24px;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__contact {
@@ -112,6 +120,10 @@
 
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
+    
+    &:hover {
+      opacity: 0.5;
+    }
 
     svg {
       margin-right: 5px;

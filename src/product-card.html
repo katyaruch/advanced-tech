@@ -45,6 +45,7 @@
                 <img class="lazyload" data-src="images/products/iphone11-grey-small-3.png" alt="">
               </button>
             </div>
+            <a href="#" class="label-delivery-free" title="Бесплатная доставка">Доставка 0₽</a>
           </div>
           <div class="product-content">
             <div class="product-rating">
@@ -52,13 +53,16 @@
             </div>
             <span class="product-votes">23 отзыва</span>
             <div class="user-nav">
+              <a href="#" class="user-link user-link--fav">
+                @@include('images/icon-fav.svg')
+                Добавить в избранное
+              </a>
               <a href="#" class="user-link user-link--compare">
                 @@include('images/icon-compare.svg')
                 Добавить к сравнению
               </a>
-              <a href="#" class="user-link user-link--fav">
-                @@include('images/icon-fav.svg')
-                Добавить в избранное
+              <a href="#" class="user-link user-link--gift">
+                @@include('images/icon-gift.svg')
               </a>
             </div>
             <fieldset class="product-parameter">
@@ -126,11 +130,27 @@
                   </div>
                 </div>
                 <a class="button button--basket" href="#">Добавить в корзину</a>
-                <a class="button" href="#">Купить в 1 клик</a>
+                <a class="button button--one-click" href="#">Купить в 1 клик</a>
               </div>
               <div class="product-content__col">
                 <p class="product-card-article">Артикул: 1394855032</p>
-                <div class="product-card-credit">Кредит онлайн за 15 минут
+                <p class="product-card-stock">В наличии: 
+                  <span class="value value-more10">
+                    больше 10
+                    @@include('images/icon-quantity.svg')
+                  </span>
+                  <!-- <span class="value value-less10">
+                    меньше 10
+                    @@include('images/icon-quantity.svg')
+                  </span>
+                  <span class="value value-less3">
+                    меньше 3
+                    @@include('images/icon-quantity.svg')
+                  </span> -->
+                </p>
+                <div class="product-card-credit">
+                  Кредит онлайн за 15 минут
+                  @@include('images/icon-info.svg')
                 </div>
                 <div class="popup popup--credit">
                   <button class="popup__close"></button>

@@ -87,6 +87,7 @@
       width: 15px;
       height: 15px;
       margin-left: 5px;
+      margin-bottom: 2px;
       background: url("../images/icon-info.svg") no-repeat center;
       vertical-align: middle;
     }
@@ -162,7 +163,7 @@
       position: absolute;
       top: 70px;
       left: 125px;
-      right: 0;
+      right: 60px;
       z-index: 3;
 
       input {
@@ -220,6 +221,10 @@
 
     &__tel {
       width: 40px;
+    }
+
+    &__search {
+      right: 55px;
     }
   }
 }

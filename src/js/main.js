@@ -76,6 +76,13 @@ $(function () {
     });
   }
 
+//////////////// выпадающая навигация на мобильном
+
+  $('.site-nav__btn').click(function(e) {
+    e.preventDefault();
+    $('.site-nav').toggleClass('site-nav--open')
+  });
+
 //////////////// помошник поиска https://jqueryui.com/autocomplete/
 
   var products = [
@@ -148,7 +155,6 @@ $(function () {
     $(this).next('.popup--bonus').addClass('popup--open');
   });
 
-
 //////////////// popup--credit
 
   $('.product-card-credit').click(function(e) {
@@ -167,6 +173,27 @@ $(function () {
     e.preventDefault();
     $(this).next('.modal--pickup').addClass('modal--open');
   });
+
+//////////////// popup Подарок при покупке
+
+$(".label-gift").click(function(e) {
+  e.preventDefault();
+    $('.popup--gift').toggleClass('popup--open');
+});
+
+//////////////// popup Бесплатная доставка
+
+$(".label-delivery-free").click(function(e) {
+  e.preventDefault();
+    $('.popup--delivery-free').toggleClass('popup--open');
+});
+
+//////////////// popup Купить в 1 клик
+
+$(".button--one-click").click(function(e) {
+  e.preventDefault();
+    $('.popup--one-click').toggleClass('popup--open');
+});
 
 //////////////// закрыть popup
 
@@ -199,7 +226,7 @@ $(function () {
     // variableWidth: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           arrows: false,
           slidesToShow: 3,
@@ -237,7 +264,6 @@ $(function () {
     $(this).find('.show-more').toggle();
     $(this).parents().find('.hidden').toggleClass('show');
   });
-
 
 //////////////// фильтры на мобильном в попапе
 
