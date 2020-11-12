@@ -346,6 +346,19 @@
   border-radius: 0 20px 20px 0;
 }
 
+.label-fav {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: #74CA5E url("../images/icon-fav.svg") no-repeat center / 18px;
+}
+
 @media (min-width: 1024px) {
 
   .product-item:hover {

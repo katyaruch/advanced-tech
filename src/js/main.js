@@ -262,7 +262,7 @@ $(".button--one-click").click(function(e) {
   $('.filter__show-more').click(function(e) {
     e.preventDefault();
     $(this).find('.show-more').toggle();
-    $(this).parents().find('.hidden').toggleClass('show');
+    $(this).parent().find('.hidden').toggleClass('show');
   });
 
 //////////////// фильтры на мобильном в попапе
@@ -362,5 +362,13 @@ $(".button--one-click").click(function(e) {
     $(this).parents('.bk_product').remove();
   });
 
+//////////////// Очистить избранное
+
+  $('.catalog-fav-clear').click(function(e) {
+    e.preventDefault();
+    $('.catalog-fav .product-item').remove();
+    $('.pagination').remove();
+    $('.button--more').remove();
+  });
 
 });

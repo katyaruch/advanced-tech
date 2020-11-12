@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+    
+    <section class="section">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">404</span>
+        </nav>
+
+        <div class="block-404">
+          <div class="block-404__left">
+            <h1 class="title">Страница не найдена</h1>
+            <a href="/" class="button">Перейти на главную</a>
+          </div>
+          <p class="block-404__right">404</p>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

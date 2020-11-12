@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+
+  <div class="content">
+
+    @@include('components/_header.html')
+
+    <section class="section">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Новости</span>
+        </nav>
+        <h1 class="title title--underline">Новости</h1>
+
+        <div class="news-list">
+          <div class="news-item">
+            <a href="/news-1.html" class="news-item__img">
+              <img class="lazyload" data-src="images/news/news-1.jpg" alt="1">
+            </a>
+            <span class="news-item__inner">
+              <span class="news-item__data">11 Апреля 2020</span>
+              <a href="/news-1.html" class="news-item__title">Старт продаж флагманов Huawei серии P40 без сервисов Google</a>
+              <p class="news-item__text">
+                В конце марта компания Huawei представила свои флагманы-камерофоны 2020 года: Huawei P40, P40 Pro и P40 Pro +, а 10 апреля в России стартуют официальные продажи первых двух моделей. 
+              </p>
+            </span>
+          </div>
+          <div class="news-item">
+            <a href="/news-1.html" class="news-item__img">
+              <img class="lazyload" data-src="images/news/news-2.jpg" alt="2">
+            </a>
+            <span class="news-item__inner">
+              <span class="news-item__data">13 марта 2020</span>
+              <a href="/news-1.html" class="news-item__title">В индии представлены Redmi Note 9 Pro и Note 9 Pro Max</a>
+              <p class="news-item__text">
+                В конце марта компания Huawei представила свои флагманы-камерофоны 2020 года: Huawei P40, P40 Pro и P40 Pro +, а 10 апреля в России стартуют официальные продажи первых двух моделей. 
+              </p>
+            </span>
+          </div>
+          <div class="news-item">
+            <a href="/news-1.html" class="news-item__img">
+              <img class="lazyload" data-src="images/news/news-3.jpg" alt="3">
+            </a>
+            <span class="news-item__inner">
+              <span class="news-item__data">11 Апреля 2020</span>
+              <a href="/news-1.html" class="news-item__title">Старт продаж флагманов Huawei серии P40 без сервисов Google</a>
+              <p class="news-item__text">
+                В конце марта компания Huawei представила свои флагманы-камерофоны 2020 года: Huawei P40, P40 Pro и P40 Pro +, а 10 апреля в России стартуют официальные продажи первых двух моделей. 
+              </p>
+            </span>
+          </div>
+          <div class="news-item">
+            <a href="/news-1.html" class="news-item__img">
+              <img class="lazyload" data-src="images/news/news-4.jpg" alt="4">
+            </a>
+            <span class="news-item__inner">
+              <span class="news-item__data">10 сентября 2020</span>
+              <a href="/news-1.html" class="news-item__title">Презентация Apple: iPhone 11, новые iPad и Apple Watch</a>
+              <p class="news-item__text">
+                В конце марта компания Huawei представила свои флагманы-камерофоны 2020 года: Huawei P40, P40 Pro и P40 Pro +, а 10 апреля в России стартуют официальные продажи первых двух моделей. 
+              </p>
+            </span>
+          </div>
+          <div class="news-item">
+            <a href="/news-1.html" class="news-item__img">
+              <img class="lazyload" data-src="images/news/news-5.jpg" alt="5">
+            </a>
+            <span class="news-item__inner">
+              <span class="news-item__data">29 августа 2020</span>
+              <a href="/news-1.html" class="news-item__title">Представлены Redmi Note 8 и Note 8 Pro</a>
+              <p class="news-item__text">
+                В конце марта компания Huawei представила свои флагманы-камерофоны 2020 года: Huawei P40, P40 Pro и P40 Pro +, а 10 апреля в России стартуют официальные продажи первых двух моделей. 
+              </p>
+            </span>
+          </div>
+        </div>
+        
+        <button class="button button--more">Показать еще</button>
+            <ul class="pagination">
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--start">В начало</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--prev">Назад</a></li>
+              <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">23</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--next">Вперёд</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--end">В конец</a></li>
+            </ul>
+      </div>
+    </section>
+
+  </div>
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

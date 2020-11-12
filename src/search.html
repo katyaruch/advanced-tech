@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+    
+    <div class="catalog">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Результаты поиска</span>
+        </nav>
+        <div class="catalog__top-line">
+          <h1 class="title">Результаты поиска</h1>
+          <span class="catalog__count">Товаров: 468</span>
+        </div>
+        
+        <div class="catalog__wrapper">
+          <aside class="filters">
+            <button class="popup__close">Закрыть</button>
+            <p class="filters__title">Фильтры</p>
+            <fieldset class="filter active">
+              <legend class="filter__title">Категория</legend>
+              <button class="filter__clear">Очистить</button>
+              <div class="filter__inner">
+                <form class="filter__search">
+                  <input type="text" placeholder="Поиск">
+                  <button class="filter__search-btn" type="submit">Поиск</button>
+                </form>
+                <div class="filter__checkbox-list">
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="1">
+                    <p class="filter__checkbox-btn">Смартфоны <span>468</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="2">
+                    <p class="filter__checkbox-btn">Защитные пленки и стекла <span>14</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="3">
+                    <p class="filter__checkbox-btn">Чехлы и сумки <span>22</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="4" checked>
+                    <p class="filter__checkbox-btn">Автомобильные зарядные устройства <span>13</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="5">
+                    <p class="filter__checkbox-btn">Аудио- и видеотехника <span>5</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="6">
+                    <p class="filter__checkbox-btn">Умный дом <span>2</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="category" value="7">
+                    <p class="filter__checkbox-btn">Компьютерная техника <span>22</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="category" value="1">
+                    <p class="filter__checkbox-btn">Смартфоны <span>468</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="category" value="2">
+                    <p class="filter__checkbox-btn">Защитные пленки и стекла <span>14</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="category" value="3">
+                    <p class="filter__checkbox-btn">Чехлы и сумки <span>22</span></p>
+                  </label>
+                </div>
+                <a href="#" class="filter__show-more">
+                  <span class="show-more">Показать еще</span>
+                  <span class="hidden">Свернуть</span>
+                </a>
+              </div>
+            </fieldset>
+            <fieldset class="filter active">
+              <legend class="filter__title">Наличие в магазинах</legend>
+              <div class="filter__inner">
+                <div class="filter__radio-list">
+                  <label>
+                    <input type="radio" name="in-stoke" value="">
+                    <span class="filter__radio-btn"> В наличии</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="in-stoke" value="" checked>
+                    <span class="filter__radio-btn"> В наличии и под заказ</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="in-stoke" value="">
+                    <span class="filter__radio-btn"> Все товары, включая отсутствующие в продаже</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter active">
+              <legend class="filter__title">Цена</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="1 999">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="126 999">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter active">
+              <legend class="filter__title">Производитель</legend>
+              <button class="filter__clear">Очистить</button>
+              <div class="filter__inner">
+                <form class="filter__search">
+                  <input type="text" placeholder="Поиск">
+                  <button class="filter__search-btn" type="submit">Поиск</button>
+                </form>
+                <div class="filter__checkbox-list">
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="0">
+                    <p class="filter__checkbox-btn">Все <span>468</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="Apple">
+                    <p class="filter__checkbox-btn">Apple <span>14</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="Asus">
+                    <p class="filter__checkbox-btn">Asus <span>22</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="Honor" checked>
+                    <p class="filter__checkbox-btn">Honor  <span>13</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="Lenovo">
+                    <p class="filter__checkbox-btn">Lenovo <span>5</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="LG">
+                    <p class="filter__checkbox-btn">LG <span>2</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="0">
+                    <p class="filter__checkbox-btn">Meizu <span>22</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="Apple">
+                    <p class="filter__checkbox-btn">Micromax <span>5</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="Asus">
+                    <p class="filter__checkbox-btn">Motorola <span>2</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="Honor" checked>
+                    <p class="filter__checkbox-btn">Nokia  <span>22</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="Lenovo">
+                    <p class="filter__checkbox-btn">One+ <span>5</span></p>
+                  </label>
+                  <label class="hidden">
+                    <input class="input" type="checkbox" name="brand" value="LG">
+                    <p class="filter__checkbox-btn">Philips <span>2</span></p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox" name="brand" value="Samsung">
+                    <p class="filter__checkbox-btn">Samsung <span>22</span></p>
+                  </label>
+                </div>
+                <a href="#" class="filter__show-more">
+                  <span class="show-more">Показать еще</span>
+                  <span class="hidden">Свернуть</span>
+                </a>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Встроенная память</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Разрешение экрана</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Оперативная память</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Год выпуска</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Емкость аккумулятора</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Операционная система</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Диагональ экрана</legend>
+              <div class="filter__inner">
+                <div class="filter__range">
+                  <label>
+                    <span class="filter__range-label">от</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                  <label>
+                    <span class="filter__range-label">до</span>
+                    <input class="input" type="text" placeholder="">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Бесконтактная оплата</legend>
+              <div class="filter__inner">
+                <div class="filter__checkbox-list">
+                  <label>
+                    <input class="input" type="checkbox">
+                    <p class="filter__checkbox-btn">Есть</p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox">
+                    <p class="filter__checkbox-btn">Нет</p>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter__title">Количество SIM-карт</legend>
+              <div class="filter__inner">
+                <div class="filter__checkbox-list">
+                  <label>
+                    <input class="input" type="checkbox">
+                    <p class="filter__checkbox-btn">1</p>
+                  </label>
+                  <label>
+                    <input class="input" type="checkbox">
+                    <p class="filter__checkbox-btn">2</p>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button class="button filters__clear">Сбросить фильтры</button>
+          </aside>
+          <div class="catalog__content">
+            <div class="filters-btn">Фильтры</div>
+            <div class="sort">
+              <a href="#" class="sort__item active">По цене</a>
+              <a href="#" class="sort__item">Новинки</a>
+              <a href="#" class="sort__item">Популярное</a>
+              <a href="#" class="sort__item">Рейтинг</a>
+            </div>
+             @@include('components/_product-list-9.html')
+
+            <button class="button button--more">Показать еще</button>
+            <ul class="pagination">
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--start">В начало</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--prev">Назад</a></li>
+              <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">23</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--next">Вперёд</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--end">В конец</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text">
+          Примесь, в согласии с традиционными представлениями, концентрирует тахионный взрыв. Расслоение, на первый взгляд, выталкивает осциллятор, тем самым открывая возможность цепочки квантовых превращений. При наступлении резонанса вещество однородно искажает вихрь. Вселенная доступна. Пульсар гомогенно вращает квант. Объект излучает межатомный экситон. Кварк по определению выталкивает осциллятор — все дальнейшее далеко выходит за рамки текущего исследования и не будет здесь рассматриваться. Плазменное образование упруго испускает циркулирующий солитон. Возмущение плотности, при адиабатическом изменении параметров, масштабирует векторный сверхпроводник. Туманность, как можно показать с помощью не совсем тривиальных вычислений, вертикально расщепляет плазменный атом. Колебание, в первом приближении, ненаблюдаемо. Лептон индуцирует адронный гамма-квант. Течение среды, в согласии с традиционными представлениями, мономолекулярно возбуждает экзотермический экситон, при этом дефект массы не образуется. Излучение заряжает гидродинамический удар. Взвесь когерентна. Молекула, в первом приближении, эксперментально верифицируема. Линза бифокально отталкивает луч. Еще в ранних работах Л. Д. Ландау показано, что плазменное образование асферично стабилизирует экситон. Любое возмущение затухает, если струя расщепляет квант независимо от расстояния до горизонта событий. Силовое поле восстанавливает короткоживущий солитон даже в случае сильных локальных возмущений среды. Расслоение искажает плоскополяризованный осциллятор. Химическое соединение возбуждает барионный поток, однозначно свидетельствуя о неустойчивости процесса в целом. В ряде недавних экспериментов колебание асферично притягивает вихрь. Мишень, как следует из совокупности экспериментальных наблюдений, расщепляет внутримолекулярный экситон. В соответствии с принципом неопределенности, объект квантуем.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

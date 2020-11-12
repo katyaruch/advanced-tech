@@ -30,19 +30,11 @@
     width: 30px;
     height: 30px;
     margin: auto;
+
+    path {
+      fill: #74CA5E;
+    }
   }
-
-  // &--login {
-  //   background-image: url("../images/icon-profile.svg");
-  // }
-
-  // &--compare {
-  //   background-image: url("../images/icon-compare.svg");
-  // }
-
-  // &--fav {
-  //   background-image: url("../images/icon-fav.svg");
-  // }
 
   &__count {
     position: absolute;

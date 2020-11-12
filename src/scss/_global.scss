@@ -101,12 +101,24 @@ input:focus {
   margin-bottom: 120px;
 }
 
-.changeable {
-  display: none;
-}
+.block-404 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.changeable.active {
-  display: block;
+  height: 100%;
+
+  &__left {
+    max-width: 310px;
+  }
+
+  &__right {
+    font-weight: bold;
+    font-size: 288px;
+    color: #103861;
+
+    opacity: 0.1;
+  }
 }
 
 
@@ -236,6 +248,21 @@ input:focus {
   .input {
     padding: 13px 15px;
   }
+
+  .block-404 {
+    flex-direction: column;
+    text-align: center;
+
+    &__left {
+      order: 2;
+    }
+
+    &__right {
+      font-size: 144px;
+      order: 1;
+    }
+  }
+
 }
 
 @media (max-width: 425px) {
