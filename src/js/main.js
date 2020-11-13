@@ -332,21 +332,51 @@ $(".button--one-click").click(function(e) {
 
 //////////////// вкладки точек самовывоза
 
-  $('.popup__buttons').slick({
-    slidesToShow: 5,
-    vertical: true,
-    variableWidth: true,
-    focusOnSelect: true,
-    asNavFor: '.popup__info-list',
-  });
+  if ($(window).width() > 768) { //только на десктопе
+    $('.popup__buttons').slick({
+      slidesToShow: 5,
+      vertical: true,
+      variableWidth: true,
+      focusOnSelect: true,
+      asNavFor: '.popup__info-list',
+    });
 
-  $('.popup__info-list').slick({
-    arrows: false,
-    slidesToShow: 1,
-    variableWidth: true,
-    focusOnSelect: true,
-    asNavFor: '.popup__buttons',
-  });
+    $('.popup__info-list').slick({
+      arrows: false,
+      slidesToShow: 1,
+      variableWidth: true,
+      focusOnSelect: true,
+      asNavFor: '.popup__buttons',
+    });
+
+    $('.pickup__buttons').slick({
+      slidesToShow: 5,
+      vertical: true,
+      variableWidth: true,
+      focusOnSelect: true,
+      asNavFor: '.pickup__info-list',
+    });
+
+    $('.pickup__info-list').slick({
+      arrows: false,
+      slidesToShow: 1,
+      // variableWidth: true,
+      focusOnSelect: true,
+      asNavFor: '.pickup__buttons',
+    });
+  }
+
+  if ($(window).width() <= 768) {
+    $('.pickup__info-item').addClass('popup');
+
+    $('.pickup__buttons .button').click(function(e) {
+      e.preventDefault();
+      $('body').addClass('overflow-h');
+
+      var id = $(this).attr('id');
+      $('.'+id).addClass('popup--open');
+    });
+  }
 
 //////////////// поле ввода количества товара https://jqueryui.com/spinner/
 

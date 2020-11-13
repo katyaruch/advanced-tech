@@ -1,0 +1,180 @@
+.pickup {
+  &__inner {
+    display: flex;
+  }
+
+  &__buttons {
+    // display: flex;
+    // flex-direction: column;
+    width: 370px;
+    height: 450px;
+    margin-right: 30px;
+
+    .button {
+      width: 370px;
+      height: 106px;
+      padding: 30px;
+      margin-bottom: 10px;
+
+      font-weight: 400;
+      color: #000000;
+      border: 1px solid #DAE1E7;
+    }
+
+    .button.active,
+    .slick-current .button {
+      font-weight: 500;
+      color: #025BB1;
+      border: 2px solid #025BB1;
+    }
+
+    .slick-slide {
+      width: 370px;
+      height: 106px;
+      margin-bottom: 10px;
+
+      // height: auto;
+    }
+
+    .slick-track {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: 65%;
+  }
+
+  &__info-list {
+    // max-width: 710px;
+  }
+
+  &__subtitle,
+  &__address {
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__line {
+    display: flex;
+  }
+
+  &__col {
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #DAE1E7;
+    }
+  }
+
+  &__days {
+    display: block;
+    margin-bottom: 5px;
+
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.45;
+    opacity: 0.7;
+  }
+
+  &__time {
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+
+  &__map {
+    margin: 20px 0;
+    border-radius: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .pickup {
+    &__buttons {
+      width: 100%;
+      margin-right: 0;
+
+      .button {
+        width: inherit;
+      }
+    }
+
+    &__info-item {
+      display: none;
+
+      position: fixed;
+      // height: 100%;
+
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__info-item.popup--open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__subtitle {
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 600;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+
+    &__address {
+      display: block;
+      font-size: 15px;
+    }
+
+    &__title {
+      order: 2;
+    }
+
+    &__line {
+      order: 3;
+    }
+
+    &__map {
+      order: 1;
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  .pickup__col:first-of-type {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .pickup__title {
+    font-size: 12px;
+  }
+
+  .pickup__days {
+    font-size: 12px;
+  }
+
+  .pickup__time {
+    font-size: 16px;
+  }
+}

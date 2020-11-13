@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+    
+    <section class="section">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Контакты</span>
+        </nav>
+        <h1 class="title title--underline">Контакты</h1>
+        
+        <div class="contacts__block pickup">
+          <h2>Пункты самовывоза в Санкт-Петербурге</h2>
+          <div class="pickup__inner">
+            <div class="pickup__buttons">
+              <button class="button" id="pickup-1">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+              <button class="button" id="pickup-2">Загородный проспект, дом 30/3, напротив ресторана Mama Roma</button>
+              <button class="button" id="pickup-3">Загородный проспект, дом 30/4, напротив ресторана Mama Roma</button>
+              <button class="button" id="pickup-4">Загородный проспект, дом 30/5, напротив ресторана Mama Roma</button>
+            </div>
+            <div class="pickup__info">
+              <div class="pickup__info-list">
+                <div class="pickup__info-item pickup-1">
+                  <button class="popup__close">Закрыть</button>
+                  <p class="pickup__subtitle">Точка самовывоза</p>
+                  <p class="pickup__address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+                  <p class="pickup__title">Режим работы пункта самовывоза</p>
+                  <div class="pickup__line">
+                    <div class="pickup__col">
+                      <span class="pickup__days">Будние дни</span>
+                      <span class="pickup__time">10:00 – 20:00</span>
+                    </div>
+                    <div class="pickup__col">
+                      <span class="pickup__days">Выходные и праздники</span>
+                      <span class="pickup__time">11:00 – 19:00</span>
+                    </div>
+                  </div>
+                  <div class="pickup__map">
+                    <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                  </div>
+                </div>
+                <div class="pickup__info-item pickup-2">
+                  <button class="popup__close">Закрыть</button>
+                  <p class="pickup__subtitle">Точка самовывоза</p>
+                  <p class="pickup__address">Загородный проспект, дом 30/3, напротив ресторана Mama Roma</p>
+                  <p class="pickup__title">Режим работы пункта самовывоза</p>
+                  <div class="pickup__line">
+                    <div class="pickup__col">
+                      <span class="pickup__days">Будние дни</span>
+                      <span class="pickup__time">10:00 – 20:00</span>
+                    </div>
+                    <div class="pickup__col">
+                      <span class="pickup__days">Выходные и праздники</span>
+                      <span class="pickup__time">11:00 – 19:00</span>
+                    </div>
+                  </div>
+                  <div class="pickup__map">
+                    <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                  </div>
+                </div>
+                <div class="pickup__info-item pickup-3">
+                  <button class="popup__close">Закрыть</button>
+                  <p class="pickup__subtitle">Точка самовывоза</p>
+                  <p class="pickup__address">Загородный проспект, дом 30/4, напротив ресторана Mama Roma</p>
+                  <p class="pickup__title">Режим работы пункта самовывоза</p>
+                  <div class="pickup__line">
+                    <div class="pickup__col">
+                      <span class="pickup__days">Будние дни</span>
+                      <span class="pickup__time">10:00 – 20:00</span>
+                    </div>
+                    <div class="pickup__col">
+                      <span class="pickup__days">Выходные и праздники</span>
+                      <span class="pickup__time">11:00 – 19:00</span>
+                    </div>
+                  </div>
+                  <div class="pickup__map">
+                    <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                  </div>
+                </div>
+                <div class="pickup__info-item pickup-4">
+                  <button class="popup__close">Закрыть</button>
+                  <p class="pickup__subtitle">Точка самовывоза</p>
+                  <p class="pickup__address">Загородный проспект, дом 30/5, напротив ресторана Mama Roma</p>
+                  <p class="pickup__title">Режим работы пункта самовывоза</p>
+                  <div class="pickup__line">
+                    <div class="pickup__col">
+                      <span class="pickup__days">Будние дни</span>
+                      <span class="pickup__time">10:00 – 20:00</span>
+                    </div>
+                    <div class="pickup__col">
+                      <span class="pickup__days">Выходные и праздники</span>
+                      <span class="pickup__time">11:00 – 19:00</span>
+                    </div>
+                  </div>
+                  <div class="pickup__map">
+                    <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__block">
+          <div class="contacts__col">
+            <h2>Позвоните</h2>
+            <a href="+78127704045" class="contacts__tel">+7 (812) 770-40-45</a>
+            <a href="+79217507881" class="contacts__tel">+7 (921) 750-78-81</a>
+          </div>
+          <div class="contacts__col">
+            <h2>Напишите</h2>
+            <a href="#" class="contacts__btn contacts__btn--email">
+              @@include('images/icon-email.svg')
+              Напишите нам на Email
+            </a>
+            <a href="#" class="contacts__btn contacts__btn--wa">
+              @@include('images/icon-wa.svg')
+              Напишите нам в WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="requisites">
+          <h2>Реквизиты</h2>
+          <div class="contacts__col">
+            <p class="small">При оплате товара юрлицами</p>
+            <p>ООО «ЭйТи»</p>
+
+            <p class="small">ИНН</p>
+            <p>7806461401</p>
+
+            <p class="small">КПП</p>
+            <p>780601001</p>
+
+            <p class="small">ОГРН</p>
+            <p>1117847369518</p>
+
+            <p class="small">Генеральный директор</p>
+            <p>Адамов А. А.</p>
+          </div>
+          <div class="contacts__col">
+            <p class="small">Розничные продажи</p>
+            <p>ООО «ЭйТи»</p>
+
+            <p class="small">ИНН</p>
+            <p>780242470453</p>
+
+            <p class="small">ОГРНИП</p>
+            <p>315784700089377</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>
