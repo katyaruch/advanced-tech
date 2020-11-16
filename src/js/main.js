@@ -366,7 +366,7 @@ $(".button--one-click").click(function(e) {
     });
   }
 
-  if ($(window).width() <= 768) {
+  if ($(window).width() <= 768) { //только на мобильном
     $('.pickup__info-item').addClass('popup');
 
     $('.pickup__buttons .button').click(function(e) {
