@@ -22,6 +22,7 @@
 
 .delivery-row {
   display: flex;
+  justify-content: space-between;
   // flex-wrap: wrap;
 }
 
@@ -38,6 +39,7 @@
 
 .delivery-info {
   margin-right: 30px;
+  flex-grow: 1;
 
   p {
     margin-bottom: 10px;
@@ -51,6 +53,126 @@
 
   &:last-child {
     border: none;
+  }
+}
+
+.delivery-list-city {
+  display: block;
+  width: 100%;
+  max-height: 680px;
+  padding: 20px 0 30px;
+  margin-top: 10px;
+
+  list-style: none;
+  border-top: 1px solid #DAE1E7;
+  columns: 2;
+
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 24px;
+  }
+
+  .letter {
+    position: absolute;
+    top: 9px;
+    left: 0;
+
+    font-weight: bold;
+    font-size: 16px;
+    color: #103861;
+  }
+}
+
+.delivery-city {
+  position: relative;
+  display: inline-block;
+  padding: 9px 27px 9px 9px;
+  border-radius: 10px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    // margin-left: 8px;
+
+    background: #E0E0E0;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &.zona-2:after {
+    background: #56CCF2;
+  }
+
+  &.zona-3:after {
+    background: #BB6BD9;
+  }
+
+  &:hover {
+    background: #F1F1F1;
+  }
+}
+
+
+.delivery-list-zones {
+  display: flex;
+  list-style: none;
+
+  .delivery-zona {
+    position: relative;
+    padding: 0 30px 0 40px;
+    border: none;
+  }
+
+  .delivery-zona:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 29px;
+    height: 29px;
+
+    background: #E0E0E0;
+    border-radius: 50%;
+  }
+
+  .delivery-zona-2:before {
+    background: #56CCF2;
+  }
+
+  .delivery-zona-3:before {
+    background: #BB6BD9;
+  }
+}
+
+.delivery-zona-title {
+  margin-bottom: 13px;
+
+  font-weight: 600;
+  font-size: 18px;
+  color: #103861;
+}
+
+.delivery-zona-price {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 145%;
+  color: rgba(#000000, .7);
+
+  .value {
+    margin-right: 11px;
+    font-weight: 500;
+    color: #103861;
   }
 }
 
@@ -109,5 +231,19 @@
 
   .delivery-zona {
     padding-right: 0;
+  }
+
+  .delivery-list-zones {
+    flex-wrap: wrap;
+
+    .delivery-zona {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .delivery-zona-title {
+      margin-bottom: 10px;
+      font-size: 14px
+    }
   }
 }

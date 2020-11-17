@@ -176,24 +176,24 @@ $(function () {
 
 //////////////// popup Подарок при покупке
 
-$(".label-gift").click(function(e) {
-  e.preventDefault();
-    $('.popup--gift').toggleClass('popup--open');
-});
+  $(".label-gift").click(function(e) {
+    e.preventDefault();
+      $('.popup--gift').toggleClass('popup--open');
+  });
 
 //////////////// popup Бесплатная доставка
 
-$(".label-delivery-free").click(function(e) {
-  e.preventDefault();
-    $('.popup--delivery-free').toggleClass('popup--open');
-});
+  $(".label-delivery-free").click(function(e) {
+    e.preventDefault();
+      $('.popup--delivery-free').toggleClass('popup--open');
+  });
 
 //////////////// popup Купить в 1 клик
 
-$(".button--one-click").click(function(e) {
-  e.preventDefault();
-    $('.popup--one-click').toggleClass('popup--open');
-});
+  $(".button--one-click").click(function(e) {
+    e.preventDefault();
+      $('.popup--one-click').toggleClass('popup--open');
+  });
 
 //////////////// закрыть popup
 
@@ -399,6 +399,13 @@ $(".button--one-click").click(function(e) {
     $('.catalog-fav .product-item').remove();
     $('.pagination').remove();
     $('.button--more').remove();
+  });
+
+
+  $(".select-city").click(function(e) {
+    e.preventDefault();
+      $('body').addClass('overflow-h');
+      $('.popup--delivery-city').toggleClass('popup--open');
   });
 
 });

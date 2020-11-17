@@ -15,9 +15,6 @@ let gulp = require("gulp"),
 	imagemin = require("gulp-imagemin"), //пережимает изображения
 	recompress = require("imagemin-jpeg-recompress"), //тоже пережимает, но лучше. Плагин для плагина
 	pngquant = require("imagemin-pngquant"),
-	webp = require('gulp-webp'),
-	webphtml = require('gulp-webp-html'),
-	// webpcss = require("gulp-webpcss"),
 	uglify = require("gulp-uglify"), //то же, что cssmin, только для js
 	concat = require("gulp-concat"), //склеивает css и js-файлы в один
 	del = require("del"), //удаляет указанные файлы и директории. Нужен для очистки перед билдом
@@ -79,7 +76,6 @@ gulp.task("scss", function () {
 				},
 			}),
 		)
-		// .pipe(webpcss())
 		.pipe(sourcemaps.write()) //записываем карту в итоговый файл
 		.pipe(gulp.dest("build/css")) //кладём итоговый файл в директорию build/css
 		.pipe(
@@ -159,48 +155,8 @@ gulp.task("html", function () {
 				basepath: "@file",
 			}),
 		)
-		// .pipe(webphtml())
 		.pipe(gulp.dest("build/"))
 		.pipe(size())
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		);
-});
-
-gulp.task("font-woff", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
-	return gulp
-		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
-		.pipe(ttf2woff())
-		.pipe(gulp.dest("build/fonts/"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		);
-});
-
-gulp.task("font-woff2", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
-	return gulp
-		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
-		.pipe(ttf2woff2())
-		.pipe(gulp.dest("build/fonts/"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		);
-});
-
-gulp.task("font-eot", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
-	return gulp
-		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
-		.pipe(ttf2eot())
-		.pipe(gulp.dest("build/fonts/"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -264,23 +220,6 @@ gulp.task("images", function () {
 		.pipe(size());
 });
 
-gulp.task("webp", function () {
-	return gulp
-		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico|webp)")
-		.pipe(size())
-		.pipe(webp({
-			quality: 75,
-			method: 6,
-		}))
-		.pipe(gulp.dest("build/images"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		)
-		.pipe(size())
-});
-
 gulp.task("deletefonts", function () {
 	//задачи для очистки директории со шрифтами в build. Нужна для того, чтобы удалить лишнее.
 	return del.sync("build/fonts/**/*.*");
@@ -295,32 +234,27 @@ gulp.task("watch", function () {
 	//Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
 	gulp.watch("src/scss/**/*.scss", gulp.parallel("scss"));
 	gulp.watch("src/**/*.html", gulp.parallel("html"));
-	gulp.watch(
-		"src/fonts/**/*.*",
-		gulp.parallel("font-woff", "font-woff2", "font-eot"),
-	);
 	gulp.watch("src/js/**/*.js", gulp.parallel("minjs", "js"));
-	gulp.watch("src/images/**/*.*", gulp.parallel("images", "webp"));
 });
 
-gulp.task("deploy", function () {
-	//грузим файлы на хостинг по FTP
-	return gulp.src("build/**").pipe(
-		rsync({
-			root: "build/", //откуда берём файлы
-			hostname: "yourLogin@yourIp", //ваш логин на хостинге@IPхостинга
-			destination: "sitePath", //папка, в которую будем загружать
-			//port: 25212, //порт, к которому пойдёт подключение. Нужна, если нестандартный порт
-			include: ["*.htaccess"], //файлы, которые нужно включить в передачу
-			exclude: ["**/Thumbs.db", "**/*.DS_Store"], //файлы, которые нужно исключить из передачи
-			recursive: true, //передавать все файлы и папки рекурсивно
-			archive: true, //режим архива
-			silent: false, //отключим ведение журнала
-			compress: true, //включим сжатие
-			progress: true, //выведем прогресс передачи в консоль
-		}),
-	);
-});
+// gulp.task("deploy", function () {
+// 	//грузим файлы на хостинг по FTP
+// 	return gulp.src("build/**").pipe(
+// 		rsync({
+// 			root: "build/", //откуда берём файлы
+// 			hostname: "yourLogin@yourIp", //ваш логин на хостинге@IPхостинга
+// 			destination: "sitePath", //папка, в которую будем загружать
+// 			//port: 25212, //порт, к которому пойдёт подключение. Нужна, если нестандартный порт
+// 			include: ["*.htaccess"], //файлы, которые нужно включить в передачу
+// 			exclude: ["**/Thumbs.db", "**/*.DS_Store"], //файлы, которые нужно исключить из передачи
+// 			recursive: true, //передавать все файлы и папки рекурсивно
+// 			archive: true, //режим архива
+// 			silent: false, //отключим ведение журнала
+// 			compress: true, //включим сжатие
+// 			progress: true, //выведем прогресс передачи в консоль
+// 		}),
+// 	);
+// });
 
 gulp.task("browser-sync", function () {
 	//настройки лайв-сервера
@@ -345,9 +279,6 @@ gulp.task(
 		"script",
 		"minjs",
 		"html",
-		// "font-woff",
-		// "font-eot",
-		// "font-woff2",
 		"images",
 	),
 ); //запускает все перечисленные задачи разом

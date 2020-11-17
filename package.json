@@ -4,7 +4,6 @@
   "description": "HTML5+CSS3 template for easy start website project'",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-webpcss": "^1.1.1",
     "jquery": "^3.4.1",
     "lazysizes": "^5.2.2",
     "mkdir": "0.0.2",
@@ -43,9 +42,6 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
-    "gulp-webp": "^4.0.1",
-    "gulp-webp-css": "^1.1.0",
-    "gulp-webp-html": "^1.0.2",
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^8.0.0",
     "replace": "^1.2.0",

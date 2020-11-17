@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+
+    <div class="section order">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Оформление заказа</span>
+        </nav>
+        <div class="order__top-line">
+          <h1 class="title">Оформление заказа</h1>
+          <button class="order__btn-cart">
+            Товаров: 3 • На сумму: 43 230 ₽
+          </button>
+        </div>
+        
+        <form>
+          <ol class="order-step-list">
+            <li class="order-step">
+              <p class="order-step__title">Персональная информация</p>
+              <div class="order-tabs">
+                <label class="order-tab">
+                  <input type="radio" name="client-type" value="individual" checked>
+                  <span class="order-tab__btn">Физическое лицо</span>
+                </label>
+                <label class="order-tab">
+                  <input type="radio" name="client-type" value="legal">
+                  <span class="order-tab__btn">Юридическо лицо</span>
+                </label>
+              </div>
+              <div class="order-fields">
+                <div class="order-field">
+                  <input class="input" type="text" placeholder="Имя" required>
+                  <label class="input-label">Имя</label>
+                  <span class="input-icon"></span>
+                </div>
+                <div class="order-field">
+                  <input class="input" type="tel" placeholder="Телефон" required>
+                  <label class="input-label">Телефон</label>
+                  <span class="input-icon"></span>
+                </div>
+                <div class="order-field">
+                  <input class="input" type="email" placeholder="Email" required>
+                  <label class="input-label">Email</label>
+                  <span class="input-icon"></span>
+                </div>
+              </div>
+              <a href="#" class="button button--login">Войти в личный кабинет</a>
+            </li>
+            <li class="order-step">
+              <p class="order-step__title">Способ получения</p>
+              <div class="order-fields">
+                <div class="order-field">
+                  <input class="input input-select select-city" placeholder="Выберите город" required readonly>
+                  <label class="input-label">Населенный пункт</label>
+                  <span class="input-icon"></span>
+                </div>
+              </div>
+            </li>
+            <li class="order-step">
+              <p class="order-step__title">Оплата</p>
+              <div class="order-tabs">
+                <label class="order-tab">
+                  <input type="radio" name="pay-type" value="cash" checked>
+                  <span class="order-tab__btn">Наличными при получении</span>
+                </label>
+              </div>
+              <div class="order-confirm">
+                <button class="button button--fill" disabled>Подтвердить заказ</button>
+                <p class="order-agree">Подтверждая заказ, вы соглашаетесь с условиями 
+                  <a href="#">политики конфиденциальности</a>
+                   и 
+                  <a href="#">правилами продажи</a>
+                </p>
+              </div>
+            </li>
+          </ol>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup--delivery-city">
+      <button class="popup__close">Закрыть</button>
+      <h2>Доставка по всем городам России</h2>
+      <p class="subtitle">Введите название населенного пункта в строке поиска:</p>
+      <form class="search-form">
+        <div class="search">
+          <input type="text" placeholder="Поиск по городам России" class="input">
+          <button class="search__btn" type="search">Поиск</button>
+        </div>
+        <div class="search-help">
+          <span class="search-help__text">Например:</span>
+          <a href="#">Москва</a>
+          <a href="#">Новосибирск</a>
+          <a href="#">Екатеринбург</a>
+          <a href="#">Казань</a>
+          <a href="#">Нижний Новгород</a>
+          <a href="#">Челябинск</a>
+          <a href="#">Самара</a>
+          <a href="#">Омск</a>
+          <a href="#">Ростов-на-Дону</a>
+        </div>
+      </form>
+
+      <h3>Доставка по Санкт-Петербургу и пригородам</h3>
+      <p class="subtitle">Выберите населенный пункт:</p>
+      <div class="delivery-row">
+        <div class="delivery-info">
+          <a href="#" class="delivery-city zona-1">Санкт-Петербург</a>
+          <ul class="delivery-list-city">
+            <li>
+              <span class="letter">A</span>
+              <a href="#" class="delivery-city zona-2">Авиагородок</a>
+            </li>
+            <li>
+              <span class="letter">Б</span>
+              <a href="#" class="delivery-city zona-2">Бугры</a>
+            </li>
+            <li>
+              <span class="letter">В</span>
+              <a href="#" class="delivery-city zona-3">Всеволожск</a>
+            </li>
+            <li>
+              <span class="letter">Г</span>
+              <a href="#" class="delivery-city zona-2">Горелово</a>
+            </li>
+            <li>
+              <span class="letter">К</span>
+              <a href="#" class="delivery-city zona-3">Колпино</a>
+              <a href="#" class="delivery-city zona-3">Колтуши</a>
+              <a href="#" class="delivery-city zona-3">Красное Село</a>
+              <a href="#" class="delivery-city zona-3">Кронштадт</a>
+              <a href="#" class="delivery-city zona-2">Кудрово</a>
+            </li>
+            <li>
+              <span class="letter">Л</span>
+              <a href="#" class="delivery-city zona-2">Лахта</a>
+              <a href="#" class="delivery-city zona-3">Ленсоветовский</a>
+              <a href="#" class="delivery-city zona-3">Лисий Нос</a>
+              <a href="#" class="delivery-city zona-3">Ломоносов</a>
+            </li>
+            <li>
+              <span class="letter">М</span>
+              <a href="#" class="delivery-city zona-3">Металлострой</a>
+              <a href="#" class="delivery-city zona-2">Мурино</a>
+            </li>
+            <li>
+              <span class="letter">Н</span>
+              <a href="#" class="delivery-city zona-3">Новое Девяткино</a>
+            </li>
+            <li>
+              <span class="letter">О</span>
+              <a href="#" class="delivery-city zona-2">Ольгино</a>
+              <a href="#" class="delivery-city zona-3">Осиновая Роща</a>
+            </li>
+            <li>
+              <span class="letter">П</span>
+              <a href="#" class="delivery-city zona-3">Павловск</a>
+              <a href="#" class="delivery-city zona-2">Парголово (до КАД)</a>
+              <a href="#" class="delivery-city zona-3">Парголово (за КАД)</a>
+              <a href="#" class="delivery-city zona-3">Песочный</a>
+              <a href="#" class="delivery-city zona-3">Петергоф</a>
+              <a href="#" class="delivery-city zona-3">Петродворец</a>
+              <a href="#" class="delivery-city zona-3">Пушкин</a>
+            </li>
+            <li>
+              <span class="letter">С</span>
+              <a href="#" class="delivery-city zona-3">Свердлова</a>
+              <a href="#" class="delivery-city zona-3">Сертолово</a>
+              <a href="#" class="delivery-city zona-3">Сестрорецк</a>
+              <a href="#" class="delivery-city zona-3">Славянка</a>
+              <a href="#" class="delivery-city zona-3">Стрельна</a>
+            </li>
+            <li>
+              <span class="letter">Ш</span>
+              <a href="#" class="delivery-city zona-3">Шушары</a>
+              <a href="#" class="delivery-city zona-2">Шушары ближние</a>
+            </li>
+            <li>
+              <span class="letter">Я</span>
+              <a href="#" class="delivery-city zona-2">Янино-1</a>
+              <a href="#" class="delivery-city zona-3">Янино-2</a>
+            </li>
+          </ul>
+        </div>
+        <div class="delivery-map">
+          <img src="images/map-delivery-2.png" alt="Зона доставки">
+        </div>
+      </div>
+
+      <h3>Стоимость доставки</h3>
+      <ul class="delivery-list-zones">
+        <li class="delivery-zona delivery-zona-1">
+          <div class="delivery-zona-title">Первая зона</div>
+          <p class="delivery-zona-price">
+            <span class="value">290 ₽</span>
+            Стандартные товары
+          </p>
+          <p class="delivery-zona-price">
+            <span class="value">490 ₽</span>
+            Крупногабаритные товары
+          </p>
+        </li>
+        <li class="delivery-zona delivery-zona-2">
+          <div class="delivery-zona-title">Вторая зона</div>
+          <p class="delivery-zona-price">
+            <span class="value">390 ₽</span>
+            Стандартные товары
+          </p>
+          <p class="delivery-zona-price">
+            <span class="value">590 ₽</span>
+            Крупногабаритные товары
+          </p>
+        </li>
+        <li class="delivery-zona delivery-zona-3">
+          <div class="delivery-zona-title">Третья зона</div>
+          <p class="delivery-zona-price">
+            <span class="value">590 ₽</span>
+            Стандартные товары
+          </p>
+          <p class="delivery-zona-price">
+            <span class="value">790 ₽</span>
+            Крупногабаритные товары
+          </p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

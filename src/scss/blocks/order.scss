@@ -1,0 +1,291 @@
+.order {
+  &__top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn-cart {
+    font-weight: 500;
+    color: #103861;
+
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.order-step-list {
+  padding: 30px 0 0 15px;
+  border-top: 1px solid #DAE1E7;
+  counter-reset: myCounter;
+  list-style: none;
+}
+
+.order-step {
+  position: relative;
+  display: block;
+
+  padding: 0 0 60px 24px;
+  border-left: 1px solid #DAE1E7;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &:before {
+    counter-increment: myCounter;
+    content: counter(myCounter, decimal);
+    position: absolute;
+    top: 0;
+    left: -15px;
+
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: #103861;
+
+    border-radius: 50%;
+    border: 1px solid #DAE1E7;
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 24px;
+    color: #103861;
+  }
+
+  // .button {
+  //   margin-bottom: 20px;
+  // }
+}
+
+.order-tabs {
+
+}
+
+.order-tab {
+  display: inline-block;
+  margin: 0 10px 20px 0;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 15px;
+
+    font-weight: 500;
+    font-size: 13px;
+
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #DAE1E7;
+  }
+
+  input:checked + &__btn {
+    background: #DAE1E7;
+  }
+}
+
+.order-fields {
+  display: flex;
+
+  &:last-child .input {
+    margin-bottom: 0;
+  }
+}
+
+.order-field {
+  position: relative;
+  flex-grow: 1;
+  display: inline-block;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .input {
+    width: 100%;
+    padding: 34px 20px;
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+  }
+
+  .input:invalid {
+    padding: 34px 20px;
+  }
+
+  .input:valid {
+    padding: 48px 20px 20px;
+  }
+
+  .input-label {
+    position: absolute;
+    top: 34px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+
+    color: rgba(#000, 0);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input:valid + .input-label {
+    top: 18px;
+    color: rgba(#000, 1);
+  }
+
+  .input-icon {
+    display: block;
+  }
+}
+
+.input:required ~ .input-icon:before {
+  position: absolute;
+  top: 36px;
+  right: 20px;
+
+  content: "*";
+  font-size: 23px;
+  color: #025BB1;
+}
+
+.input-select {
+  cursor: pointer;
+
+  &:required ~ .input-icon:before {
+    right: 56px;
+  }
+
+  & ~ .input-icon:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    content: "";
+    width: 17px;
+    height: 8px;
+    background: url("../images/icon-arrow-filter.svg") no-repeat center / contain;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.order-agree {
+  display: inline-block;
+  max-width: 386px;
+  margin-left: 30px;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 145%;
+  vertical-align: middle;
+
+  a {
+    color: #025BB1;
+    vertical-align: top;
+  }
+}
+
+.order-confirm {
+  margin-top: 40px;
+
+  .button {
+    padding: 17px 61px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .order {
+    &__top-line {
+      flex-wrap: wrap;
+    }
+
+    &__btn-cart {
+      margin-bottom: 15px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+  }
+
+  .order-step {
+    padding: 0 0 40px 0;
+    border: none;
+
+    &__title {
+      padding: 4px 0 0 24px;
+      font-size: 18px;
+    }
+  }
+
+  .order-tab {
+    margin-bottom: 10px;
+  }
+
+  .order-fields {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .order-field {
+    margin-right: 0;
+
+    .input {
+      padding: 25px 20px;
+      margin-bottom: 10px;
+    }
+
+    .input:invalid {
+      padding: 25px 20px;
+    }
+
+    .input:valid {
+      padding: 35px 20px 15px;
+    }
+
+    .input-label {
+      top: 27px;
+    }
+
+    .input:valid + .input-label {
+      top: 15px;
+    }
+
+    .input:required ~ .input-icon:before {
+      top: 27px;
+
+      font-size: 17px;
+    }
+  }
+
+  .order-confirm {
+    margin-top: 30px;
+  }
+
+  .order-agree {
+    margin: 20px 0 0 0;
+    font-size: 12px;
+  }
+}

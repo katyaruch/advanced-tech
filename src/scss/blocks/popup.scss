@@ -304,9 +304,57 @@
 //   width: 1170px;
 // }
 
+.popup--delivery-city {
+  width: calc(100% - 40px);
+  max-width: 1290px;
+  height: calc(100% - 40px);
+  padding: 59px;
+  overflow-y: scroll;
+
+  h2,
+  h3 {
+    margin-bottom: 10px;
+    color: #103861;
+  }
+
+  .subtitle {
+    margin-bottom: 30px;
+    color: #103861;
+  }
+
+  .search-form {
+    margin: 40px 0 80px;
+  }
+
+  .search .input {
+    padding: 34px 30px;
+  }
+
+  .search-help {
+    padding-top: 10px;
+    &__text {
+      margin-right: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      color: #103861;
+    }
+
+    a {
+      margin-right: 19px;
+      border-bottom: 1px dashed #808080;
+    }
+  }
+
+  .delivery-row {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #DAE1E7;
+  }
+}
+
 .popup--one-click.popup--open,
 .popup--gift.popup--open,
-.popup--delivery-free.popup--open {
+.popup--delivery-free.popup--open,
+.popup--delivery-city.popup--open {
   position: fixed;
 
   top: 50%;
@@ -455,5 +503,29 @@
 
   .modal--pickup .popup {
     top: 10%;
+  }
+
+  .popup--delivery-city {
+    height: 100%;
+
+    h2 {
+      font-size: 30px
+    }
+
+    .subtitle {
+      margin-bottom: 20px;
+    }
+
+    .search-form {
+      margin: 15px 0 40px;
+    }
+
+    .search-help {
+      display: none;
+    }
+
+    .delivery-map {
+      order: 2;
+    }
   }
 }
