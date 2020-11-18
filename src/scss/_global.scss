@@ -70,7 +70,10 @@ input:focus {
 
 .hide {
   visibility: hidden;
+}
 
+.d-none {
+  display: none !important;
 }
 
 .sticky {

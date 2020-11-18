@@ -402,10 +402,64 @@ $(function () {
   });
 
 
+//////////////// Input not empty
+
+$(".input").on('input', function() {
+  if ($(this).val()) {
+    $(this).removeClass('input-empty');
+  } else {
+    $(this).addClass('input-empty');
+  }
+});
+
+//////////////// Popup выбора города получения
+
   $(".select-city").click(function(e) {
     e.preventDefault();
-      $('body').addClass('overflow-h');
-      $('.popup--delivery-city').toggleClass('popup--open');
+    $('body').addClass('overflow-h');
+    $('.popup--delivery-city').toggleClass('popup--open');
   });
 
+  $(".search-help a, .delivery-city").click(function(e) {
+    e.preventDefault();
+    var city = $(this).text();
+    $('.select-city, .search-city').val(city).removeClass('input-empty');
+    $('body').removeClass('overflow-h');
+    $('.tabs-cdek').removeClass('d-none');
+    $('.popup--delivery-city').removeClass('popup--open');
+  });
+
+//////////////// Если выбрана доставка курьером
+
+  $(".tabs-cdek input[name='delivery-type']").on('change', function() {
+    if ($("[value='courier']").is(':checked')) {
+      $('.field-pickup').addClass('d-none');
+      $('.fields-address').removeClass('d-none');
+    }
+    if ($("[value='pickup']").is(':checked')) {
+      $('.fields-address').addClass('d-none');
+      $('.field-pickup').removeClass('d-none');
+    }
+  });
+
+//////////////// Popup выбора пункта самовывоза
+
+  $(".select-pickup").click(function(e) {
+    e.preventDefault();
+    $('body').addClass('overflow-h');
+    $('.popup--delivery-pickup').toggleClass('popup--open');
+  });
+
+//////////////// Список/Карта пунктов на мобильном
+
+  $(".tabs-view input[name='view-type']").on('change', function() {
+    if ($("[value='list']").is(':checked')) {
+      $('.pickup__info').addClass('d-none');
+      $('.pickup__list').removeClass('d-none');
+    }
+    if ($("[value='map']").is(':checked')) {
+      $('.pickup__list').addClass('d-none');
+      $('.pickup__info').removeClass('d-none');
+    }
+  });
 });

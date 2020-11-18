@@ -304,7 +304,8 @@
 //   width: 1170px;
 // }
 
-.popup--delivery-city {
+.popup--delivery-city,
+.popup--delivery-pickup {
   width: calc(100% - 40px);
   max-width: 1290px;
   height: calc(100% - 40px);
@@ -351,10 +352,26 @@
   }
 }
 
+.popup--delivery-pickup {
+
+  .pickup__info {
+    width: 570px;
+  }
+
+  .search-form {
+    margin: 15px 0 30px;
+  }
+
+  .tabs-view {
+    display: none;
+  }
+}
+
 .popup--one-click.popup--open,
 .popup--gift.popup--open,
 .popup--delivery-free.popup--open,
-.popup--delivery-city.popup--open {
+.popup--delivery-city.popup--open,
+.popup--delivery-pickup.popup--open {
   position: fixed;
 
   top: 50%;
@@ -526,6 +543,32 @@
 
     .delivery-map {
       order: 2;
+    }
+  }
+
+  .popup--delivery-pickup,
+  .popup--delivery-city {
+
+    .pickup__info {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .search-form {
+      margin: 15px 0 10px;
+    }
+
+    .search .input {
+      padding: 25px 20px;
+    }
+
+    .search__btn {
+      width: 20px;
+      height: 20px;
+    }
+
+    .tabs-view {
+      display: flex;
     }
   }
 }

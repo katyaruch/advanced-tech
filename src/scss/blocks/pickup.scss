@@ -7,14 +7,13 @@
     // display: flex;
     // flex-direction: column;
     width: 370px;
-    height: 450px;
+    // height: 450px;
     margin-right: 30px;
 
     .button {
-      width: 370px;
-      height: 106px;
+      width: 100%;
       padding: 30px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
 
       font-weight: 400;
       color: #000000;
@@ -32,8 +31,6 @@
       width: 370px;
       height: 106px;
       margin-bottom: 10px;
-
-      // height: auto;
     }
 
     .slick-track {
@@ -42,8 +39,121 @@
     }
   }
 
+  &__list {
+    margin-right: 30px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    border: 1px solid #DAE1E7;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      border: 1px solid #025BB1;
+      box-shadow: 0px 0px 0px 1px #025BB1 inset;
+      background: #FCFCFD;
+    }
+  }
+
+  &__button-address {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__button-line {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-time {
+    margin-bottom: 12px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(#000, .5);
+  }
+
+  &__button-stock {
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(#000, .5);
+    border-left: 1px solid #DAE1E7;
+
+    svg {
+      display: inline-block;
+      margin-left: 5px;
+      width: 12px;
+      height: 12px;
+      vertical-align: top;
+    }
+  }
+
+  &__button-when {
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(#000, .7);
+
+    &:before {
+      content: "";
+
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+      transform: translateY(-2px);
+      background: url("../images/icon-time.svg") no-repeat center / contain;
+    }
+
+    .value {
+      font-weight: 500;
+    }
+  }
+
+  &__button-price {
+    padding-left: 10px;
+    margin-left: 10px;
+
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(#000, .7);
+    border-left: 1px solid #DAE1E7;
+
+    &:before {
+      content: "";
+
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+      transform: translateY(-2px);
+      background: url("../images/icon-ruble.svg") no-repeat center / contain;
+    }
+
+    .value {
+      font-weight: 500;
+    }
+  }
+
   &__info {
     max-width: 65%;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__info-list {
@@ -108,6 +218,11 @@
 
 @media (max-width: 768px) {
   .pickup {
+    &__inner {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
     &__buttons {
       width: 100%;
       margin-right: 0;
@@ -115,6 +230,39 @@
       .button {
         width: inherit;
       }
+    }
+
+    &__list {
+      margin-right: 0;
+    }
+
+    &__button {
+      padding: 15px;
+    }
+
+    &__button-line {
+      flex-wrap: wrap;
+    }
+
+    &__button-address {
+      margin-bottom: 8px;
+    }
+
+    &__button-stock {
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: 8px;
+      border: none;
+    }
+
+    &__button-when {
+      margin-bottom: 8px;
+    }
+
+    &__button-price {
+      margin-left: 0;
+      padding-left: 0;
+      border: none;
     }
 
     &__info-item {

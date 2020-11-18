@@ -235,6 +235,7 @@ gulp.task("watch", function () {
 	gulp.watch("src/scss/**/*.scss", gulp.parallel("scss"));
 	gulp.watch("src/**/*.html", gulp.parallel("html"));
 	gulp.watch("src/js/**/*.js", gulp.parallel("minjs", "js"));
+	gulp.watch("src/images/**/*.*", gulp.parallel("images"));
 });
 
 // gulp.task("deploy", function () {

@@ -615,17 +615,17 @@
               </div>
               <div class="order-fields">
                 <div class="order-field">
-                  <input class="input" type="text" placeholder="Имя" required>
+                  <input class="input input-empty" type="text" placeholder="Имя" required>
                   <label class="input-label">Имя</label>
                   <span class="input-icon"></span>
                 </div>
                 <div class="order-field">
-                  <input class="input" type="tel" placeholder="Телефон" required>
+                  <input class="input input-empty" type="tel" placeholder="Телефон" required>
                   <label class="input-label">Телефон</label>
                   <span class="input-icon"></span>
                 </div>
                 <div class="order-field">
-                  <input class="input" type="email" placeholder="Email" required>
+                  <input class="input input-empty" type="email" placeholder="Email" required>
                   <label class="input-label">Email</label>
                   <span class="input-icon"></span>
                 </div>
@@ -636,8 +636,53 @@
               <p class="order-step__title">Способ получения</p>
               <div class="order-fields">
                 <div class="order-field">
-                  <input class="input input-select select-city" placeholder="Выберите город" required readonly>
+                  <input class="input input-empty input-select select-city" placeholder="Выберите город" required>
                   <label class="input-label">Населенный пункт</label>
+                  <span class="input-icon"></span>
+                </div>
+              </div>
+              <div class="order-tabs tabs-cdek d-none">
+                <label class="order-tab">
+                  <input type="radio" name="delivery-type" value="courier">
+                  <span class="order-tab__btn">
+                    <img src="images/logo-cdek.png" alt="CDEK">
+                    Курьер
+                  </span>
+                </label>
+                <label class="order-tab">
+                  <input type="radio" name="delivery-type" value="pickup">
+                  <span class="order-tab__btn">
+                    <img src="images/logo-cdek.png" alt="CDEK">
+                    Самовывоз
+                  </span>
+                </label>
+              </div>
+              <div class="order-fields fields-address d-none">
+                <div class="order-field">
+                  <input class="input input-empty" type="text" placeholder="Улица" required>
+                  <label class="input-label">Улица</label>
+                  <span class="input-icon"></span>
+                </div>
+                <div class="order-field">
+                  <input class="input input-empty" type="text" placeholder="Дом" required>
+                  <label class="input-label">Дом</label>
+                  <span class="input-icon"></span>
+                </div>
+                <div class="order-field">
+                  <input class="input input-empty" type="text" placeholder="Квартира" required>
+                  <label class="input-label">Квартира</label>
+                  <span class="input-icon"></span>
+                </div>
+                <div class="order-field order-field-100">
+                  <input class="input input-empty" type="text" placeholder="Комментарий">
+                  <label class="input-label">Комментарий</label>
+                  <span class="input-icon"></span>
+                </div>
+              </div>
+              <div class="order-fields field-pickup d-none">
+                <div class="order-field">
+                  <input class="input input-empty input-select select-pickup" placeholder="Выберите пункт самовывоза" required>
+                  <label class="input-label">Пункт самовывоза</label>
                   <span class="input-icon"></span>
                 </div>
               </div>
@@ -670,7 +715,7 @@
       <p class="subtitle">Введите название населенного пункта в строке поиска:</p>
       <form class="search-form">
         <div class="search">
-          <input type="text" placeholder="Поиск по городам России" class="input">
+          <input type="text" placeholder="Поиск по городам России" class="input search-city">
           <button class="search__btn" type="search">Поиск</button>
         </div>
         <div class="search-help">
@@ -811,6 +856,113 @@
       </ul>
     </div>
 
+    <div class="popup popup--delivery-pickup">
+      <button class="popup__close">Закрыть</button>
+      <h2>Выбор пункта самовывоза</h2>
+      <form class="search-form">
+        <div class="search">
+          <input type="text" placeholder="Поиск по пунктам самовывоза" class="input search-pickup">
+          <button class="search__btn" type="search">Поиск</button>
+        </div>
+      </form>
+      <div class="order-tabs tabs-view">
+        <label class="order-tab">
+          <input type="radio" name="view-type" value="list" checked>
+          <span class="order-tab__btn">Список</span>
+        </label>
+        <label class="order-tab">
+          <input type="radio" name="view-type" value="map">
+          <span class="order-tab__btn">Карта</span>
+        </label>
+      </div>
+      <div class="pickup__inner">
+        <div class="pickup__list">
+          <div class="pickup__button" id="pickup-1">
+            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+            <div class="pickup__button-line">
+              <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+              <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="less" d="M6.392 15.9999C6.39193 14.3624 5.76838 12.7248 4.5218 11.4782C3.27508 10.2315 1.63748 9.60794 0 9.60794L1.225e-06 6C2.56194 6.00006 5.12414 6.97515 7.0745 8.9255C9.02486 10.8759 9.99987 13.438 10 16L6.392 15.9999Z" fill="#025BB1"/>
+<path d="M1.71097e-06 12L0 16L4 16C3.99975 14.9765 3.60924 13.9528 2.82822 13.1718C2.04714 12.3907 1.02351 12.0003 1.71097e-06 12Z" fill="#025BB1"/>
+<path class="more" d="M8.707 7.29293C11.1075 9.69341 12.3079 12.8465 12.3076 15.9999L16 16C16.0001 11.9006 14.4397 7.80148 11.3191 4.68092C8.19845 1.56022 4.09933 -0.000134128 0 8.6476e-09L6.60833e-05 3.69231C3.15339 3.69204 6.30659 4.89252 8.707 7.29293Z" fill="#025BB1"/>
+</svg>
+</span></span>
+            </div>
+            <div class="pickup__button-line">
+              <span class="pickup__button-when">Поступление: с 10 октября</span>
+              <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+            </div>
+          </div>
+          <div class="pickup__button" id="pickup-2">
+            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+            <div class="pickup__button-line">
+              <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+              <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="less" d="M6.392 15.9999C6.39193 14.3624 5.76838 12.7248 4.5218 11.4782C3.27508 10.2315 1.63748 9.60794 0 9.60794L1.225e-06 6C2.56194 6.00006 5.12414 6.97515 7.0745 8.9255C9.02486 10.8759 9.99987 13.438 10 16L6.392 15.9999Z" fill="#025BB1"/>
+<path d="M1.71097e-06 12L0 16L4 16C3.99975 14.9765 3.60924 13.9528 2.82822 13.1718C2.04714 12.3907 1.02351 12.0003 1.71097e-06 12Z" fill="#025BB1"/>
+<path class="more" d="M8.707 7.29293C11.1075 9.69341 12.3079 12.8465 12.3076 15.9999L16 16C16.0001 11.9006 14.4397 7.80148 11.3191 4.68092C8.19845 1.56022 4.09933 -0.000134128 0 8.6476e-09L6.60833e-05 3.69231C3.15339 3.69204 6.30659 4.89252 8.707 7.29293Z" fill="#025BB1"/>
+</svg>
+</span></span>
+            </div>
+            <div class="pickup__button-line">
+              <span class="pickup__button-when">Поступление: с 10 октября</span>
+              <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+            </div>
+          </div>
+          <div class="pickup__button" id="pickup-3">
+            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+            <div class="pickup__button-line">
+              <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+              <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="less" d="M6.392 15.9999C6.39193 14.3624 5.76838 12.7248 4.5218 11.4782C3.27508 10.2315 1.63748 9.60794 0 9.60794L1.225e-06 6C2.56194 6.00006 5.12414 6.97515 7.0745 8.9255C9.02486 10.8759 9.99987 13.438 10 16L6.392 15.9999Z" fill="#025BB1"/>
+<path d="M1.71097e-06 12L0 16L4 16C3.99975 14.9765 3.60924 13.9528 2.82822 13.1718C2.04714 12.3907 1.02351 12.0003 1.71097e-06 12Z" fill="#025BB1"/>
+<path class="more" d="M8.707 7.29293C11.1075 9.69341 12.3079 12.8465 12.3076 15.9999L16 16C16.0001 11.9006 14.4397 7.80148 11.3191 4.68092C8.19845 1.56022 4.09933 -0.000134128 0 8.6476e-09L6.60833e-05 3.69231C3.15339 3.69204 6.30659 4.89252 8.707 7.29293Z" fill="#025BB1"/>
+</svg>
+</span></span>
+            </div>
+            <div class="pickup__button-line">
+              <span class="pickup__button-when">Поступление: с 10 октября</span>
+              <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+            </div>
+          </div>
+          <div class="pickup__button" id="pickup-4">
+            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+            <div class="pickup__button-line">
+              <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+              <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="less" d="M6.392 15.9999C6.39193 14.3624 5.76838 12.7248 4.5218 11.4782C3.27508 10.2315 1.63748 9.60794 0 9.60794L1.225e-06 6C2.56194 6.00006 5.12414 6.97515 7.0745 8.9255C9.02486 10.8759 9.99987 13.438 10 16L6.392 15.9999Z" fill="#025BB1"/>
+<path d="M1.71097e-06 12L0 16L4 16C3.99975 14.9765 3.60924 13.9528 2.82822 13.1718C2.04714 12.3907 1.02351 12.0003 1.71097e-06 12Z" fill="#025BB1"/>
+<path class="more" d="M8.707 7.29293C11.1075 9.69341 12.3079 12.8465 12.3076 15.9999L16 16C16.0001 11.9006 14.4397 7.80148 11.3191 4.68092C8.19845 1.56022 4.09933 -0.000134128 0 8.6476e-09L6.60833e-05 3.69231C3.15339 3.69204 6.30659 4.89252 8.707 7.29293Z" fill="#025BB1"/>
+</svg>
+</span></span>
+            </div>
+            <div class="pickup__button-line">
+              <span class="pickup__button-when">Поступление: с 10 октября</span>
+              <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+            </div>
+          </div>
+          <div class="pickup__button" id="pickup-5">
+            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+            <div class="pickup__button-line">
+              <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+              <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="less" d="M6.392 15.9999C6.39193 14.3624 5.76838 12.7248 4.5218 11.4782C3.27508 10.2315 1.63748 9.60794 0 9.60794L1.225e-06 6C2.56194 6.00006 5.12414 6.97515 7.0745 8.9255C9.02486 10.8759 9.99987 13.438 10 16L6.392 15.9999Z" fill="#025BB1"/>
+<path d="M1.71097e-06 12L0 16L4 16C3.99975 14.9765 3.60924 13.9528 2.82822 13.1718C2.04714 12.3907 1.02351 12.0003 1.71097e-06 12Z" fill="#025BB1"/>
+<path class="more" d="M8.707 7.29293C11.1075 9.69341 12.3079 12.8465 12.3076 15.9999L16 16C16.0001 11.9006 14.4397 7.80148 11.3191 4.68092C8.19845 1.56022 4.09933 -0.000134128 0 8.6476e-09L6.60833e-05 3.69231C3.15339 3.69204 6.30659 4.89252 8.707 7.29293Z" fill="#025BB1"/>
+</svg>
+</span></span>
+            </div>
+            <div class="pickup__button-line">
+              <span class="pickup__button-when">Поступление: с 10 октября</span>
+              <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="pickup__info">
+          <img src="images/map-pickup-1.png" alt="Пункт самовывоза">
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="footer">
   <div class="footer__top">
