@@ -522,7 +522,8 @@
     top: 10%;
   }
 
-  .popup--delivery-city {
+  .popup--delivery-city,
+  .popup--delivery-pickup {
     height: 100%;
 
     h2 {
@@ -546,8 +547,8 @@
     }
   }
 
-  .popup--delivery-pickup,
-  .popup--delivery-city {
+  .popup--delivery-city,
+  .popup--delivery-pickup {
 
     .pickup__info {
       width: 100%;

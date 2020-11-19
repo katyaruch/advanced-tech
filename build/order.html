@@ -686,6 +686,8 @@
                   <span class="input-icon"></span>
                 </div>
               </div>
+              <div class="select-pickup-address d-none"></div>
+              <button class="button select-pickup d-none">Выбрать другую точку самовывоза</button>
             </li>
             <li class="order-step">
               <p class="order-step__title">Оплата</p>
@@ -694,6 +696,18 @@
                   <input type="radio" name="pay-type" value="cash" checked>
                   <span class="order-tab__btn">Наличными при получении</span>
                 </label>
+              </div>
+              <div class="order-total d-none">
+                <div class="order-total__title">Итого к оплате</div>
+                <div class="order-total__products-summ">
+                  Товары <span class="value">10 000 ₽</span>
+                </div>
+                <div class="order-total__pickup-summ">
+                  Самовывоз <span class="value">315 ₽</span>
+                </div>
+                <div class="order-total__total-summ">
+                  Итого <span class="value">10 315 ₽</span>
+                </div>
               </div>
               <div class="order-confirm">
                 <button class="button button--fill" disabled>Подтвердить заказ</button>
@@ -877,7 +891,7 @@
       </div>
       <div class="pickup__inner">
         <div class="pickup__list">
-          <div class="pickup__button" id="pickup-1">
+          <div class="pickup__button">
             <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
             <div class="pickup__button-line">
               <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
@@ -893,8 +907,8 @@
               <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
             </div>
           </div>
-          <div class="pickup__button" id="pickup-2">
-            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+          <div class="pickup__button">
+            <p class="pickup__button-address">Загородный проспект, дом 30/3, напротив ресторана Mama Roma</p>
             <div class="pickup__button-line">
               <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
               <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -909,8 +923,8 @@
               <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
             </div>
           </div>
-          <div class="pickup__button" id="pickup-3">
-            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+          <div class="pickup__button">
+            <p class="pickup__button-address">Загородный проспект, дом 30/4, напротив ресторана Mama Roma</p>
             <div class="pickup__button-line">
               <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
               <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -925,8 +939,8 @@
               <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
             </div>
           </div>
-          <div class="pickup__button" id="pickup-4">
-            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+          <div class="pickup__button">
+            <p class="pickup__button-address">Загородный проспект, дом 30/5, напротив ресторана Mama Roma</p>
             <div class="pickup__button-line">
               <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
               <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -941,8 +955,8 @@
               <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
             </div>
           </div>
-          <div class="pickup__button" id="pickup-5">
-            <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+          <div class="pickup__button">
+            <p class="pickup__button-address">Загородный проспект, дом 30/6, напротив ресторана Mama Roma</p>
             <div class="pickup__button-line">
               <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
               <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -62,9 +62,9 @@
     color: #103861;
   }
 
-  // .button {
-  //   margin-bottom: 20px;
-  // }
+  .button {
+    margin-top: 12px;
+  }
 }
 
 .order-tabs {
@@ -213,7 +213,7 @@
 
   & ~ .input-icon:after {
     position: absolute;
-    top: 50%;
+    top: 34px;
     right: 20px;
 
     content: "";
@@ -221,6 +221,75 @@
     height: 8px;
     background: url("../images/icon-arrow-filter.svg") no-repeat center / contain;
     transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.field-pickup {
+
+  .select-pickup {
+    color: rgba(#000,0);
+  }
+}
+
+.select-pickup-address {
+  position: relative;
+  top: -25px;
+  padding-bottom: 10px;
+
+  background: #FCFCFD;
+  border: 1px solid #DAE1E7;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+
+  .pickup__button {
+    margin-left: 20px;
+    width: auto;
+  }
+}
+
+.order-total {
+  display: inline-block;
+  width: 287px;
+  padding: 20px;
+  margin-top: 12px;
+
+  background: #FFFFFF;
+  border: 1px solid #DAE1E7;
+  border-radius: 15px;
+}
+
+.order-total__title {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  font-size: 18px;
+  color: #103861;
+  border-bottom: 1px solid #DAE1E7;
+}
+
+.order-total__products-summ,
+.order-total__pickup-summ  {
+  margin-bottom: 5px;
+  display: flex;
+  font-weight: 500;
+
+  .value {
+    margin-left: auto;
+    text-align: right;
+    opacity: 0.7;
+  }
+}
+
+.order-total__total-summ {
+  display: flex;
+  margin-top: 10px;
+  font-weight: bold;
+
+  .value {
+    margin-left: auto;
+    text-align: right;
+    opacity: 0.7;
   }
 }
 
@@ -264,12 +333,20 @@
     }
   }
 
+  .order-step-list {
+    padding-left: 0;
+  }
+
   .order-step {
     padding: 0 0 40px 0;
     border: none;
 
+    &:before {
+      left: 0;
+    }
+
     &__title {
-      padding: 4px 0 0 24px;
+      padding: 4px 0 0 40px;
       font-size: 18px;
     }
   }
@@ -279,7 +356,8 @@
   }
 
   .order-tab {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    margin: 5px;
   }
 
   .tabs-cdek .order-tab__btn {
@@ -296,17 +374,18 @@
   }
 
   .order-field {
-    margin-right: 0;
+    width: 100%;
+    margin: 5px 6px;
 
     .input {
       padding: 25px 20px;
     }
 
-    .input:invalid {
+    .input.input-empty {
       padding: 25px 20px;
     }
 
-    .input:valid {
+    .input {
       padding: 35px 20px 15px;
     }
 
@@ -322,6 +401,23 @@
       top: 27px;
 
       font-size: 17px;
+    }
+  }
+
+  // .select-pickup,
+  // .select-pickup ~ .input-label,
+  // .select-pickup ~ .input-icon {
+  //   display: none;
+  // }
+
+  .select-pickup-address {
+    position: static;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    .pickup__button {
+      margin: 5px 0 0 0;
     }
   }
 

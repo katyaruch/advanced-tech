@@ -462,4 +462,24 @@ $(".input").on('input', function() {
       $('.pickup__info').removeClass('d-none');
     }
   });
+
+  $(".pickup__button").click(function() {
+    var address = $(this).find(".pickup__button-address").text();
+    $('.select-pickup').removeClass('input-empty').val(address);
+    $('.select-pickup-address').removeClass('d-none').empty();
+    $(this).clone().appendTo('.select-pickup-address');
+    $('.order-total').removeClass('d-none');
+
+    $('body').removeClass('overflow-h');
+    $(".popup--delivery-pickup").removeClass('popup--open');
+  });
+
+
+  if ($(window).width() <= 768) {
+    $(".pickup__button").click(function() {
+      $('.button.select-pickup').removeClass('d-none');
+      $('.field-pickup').addClass('d-none');
+    });
+  }
+
 });
