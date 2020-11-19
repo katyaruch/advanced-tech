@@ -478,7 +478,7 @@ $(".input").on('input', function() {
   if ($(window).width() <= 768) {
     $(".pickup__button").click(function() {
       $('.button.select-pickup').removeClass('d-none');
-      $('.field-pickup').addClass('d-none');
+      $('.field-pickup .order-field').addClass('d-none');
     });
   }
 
