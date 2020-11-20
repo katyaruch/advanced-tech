@@ -186,6 +186,10 @@
 
 /////////////////////////////// Параметры и цена
 
+.product-rating-wrap {
+  margin-bottom: 15px;
+}
+
 .product-content {
   position: relative;
   margin-bottom: 50px;
@@ -250,8 +254,9 @@
 }
 
 .product-parameter {
+  display: inline-block;
   padding: 0;
-  margin: 30px 0 20px;
+  margin: 0 30px 20px 0;
   border: none;
 
   &__title {
@@ -283,7 +288,7 @@
 .product-region {
 
   input:checked + &__button {
-    border: 5px solid #DAE1E7;
+    border: 10px solid #DAE1E7;
   }
 
   &__button {
@@ -298,6 +303,14 @@
     cursor: pointer;
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+.product-parameter.product-color {
+  display: block;
+
+  .product-color__button {
+    margin-bottom: 0;
   }
 }
 
@@ -714,7 +727,8 @@
   }
 
   .product-parameter {
-    margin: 20px 0;
+    width: 100%;
+    margin: 0 0 20px 0;
 
     &__title {
       font-size: 14px;
