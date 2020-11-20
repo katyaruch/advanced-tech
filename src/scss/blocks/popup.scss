@@ -250,6 +250,10 @@
   }
 }
 
+.popup-wrapper {
+  position: relative;
+}
+
 .popup--about-tel {
   left: auto;
   right: 0;
@@ -438,7 +442,7 @@
 .popup--cart {
   right: -20px;
   left: auto;
-  top: 60px;
+  top: -10px;
 
   max-height: 558px;
   overflow-y: scroll;
@@ -591,7 +595,7 @@
   .popup--cart {
     right: 0;
     left: 0;
-    top: 80px;
+    top: 0;
 
     padding: 15px;
   }
