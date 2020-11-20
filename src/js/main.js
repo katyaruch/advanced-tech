@@ -450,6 +450,25 @@ $(".input").on('input', function() {
     $('.popup--delivery-pickup').toggleClass('popup--open');
   });
 
+  $(".pickup__button").click(function() {
+    var address = $(this).find(".pickup__button-address").text();
+    $('.select-pickup').removeClass('input-empty').val(address);
+    $('.select-pickup-address').removeClass('d-none').empty();
+    $(this).clone().appendTo('.select-pickup-address');
+    $('.order-total').removeClass('d-none');
+    $('.buton-confirm').removeAttr('disabled')
+
+    $('body').removeClass('overflow-h');
+    $(".popup--delivery-pickup").removeClass('popup--open');
+  });
+
+  if ($(window).width() <= 768) {
+    $(".pickup__button").click(function() {
+      $('.button.select-pickup').removeClass('d-none');
+      $('.field-pickup .order-field').addClass('d-none');
+    });
+  }
+
 //////////////// Список/Карта пунктов на мобильном
 
   $(".tabs-view input[name='view-type']").on('change', function() {
@@ -463,23 +482,11 @@ $(".input").on('input', function() {
     }
   });
 
-  $(".pickup__button").click(function() {
-    var address = $(this).find(".pickup__button-address").text();
-    $('.select-pickup').removeClass('input-empty').val(address);
-    $('.select-pickup-address').removeClass('d-none').empty();
-    $(this).clone().appendTo('.select-pickup-address');
-    $('.order-total').removeClass('d-none');
-
-    $('body').removeClass('overflow-h');
-    $(".popup--delivery-pickup").removeClass('popup--open');
+//////////////// Popup корзина на странице оформлении заказа
+  $(".order__btn-cart").click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('open');
+    $(".popup--cart").toggleClass('popup--open');
   });
-
-
-  if ($(window).width() <= 768) {
-    $(".pickup__button").click(function() {
-      $('.button.select-pickup').removeClass('d-none');
-      $('.field-pickup .order-field').addClass('d-none');
-    });
-  }
 
 });

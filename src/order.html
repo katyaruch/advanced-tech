@@ -14,9 +14,54 @@
         </nav>
         <div class="order__top-line">
           <h1 class="title">Оформление заказа</h1>
-          <button class="order__btn-cart">
+          <button class="order__btn-cart open">
             Товаров: 3 • На сумму: 43 230 ₽
           </button>
+          <div class="popup popup--cart">
+            <div class="cart-table cart-table--short">
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/samokat-thumb.png" alt="Электросамокат Xiaomi Mi Electric Scooter 1S">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Электросамокат Xiaomi Mi Electric Scooter 1S</a>
+                  <span class="price">
+                    <span>27 270</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/zte-thumb.png" alt="Смартфон ZTE Blade A7 (2020)">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Смартфон ZTE Blade A7 (2020)</a>
+                  <span class="price">
+                    <span>7 390</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/chehol.png" alt="Чехол-накладка Leather Cover для Samsung Galaxy S20 Ultra">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Чехол-накладка Leather Cover для Samsung Galaxy S20 Ultra</a>
+                  <span class="price-old">
+                    <span>2 990</span>
+                    <span class="ruble">₽</span>
+                    <span class="price-sale">-10%</span>
+                  </span>
+                  <span class="price">
+                    <span>2 691</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <form>
@@ -130,7 +175,7 @@
                 </div>
               </div>
               <div class="order-confirm">
-                <button class="button button--fill" disabled>Подтвердить заказ</button>
+                <a href="/order-success.html" class="button button--fill buton-confirm" disabled>Подтвердить заказ</a>
                 <p class="order-agree">Подтверждая заказ, вы соглашаетесь с условиями 
                   <a href="#">политики конфиденциальности</a>
                    и 

@@ -1,16 +1,43 @@
 .order {
   &__top-line {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__btn-cart {
+    position: relative;
+    padding: 0 0 0 30px;
     font-weight: 500;
     color: #103861;
 
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+      border: 1px solid #DAE1E7;
+      background-image: url("../images/icon-arrow-filter.svg");
+      background-position: bottom 6px center;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      transition: 0.5s;
+    }
+  }
+
+  &__btn-cart.open:before {
+    transform: rotate(0deg);
   }
 }
 
@@ -249,52 +276,6 @@
   }
 }
 
-.order-total {
-  display: inline-block;
-  width: 287px;
-  padding: 20px;
-  margin-top: 12px;
-
-  background: #FFFFFF;
-  border: 1px solid #DAE1E7;
-  border-radius: 15px;
-}
-
-.order-total__title {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-
-  font-weight: bold;
-  font-size: 18px;
-  color: #103861;
-  border-bottom: 1px solid #DAE1E7;
-}
-
-.order-total__products-summ,
-.order-total__pickup-summ  {
-  margin-bottom: 5px;
-  display: flex;
-  font-weight: 500;
-
-  .value {
-    margin-left: auto;
-    text-align: right;
-    opacity: 0.7;
-  }
-}
-
-.order-total__total-summ {
-  display: flex;
-  margin-top: 10px;
-  font-weight: bold;
-
-  .value {
-    margin-left: auto;
-    text-align: right;
-    opacity: 0.7;
-  }
-}
-
 .order-agree {
   display: inline-block;
   max-width: 386px;
@@ -316,6 +297,111 @@
 
   .button {
     padding: 17px 61px;
+  }
+}
+
+.order-total {
+  display: block;
+  padding: 30px;
+  margin-bottom: 30px;
+
+  background: #FFFFFF;
+  border: 1px solid #DAE1E7;
+  border-radius: 15px;
+
+  &__title {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    font-weight: bold;
+    font-size: 36px;
+    color: #103861;
+    border-bottom: 1px solid #DAE1E7;
+  }
+
+  &__products-summ,
+  &__pickup-summ  {
+    margin-bottom: 5px;
+    display: flex;
+    font-weight: 500;
+
+    .value {
+      margin-left: auto;
+      text-align: right;
+      opacity: 0.7;
+    }
+  }
+
+  &__total-summ {
+    display: flex;
+    margin-top: 10px;
+    font-weight: bold;
+
+    .value {
+      margin-left: auto;
+      text-align: right;
+      opacity: 0.7;
+    }
+  }
+
+  &__number {
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  &__text {
+    max-width: 466px;
+    opacity: 0.7;
+  }
+
+  &__table {
+    font-size: 18px;
+
+    th {
+      width: 220px;
+      padding: 0 30px 20px 0;
+
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td {
+      padding-bottom: 20px;
+      line-height: 145%;
+      vertical-align: top;
+      color: rgba(#000, 0.7);
+    }
+
+    tr:last-child th,
+    tr:last-child td {
+      padding-bottom: 0;
+    }
+  }
+
+  .pickup__button {
+    width: auto;
+    margin-left: 220px;
+
+    &:hover {
+      box-shadow: none;
+      border-color: #DAE1E7;
+    }
+  }
+}
+
+.order-step {
+  .order-total {
+    width: 287px;
+    padding: 20px;
+    margin: 12px 0 0;
+
+    &__title {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      font-size: 18px;
+    }
   }
 }
 
@@ -409,12 +495,6 @@
     top: 34px;
   }
 
-  // .select-pickup,
-  // .select-pickup ~ .input-label,
-  // .select-pickup ~ .input-icon {
-  //   display: none;
-  // }
-
   .select-pickup-address {
     position: static;
     padding: 0;
@@ -433,5 +513,33 @@
   .order-agree {
     margin: 20px 0 0 0;
     font-size: 12px;
+  }
+
+  .order-total {
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+
+    &__title {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      font-size: 24px;
+    }
+
+    &__number {
+      font-size: 24px;
+    }
+
+    &__table th,
+    &__table td {
+      width: 50%;
+      padding-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .pickup__button {
+      margin-left: 0;
+    }
   }
 }

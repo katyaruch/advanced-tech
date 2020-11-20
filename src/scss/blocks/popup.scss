@@ -356,6 +356,7 @@
 
   .pickup__info {
     width: 570px;
+    max-width: 100%
   }
 
   .search-form {
@@ -432,6 +433,16 @@
     max-width: 1170px;
     margin: auto;
   }
+}
+
+.popup--cart {
+  right: -20px;
+  left: auto;
+  top: 60px;
+
+  max-height: 558px;
+  overflow-y: scroll;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -571,5 +582,13 @@
     .tabs-view {
       display: flex;
     }
+  }
+
+  .popup--cart {
+    right: 0;
+    left: 0;
+    top: 80px;
+
+    padding: 15px;
   }
 }

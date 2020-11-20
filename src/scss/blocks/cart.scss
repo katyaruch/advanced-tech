@@ -45,7 +45,7 @@
   }
 
   .cart-table-name {
-    display: inline-block;
+    display: block;
     font-weight: 600;
     font-size: 16px;
     line-height: 145%;
@@ -208,9 +208,27 @@
   width: 100px;
   height: 100px;
   margin-right: 20px;
+  flex-shrink: 0;
 
   img {
     width: 100%;
+  }
+}
+
+.cart-table--short {
+  margin: 0 0 15px;
+  
+  .cart-table-row {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .cart-table-name {
+    margin-bottom: 10px;
   }
 }
 
@@ -340,7 +358,6 @@
   padding: 14px 0 0 120px;
 
   .cart-table-name {
-    display: block;
     margin-bottom: 15px;
   }
 
@@ -472,5 +489,17 @@
 
   .cart-table-gift-text {
     margin-bottom: 5px;
+  }
+
+
+  .cart-table--short {
+    .cart-table-name {
+      margin-bottom: 5px;
+      font-size: 12px
+    }
+    .price,
+    .price-old {
+      font-size: 12px
+    }
   }
 }

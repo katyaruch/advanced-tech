@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  <div class="content">
+    @@include('components/_header.html')
+
+    <div class="section order">
+      <div class="container">
+        <nav class="page-nav">
+          <a class="page-nav__item" href="/">Главная</a>
+          <span class="page-nav__item">Оформление заказа</span>
+        </nav>
+        <h1 class="title title--underline">Заказ оформлен</h1>
+        
+        <div class="order-total">
+          <div class="order-total__title">Номер</div>
+          <div class="order-total__number">61991</div>
+          <div class="order-total__text">Мы свяжемся с вами в течение 1 часа в рабочее время для подтверждения заказа и уточнения деталей</div>
+        </div>
+        <div class="order-total">
+          <div class="order-total__title">Информация</div>
+          <table class="order-total__table">
+            <tr>
+              <th>Населенный пункт</th>
+              <td>Москва</td>
+            </tr>
+            <tr>
+              <th>Оплата</th>
+              <td>Наличными при получении</td>
+            </tr>
+            <tr>
+              <th>Способ получения</th>
+              <td>Доставка курьером</td>
+            </tr>
+            <tr>
+              <th>Улица</th>
+              <td>Ленина</td>
+            </tr>
+            <tr>
+              <th>Дом</th>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th>Квартира</th>
+              <td>10</td>
+            </tr>
+            <!-- В пункте самовывоза -->
+            <tr>
+              <th>Способ получения</th>
+              <td>В пункте самовывоза</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="pickup__button">
+                  <p class="pickup__button-address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+                  <div class="pickup__button-line">
+                    <span class="pickup__button-time">Пн-Сб с 10:00 до 20:00, Вс с 10:00 до 19:00</span>
+                    <span class="pickup__button-stock">В наличии: <span class="value value-more10">больше 10 @@include('images/icon-quantity.svg')</span></span>
+                  </div>
+                  <div class="pickup__button-line">
+                    <span class="pickup__button-when">Поступление: с 10 октября</span>
+                    <span class="pickup__button-price">Платный самовывоз: <span class="value">315 ₽</span></span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!--  -->
+            <tr>
+              <th>Комментарий</th>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum laoreet sapien et egestas. Cras suscipit nibh quis nunc iaculis maximus non quis nisl. Curabitur id risus a mi bibendum.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="order-total">
+          <div class="order-total__title">Состав заказа</div>
+            <div class="cart-table cart-table--short">
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/samokat-thumb.png" alt="Электросамокат Xiaomi Mi Electric Scooter 1S">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Электросамокат Xiaomi Mi Electric Scooter 1S</a>
+                  <span class="price">
+                    <span>27 270</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/zte-thumb.png" alt="Смартфон ZTE Blade A7 (2020)">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Смартфон ZTE Blade A7 (2020)</a>
+                  <span class="price">
+                    <span>7 390</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <div class="cart-table-row">
+                <a target="_blank" class="cart-table-image" href="#">
+                  <img src="images/products/chehol.png" alt="Чехол-накладка Leather Cover для Samsung Galaxy S20 Ultra">
+                </a>
+                <div>
+                  <a target="_blank" href="#" class="cart-table-name">Чехол-накладка Leather Cover для Samsung Galaxy S20 Ultra</a>
+                  <span class="price-old">
+                    <span>2 990</span>
+                    <span class="ruble">₽</span>
+                    <span class="price-sale">-10%</span>
+                  </span>
+                  <span class="price">
+                    <span>2 691</span>
+                    <span class="ruble">₽</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <table class="order-total__table">
+              <tr>
+                <th>Товаров</th>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th>Итого к оплате</th>
+                <td>43 230 ₽</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>
