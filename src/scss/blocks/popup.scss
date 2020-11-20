@@ -545,6 +545,10 @@
       margin-bottom: 20px;
     }
 
+    h3 + .subtitle {
+      font-size: 14px;
+    }
+
     .search-form {
       margin: 15px 0 40px;
     }
@@ -567,7 +571,7 @@
     }
 
     .search-form {
-      margin: 15px 0 10px;
+      margin: 15px 0 40px;
     }
 
     .search .input {

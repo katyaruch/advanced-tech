@@ -57,15 +57,24 @@
 }
 
 .delivery-list-city {
-  display: block;
+  display: flex;
   width: 100%;
-  max-height: 680px;
-  padding: 20px 0 30px;
+  // max-height: 680px;
+  padding: 20px 0 30px 0;
   margin-top: 10px;
 
   list-style: none;
   border-top: 1px solid #DAE1E7;
-  columns: 2;
+  // columns: 2;
+
+  &__col {
+    display: inline-block;
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   li {
     position: relative;
@@ -244,6 +253,20 @@
     .delivery-zona-title {
       margin-bottom: 10px;
       font-size: 14px
+    }
+  }
+
+  .delivery-list-city {
+    &__col {
+      margin-right: 20px;
+    }
+
+    li {
+      padding-left: 14px;
+    }
+
+    .letter {
+      top: 6px;
     }
   }
 }
