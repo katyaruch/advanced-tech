@@ -215,6 +215,19 @@
       border-radius: 20px;
     }
   }
+
+  &__photos {
+    display: flex;
+
+    a {
+      margin-right: 15px;
+    }
+
+    img {
+      // max-width: 30%;
+      margin-right: 15px;
+    }
+  }
 }
 
 

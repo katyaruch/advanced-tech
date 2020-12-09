@@ -32,9 +32,12 @@
 
       border: 1px solid #DAE1E7;
       border-radius: 10px;
+      cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &.active {
         border: 1px solid #025BB1;
+        box-shadow: 0 0 0 1px #025BB1;
       }
     }
   }

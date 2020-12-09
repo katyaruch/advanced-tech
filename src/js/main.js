@@ -108,101 +108,117 @@ $(function () {
     autoFocus: true,
   });
 
-//////////////// popup при наведении на телефон
 
-  $('.header__tel').mouseover(function(e) {
-    e.preventDefault();
-    $('.popup--about-tel').addClass('popup--open');
-  });
-  
-  $(document).mouseover(function(e) {
-    if (!$('.header__tel').is(e.target) // если наведение не по блоку
-        && $('.header__tel').has(e.target).length === 0 // и не по его дочерним элементам
-        && !$('.popup--about-tel').is(e.target)
-        && $('.popup--about-tel').has(e.target).length === 0) {
-      $('.popup--about-tel').removeClass('popup--open');
-    }
-  });
+// всплывающие окна
 
-//////////////// popup при наведении на преимущества
+  //////////////// popup при наведении на телефон
 
-  $('.main__benefit').mouseover(function(e) {
-    e.preventDefault();
-    $(this).find('.popup').addClass('popup--open');
-  });
-  
-  $(document).mouseover(function(e) {
-    if (!$('.main__benefit').is(e.target) // если наведение не по блоку
-        && $('.main__benefit').has(e.target).length === 0 // и не по его дочерним элементам
-        ) {
-      $('.popup--benefit').removeClass('popup--open');
-    }
-  });
+    $('.header__tel').mouseover(function(e) {
+      e.preventDefault();
+      $('.popup--about-tel').addClass('popup--open');
+    });
+    
+    $(document).mouseover(function(e) {
+      if (!$('.header__tel').is(e.target) // если наведение не по блоку
+          && $('.header__tel').has(e.target).length === 0 // и не по его дочерним элементам
+          && !$('.popup--about-tel').is(e.target)
+          && $('.popup--about-tel').has(e.target).length === 0) {
+        $('.popup--about-tel').removeClass('popup--open');
+      }
+    });
 
-//////////////// popup напомнить о дате анонса
+  //////////////// popup при наведении на преимущества
 
-  $('.button--remind').click(function(e) {
-    e.preventDefault();
-    $('.popup--remind').removeClass('popup--open');
-    $(this).next('.popup--remind').addClass('popup--open');
-  });
+    $('.main__benefit').mouseover(function(e) {
+      e.preventDefault();
+      $(this).find('.popup').addClass('popup--open');
+    });
+    
+    $(document).mouseover(function(e) {
+      if (!$('.main__benefit').is(e.target) // если наведение не по блоку
+          && $('.main__benefit').has(e.target).length === 0 // и не по его дочерним элементам
+          ) {
+        $('.popup--benefit').removeClass('popup--open');
+      }
+    });
 
-//////////////// popup АТ-Бонус
+  //////////////// popup напомнить о дате анонса
 
-  $('.product-bonus').click(function(e) {
-    e.preventDefault();
-    $('.popup--bonus').removeClass('popup--open');
-    $(this).next('.popup--bonus').addClass('popup--open');
-  });
+    $('.button--remind').click(function(e) {
+      e.preventDefault();
+      $('.popup--remind').toggleClass('popup--open');
+    });
 
-//////////////// popup--credit
+  //////////////// popup at-бонус
 
-  $('.product-card-credit').click(function(e) {
-    e.preventDefault();
-    $('.popup--credit').toggleClass('popup--open');
-  });
+    $('.product-bonus').click(function(e) {
+      e.preventDefault();
+      $('.popup--bonus').toggleClass('popup--open');
+    });
 
-//////////////// popup Точки для самовывоза
+  //////////////// popup--credit
 
-  $('.product-card-pickups').click(function(e) {
-    e.preventDefault();
-    $('.modal--pickup').toggleClass('modal--open');
-  });
+    $('.product-card-credit').click(function(e) {
+      e.preventDefault();
+      $('.popup--credit').toggleClass('popup--open');
+    });
 
-  $('.available').click(function(e) {
-    e.preventDefault();
-    $(this).next('.modal--pickup').addClass('modal--open');
-  });
+  //////////////// popup Точки для самовывоза
 
-//////////////// popup Подарок при покупке
+    $('.product-card-pickups').click(function(e) {
+      e.preventDefault();
+      $('.modal--pickup').toggleClass('modal--open');
+    });
 
-  $(".label-gift").click(function(e) {
-    e.preventDefault();
-      $('.popup--gift').toggleClass('popup--open');
-  });
+    $('.available').click(function(e) {
+      e.preventDefault();
+      $(this).next('.modal--pickup').addClass('modal--open');
+    });
 
-//////////////// popup Бесплатная доставка
+  //////////////// popup Подарок при покупке
 
-  $(".label-delivery-free").click(function(e) {
-    e.preventDefault();
+    $(".label-gift, .user-link--gift").click(function(e) {
+      e.preventDefault();
+        $('.popup--gift').toggleClass('popup--open');
+    });
+
+  //////////////// popup доставка
+
+    $(".product-card-delivery").click(function(e) {
+      e.preventDefault();
+      $('.popup--delivery').toggleClass('popup--open');
+    });
+
+  //////////////// popup Бесплатная доставка
+
+    $(".label-delivery-free").click(function(e) {
+      e.preventDefault();
       $('.popup--delivery-free').toggleClass('popup--open');
-  });
+    });
 
-//////////////// popup Купить в 1 клик
+  //////////////// popup Гарантия производителя
 
-  $(".button--one-click").click(function(e) {
-    e.preventDefault();
-      $('.popup--one-click').toggleClass('popup--open');
-  });
+    $(".product-card-garant").click(function(e) {
+      e.preventDefault();
+      $('.popup--garant').toggleClass('popup--open');
+    });
 
-//////////////// закрыть popup
+  //////////////// popup Купить в 1 клик
 
-  $('.popup__close').click(function(e) {
-    e.preventDefault();
-    $('body').removeClass('overflow-h');
-    $(this).parents('.modal').removeClass('modal--open');
-    $(this).parents('.popup').removeClass('popup--open');
-  });
+    $(".button--one-click").click(function(e) {
+      e.preventDefault();
+        $('.popup--one-click').toggleClass('popup--open');
+    });
+
+  //////////////// закрыть popup
+
+    $('.popup__close').click(function(e) {
+      e.preventDefault();
+      $('body').removeClass('overflow-h');
+      $(this).parents('.modal').removeClass('modal--open');
+      $(this).parents('.popup').removeClass('popup--open');
+    });
+
 
 //////////////// слайдер акций
 
@@ -236,257 +252,323 @@ $(function () {
     ]
   });
 
-//////////////// свернуть/раскрыть группу фильтра
 
-  $('.filter__title').click(function(e) {
-    e.preventDefault();
-    $(this).parent().toggleClass('active');
-  });
+// Фильтры каталога
 
-//////////////// очистить выбранный фильтр
+  //////////////// Выбрать тег
 
-  $('.filter__clear').click(function(e) {
-    e.preventDefault();
-    $(this).parent('.filter').find('input').prop('checked', false).val("");
-  });
-
-//////////////// очистить все фильтры
-
-  $('.filters__clear').click(function(e) {
-    e.preventDefault();
-    $(this).parent('.filters').find('input').prop('checked', false).val("");
-  });
-
-//////////////// свернуть/раскрыть скрытый список фильтра
-
-  $('.filter__show-more').click(function(e) {
-    e.preventDefault();
-    $(this).find('.show-more').toggle();
-    $(this).parent().find('.hidden').toggleClass('show');
-  });
-
-//////////////// фильтры на мобильном в попапе
-
-  if ($(window).width() <= 768) {
-    $('.filters').addClass('popup');
-
-    $('.filters-btn').click(function(e) {
+    $(".catalog__tag").click(function(e) {
       e.preventDefault();
-      $('body').addClass('overflow-h');
-      $('.filters').addClass('popup--open');
+      $('.catalog__tag').not(this).removeClass('active');
+      $(this).toggleClass('active');
     });
-  }
 
-//////////////// фото-слайдер товара
+  //////////////// свернуть/раскрыть группу фильтра
 
-  $('.product-big-photo').slick({
-    asNavFor: '.product-small-photos',
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 480,
-        dots: true,
-      }
-    ]
-  });
+    $('.filter__title').click(function(e) {
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+    });
 
-  $('.product-small-photos').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: 0,
-    focusOnSelect: true,
-    asNavFor: '.product-big-photo',
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: "unslick"
-      }
-    ]
-  });
+  //////////////// очистить выбранный фильтр
 
-//////////////// вкладки товара
+    $('.filter__clear').click(function(e) {
+      e.preventDefault();
+      $(this).parent('.filter').find('input').prop('checked', false).val("");
+    });
 
-  $('.product-tab-btn').click(function(e) {
-    e.preventDefault();
-    $(this).parent().find('.active').removeClass('active');
-    $(this).addClass('active');
-  });
+  //////////////// очистить все фильтры
+
+    $('.filters__clear').click(function(e) {
+      e.preventDefault();
+      $(this).parent('.filters').find('input').prop('checked', false).val("");
+    });
+
+  //////////////// свернуть/раскрыть скрытый список фильтра
+
+    $('.filter__show-more').click(function(e) {
+      e.preventDefault();
+      $(this).find('.show-more').toggle();
+      $(this).parent().find('.hidden').toggleClass('show');
+    });
+
+  //////////////// фильтры на мобильном в попапе
+
+    if ($(window).width() <= 768) {
+      $('.filters').addClass('popup');
+
+      $('.filters-btn').click(function(e) {
+        e.preventDefault();
+        $('body').addClass('overflow-h');
+        $('.filters').addClass('popup--open');
+      });
+    }
 
 
-  if ($(window).width() > 768) { 
-    $('.product-tab-btn:first-child').addClass('active');
-  }
+// Страница товара
 
-  if ($(window).width() <= 768) {
-    $('.product-tab').addClass('popup');
+  //////////////// фото-слайдер товара
+
+    $('.product-big-photo').slick({
+      asNavFor: '.product-small-photos',
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 480,
+          dots: true,
+        }
+      ]
+    });
+
+    $('.product-small-photos').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: 0,
+      focusOnSelect: true,
+      asNavFor: '.product-big-photo',
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: "unslick"
+        }
+      ]
+    });
+
+    $(".product-parameter-info").click(function(e) {
+      e.preventDefault();
+
+      $(this).next().addClass('popup--open')
+    });
+
+  //////////////// вкладки товара
+    $('.product-votes').click(function() {
+      $('.product-tab-btn').removeClass('active');
+      $('.product-tab-btn--responds').addClass('active');
+    });
 
     $('.product-tab-btn').click(function(e) {
-      $('body').addClass('overflow-h'); //без прокрутки тела сайта
+      e.preventDefault();
+      $(this).parent().find('.active').removeClass('active');
+      $(this).addClass('active');
     });
 
-    $('.product-tab .popup__close').click(function(e) {
-      $('.product-tab-btn').removeClass('active');
+
+    if ($(window).width() > 768) { 
+      $('.product-tab-btn:first-child').addClass('active');
+    }
+
+    if ($(window).width() <= 768) {
+      $('.product-tab').addClass('popup');
+
+      $('.product-tab-btn').click(function(e) {
+        $('body').addClass('overflow-h'); //без прокрутки тела сайта
+      });
+
+      $('.product-tab .popup__close').click(function(e) {
+        $('.product-tab-btn').removeClass('active');
+      });
+    }
+
+  //////////////// вкладки точек самовывоза
+
+    if ($(window).width() > 768) { //только на десктопе
+      $('.popup__buttons').slick({
+        slidesToShow: 5,
+        vertical: true,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.popup__info-list',
+      });
+
+      $('.popup__info-list').slick({
+        arrows: false,
+        slidesToShow: 1,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.popup__buttons',
+      });
+
+      $('.pickup__buttons').slick({
+        slidesToShow: 5,
+        vertical: true,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.pickup__info-list',
+      });
+
+      $('.pickup__info-list').slick({
+        arrows: false,
+        slidesToShow: 1,
+        // variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.pickup__buttons',
+      });
+    }
+
+    if ($(window).width() <= 768) { //только на мобильном
+      $('.pickup__info-item').addClass('popup');
+
+      $('.pickup__buttons .button').click(function(e) {
+        e.preventDefault();
+        $('body').addClass('overflow-h');
+
+        var id = $(this).attr('id');
+        $('.'+id).addClass('popup--open');
+      });
+    }
+
+
+  $(".dropdown-toggle").click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('dropdown-toggle--open');
+  });
+
+  $(".dropdown-menu li").click(function(e) {
+    e.preventDefault();
+    var select = $(this).text();
+    $(this).parents(".dropdown").find(".dropdown-toggle").text(select);
+
+    $(".dropdown-menu li").removeClass('active');
+    $(this).addClass('active');
+    $(".dropdown-toggle").removeClass('dropdown-toggle--open');
+  });
+
+// Корзина
+
+  //////////////// поле ввода количества товара https://jqueryui.com/spinner/
+
+    $('.cart-spinner').spinner({
+      min: 1,
+      max: 10,
     });
-  }
 
-//////////////// вкладки точек самовывоза
+  //////////////// удалить товар из корзины
 
-  if ($(window).width() > 768) { //только на десктопе
-    $('.popup__buttons').slick({
-      slidesToShow: 5,
-      vertical: true,
-      variableWidth: true,
-      focusOnSelect: true,
-      asNavFor: '.popup__info-list',
+    $('.cart-remove').click(function(e) {
+      e.preventDefault();
+      $(this).parents('.bk_product').remove();
     });
 
-    $('.popup__info-list').slick({
-      arrows: false,
-      slidesToShow: 1,
-      variableWidth: true,
-      focusOnSelect: true,
-      asNavFor: '.popup__buttons',
+  //////////////// Очистить избранное
+
+    $('.catalog-fav-clear').click(function(e) {
+      e.preventDefault();
+      $('.catalog-fav .product-item').remove();
+      $('.pagination').remove();
+      $('.button--more').remove();
     });
 
-    $('.pickup__buttons').slick({
-      slidesToShow: 5,
-      vertical: true,
-      variableWidth: true,
-      focusOnSelect: true,
-      asNavFor: '.pickup__info-list',
+
+// Страница оформления заказа
+
+  //////////////// если поле ввода текста не пустое
+
+    $(".input").on('input', function() {
+      if ($(this).val()) {
+        $(this).removeClass('input-empty');
+      } else {
+        $(this).addClass('input-empty');
+      }
     });
 
-    $('.pickup__info-list').slick({
-      arrows: false,
-      slidesToShow: 1,
-      // variableWidth: true,
-      focusOnSelect: true,
-      asNavFor: '.pickup__buttons',
-    });
-  }
+  //////////////// Popup выбора города получения
 
-  if ($(window).width() <= 768) { //только на мобильном
-    $('.pickup__info-item').addClass('popup');
-
-    $('.pickup__buttons .button').click(function(e) {
+    $(".select-city").click(function(e) {
       e.preventDefault();
       $('body').addClass('overflow-h');
-
-      var id = $(this).attr('id');
-      $('.'+id).addClass('popup--open');
+      $('.popup--delivery-city').toggleClass('popup--open');
     });
-  }
 
-//////////////// поле ввода количества товара https://jqueryui.com/spinner/
+    $(".search-help a, .delivery-city").click(function(e) {
+      e.preventDefault();
+      var city = $(this).text();
+      if (city == 'Санкт-Петербург') {
+        $('.order-our-courier').removeClass('d-none');
+      }
 
-  $('.cart-spinner').spinner({
-    min: 1,
-    max: 10,
-  });
+      $('.select-city, .search-city').val(city).removeClass('input-empty');
+      $('body').removeClass('overflow-h');
+      $('.tabs-method').removeClass('d-none');
+      $('.popup--delivery-city').removeClass('popup--open');
+    });
 
-//////////////// удалить товар из корзины
+  //////////////// Если выбрана доставка курьером
 
-  $('.cart-remove').click(function(e) {
-    e.preventDefault();
-    $(this).parents('.bk_product').remove();
-  });
+    $(".tabs-method input[name='delivery-type']").on('change', function() {
+      if ($("[value='our-courier'],[value='cdek-courier']").is(':checked')) {
+        $('.field-pickup').addClass('d-none');
+        $('.fields-address').removeClass('d-none');
+      }
+      if ($("[value='pickup']").is(':checked')) {
+        $('.fields-address').addClass('d-none');
+        $('.field-pickup').removeClass('d-none');
+      }
+    });
 
-//////////////// Очистить избранное
+  //////////////// Popup выбора пункта самовывоза
 
-  $('.catalog-fav-clear').click(function(e) {
-    e.preventDefault();
-    $('.catalog-fav .product-item').remove();
-    $('.pagination').remove();
-    $('.button--more').remove();
-  });
+    $(".select-pickup").click(function(e) {
+      e.preventDefault();
+      $('body').addClass('overflow-h');
+      $('.popup--delivery-pickup').toggleClass('popup--open');
+    });
 
-
-//////////////// Input not empty
-
-$(".input").on('input', function() {
-  if ($(this).val()) {
-    $(this).removeClass('input-empty');
-  } else {
-    $(this).addClass('input-empty');
-  }
-});
-
-//////////////// Popup выбора города получения
-
-  $(".select-city").click(function(e) {
-    e.preventDefault();
-    $('body').addClass('overflow-h');
-    $('.popup--delivery-city').toggleClass('popup--open');
-  });
-
-  $(".search-help a, .delivery-city").click(function(e) {
-    e.preventDefault();
-    var city = $(this).text();
-    $('.select-city, .search-city').val(city).removeClass('input-empty');
-    $('body').removeClass('overflow-h');
-    $('.tabs-cdek').removeClass('d-none');
-    $('.popup--delivery-city').removeClass('popup--open');
-  });
-
-//////////////// Если выбрана доставка курьером
-
-  $(".tabs-cdek input[name='delivery-type']").on('change', function() {
-    if ($("[value='courier']").is(':checked')) {
-      $('.field-pickup').addClass('d-none');
-      $('.fields-address').removeClass('d-none');
-    }
-    if ($("[value='pickup']").is(':checked')) {
-      $('.fields-address').addClass('d-none');
-      $('.field-pickup').removeClass('d-none');
-    }
-  });
-
-//////////////// Popup выбора пункта самовывоза
-
-  $(".select-pickup").click(function(e) {
-    e.preventDefault();
-    $('body').addClass('overflow-h');
-    $('.popup--delivery-pickup').toggleClass('popup--open');
-  });
-
-  $(".pickup__button").click(function() {
-    var address = $(this).find(".pickup__button-address").text();
-    $('.select-pickup').removeClass('input-empty').val(address);
-    $('.select-pickup-address').removeClass('d-none').empty();
-    $(this).clone().appendTo('.select-pickup-address');
-    $('.order-total').removeClass('d-none');
-    $('.buton-confirm').removeAttr('disabled')
-
-    $('body').removeClass('overflow-h');
-    $(".popup--delivery-pickup").removeClass('popup--open');
-  });
-
-  if ($(window).width() <= 768) {
     $(".pickup__button").click(function() {
-      $('.button.select-pickup').removeClass('d-none');
-      $('.field-pickup .order-field').addClass('d-none');
+      var address = $(this).find(".pickup__button-address").text();
+      $('.select-pickup').removeClass('input-empty').val(address);
+      $('.select-pickup-address').removeClass('d-none').empty();
+      $(this).clone().appendTo('.select-pickup-address');
+      $('.order-total').removeClass('d-none');
+      $('.buton-confirm').removeAttr('disabled')
+
+      $('body').removeClass('overflow-h');
+      $(".popup--delivery-pickup").removeClass('popup--open');
     });
-  }
 
-//////////////// Список/Карта пунктов на мобильном
-
-  $(".tabs-view input[name='view-type']").on('change', function() {
-    if ($("[value='list']").is(':checked')) {
-      $('.pickup__info').addClass('d-none');
-      $('.pickup__list').removeClass('d-none');
+    if ($(window).width() <= 768) {
+      $(".pickup__button").click(function() {
+        $('.button.select-pickup').removeClass('d-none');
+        $('.field-pickup .order-field').addClass('d-none');
+      });
     }
-    if ($("[value='map']").is(':checked')) {
-      $('.pickup__list').addClass('d-none');
-      $('.pickup__info').removeClass('d-none');
-    }
-  });
 
-//////////////// Popup корзина на странице оформлении заказа
-  $(".order__btn-cart").click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass('open');
-    $(".popup--cart").toggleClass('popup--open');
+  //////////////// Список/Карта пунктов на мобильном
+
+    $(".tabs-view input[name='view-type']").on('change', function() {
+      if ($("[value='list']").is(':checked')) {
+        $('.pickup__info').addClass('d-none');
+        $('.pickup__list').removeClass('d-none');
+      }
+      if ($("[value='map']").is(':checked')) {
+        $('.pickup__list').addClass('d-none');
+        $('.pickup__info').removeClass('d-none');
+      }
+    });
+
+  //////////////// Popup корзина на странице оформлении заказа
+    $(".order__btn-cart").click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('open');
+      $(".popup--cart").toggleClass('popup--open');
+    });
+
+
+// Контакты
+
+  $('.pickup__photos').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Загрузка #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось'
+    }
   });
 
 });

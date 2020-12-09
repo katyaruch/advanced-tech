@@ -125,10 +125,10 @@
           <div class="popup__block">
             <p class="popup__title">Обратитесь к нам с любым вопросом</p>
             <ol class="popup__list">
+              <li>Консультация по товарам и услугам</li>
               <li>Оформление заказа</li>
-              <li>Доставка, самовывоз и оплата</li>
-              <li>Гарантия и возврат</li>
-              <li>Любые другие вопросы</li>
+              <li>Гарантийное обслуживание и возврат</li>
+              <li>Другие вопросы о работе магазина</li>
             </ol>
             <button class="button button--stroke">Обратный звонок</button>
           </div>
@@ -806,8 +806,80 @@
     </div>
   </div>
 </footer>
+
+<!-- попап at-бонус -->
+<div class="popup popup--bonus">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">at-бонус</h4>
+  <p class="popup__text">Копите at-бонусы и расплачивайтесь ими по курсу 1 бонус = 1 ₽</p>
+  <a href="#" class="button">Подробнее</a>
+</div>
+
+<!-- попап Купить в 1 клик -->
+<div class="popup popup--one-click">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Купить в 1 клик</h4>
+  <p class="popup__text">Заполните данные и мы перезвоним вам, чтобы подтвердить заказ.</p>
+  <p class="popup__text-info">При покупке в 1 клик at-бонусы не сохраняются</p>
+
+  <form>
+    <input type="email" class="input" placeholder="Введите ваше имя">
+    <input type="tel" class="input" placeholder="Введите ваш телефон">
+    <a href="#" class="button button--fill">Купить в 1 клик</a>
+
+    <div class="popup__product-line">
+      <img class="product-img" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+      <div class="">
+        <a target="_blank" href="#" class="product-name">Смарт-часы Amazfit GTS A1914</a>
+        <span class="product-price">
+          8 570 <span class="ruble">₽</span>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- попап Подарок при покупке-->
+<div class="popup popup--gift">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Подарок при покупке</h4>
+  <div class="popup__product-line">
+    <img class="product-img" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+    <div class="">
+      <a target="_blank" href="#" class="product-name">Смарт-часы Amazfit GTS A1914</a>
+      <span class="product-price"><span class="price-old">
+        <span class="bk_price">2 990</span>
+          <span class="ruble">₽</span>
+          <span class="price-sale">-100%</span>
+        </span>
+        0 <span class="ruble">₽</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- попап Бесплaтная доставка -->
+<div class="popup popup--delivery-free">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Бесплaтная доставка по Санкт-Петербургу</h4>
+  <p class="popup__text">Для данного товара</p>
+</div>
+
+<!-- попап Уведомить о поступлении товара -->
+<div class="popup popup--remind">
+  <form>
+    <button class="popup__close">Закрыть</button>
+    <h4 class="popup__title">Напомним о поступлении товара</h4>
+    <p class="popup__text">Как только товар будет доступен для заказа, вы получите уведомление на email</p>
+    <input type="email" class="input" placeholder="Введите Email">
+    <button type="submit" class="button button--fill">Уведомить</button>
+  </form>
+</div>
   <script src="js/libs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
 
 <script src="js/main.min.js" async></script>
 </body>

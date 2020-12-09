@@ -52,7 +52,7 @@
               <div class="product-rating">
                 <div class="value" style="width: 80%;"></div>
               </div>
-              <span class="product-votes">23 отзыва</span>
+              <a href="#respondsTab" class="product-votes">23 отзыва</a>
             </div>
             <div class="user-nav">
               <a href="#" class="user-link user-link--fav">
@@ -85,7 +85,15 @@
               </div>
             </fieldset>
             <fieldset class="product-parameter product-region">
-              <legend class="product-parameter__title">Регион</legend>
+              <legend class="product-parameter__title">
+                Регион
+                <button class="product-parameter-info">@@include('images/icon-info.svg')</button>
+                <div class="popup">
+                  <button class="popup__close"></button>
+                  <p class="popup__title">Что за параметр «Регион»?</p>
+                  <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+              </legend>
               <label>
                 <input type="radio" name="product-region" checked>
                 <span class="product-region__button" style="background-image: url('/images/regions/russia.svg');"></span>
@@ -123,12 +131,6 @@
                       <span class="product-bonus__title">AT-Бонус</span>
                       <strong class="product-bonus__value">149 <span class="ruble">₽</span></strong>
                     </div>
-                    <div class="popup popup--bonus">
-                      <button class="popup__close">Закрыть</button>
-                      <h4 class="popup__title">АТ-Бонус</h4>
-                      <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                      <a href="#" class="button button--fill">Подробнее</a>
-                    </div>
                   </div>
                 </div>
                 <a class="button button--basket" href="#">Добавить в корзину</a>
@@ -164,8 +166,8 @@
                 <ul class="product-card-info">
                   <li class="product-card-info__item product-card-pickups">Доступен для самовывоза <span class="underline">в 2 точках</span>
                   </li>
-                  <li class="product-card-info__item">Доставка по СПб <span class="underline">от 100 ₽</span>
-                    <div class="popup">
+                  <li class="product-card-info__item">Доставка по СПб <span class="product-card-delivery underline">от 100 ₽</span>
+                    <div class="popup popup--delivery">
                       <button class="popup__close">Закрыть</button>
                       <p class="popup__title">Курьером</p>
                       <p class="popup__text">290 ₽ • Завтра 14 августа</p>
@@ -175,11 +177,17 @@
                       <p class="popup__text">От 500 ₽ • До 14 дней</p>
                     </div>
                   </li>
-                  <li class="product-card-info__item">Гарантия <span class="underline">производителя</span>: 12 месяцев
-                    <div class="popup">
+                  <li class="product-card-info__item">
+                    <!-- Гарантия <span class="product-card-garant underline">производителя</span>: 12 месяцев -->
+                    Гарантия <span class="product-card-garant underline">магазина</span>: <span class="nowrap">12 месяцев</span>
+                    <div class="popup popup--garant">
                       <button class="popup__close">Закрыть</button>
-                      <p class="popup__title">Гарантия производителя: 12 месяцев</p>
-                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p>
+                      <!-- <p class="popup__title">Гарантия производителя: 12 месяцев</p>
+                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p> -->
+
+                      <p class="popup__title">Гарантия магазина: 12 месяцев</p>
+                      <p class="popup__text">Наш магазин Advanced Tech берет на себя обязательства по ремонту приобретенного устройства</p>
+
                     </div>
                   </li>
                 </ul>
@@ -232,7 +240,7 @@
           <div class="product-tabs">
             <div class="product-tab-btn product-tab-btn--description">Описание</div>
             <div class="product-tab-btn product-tab-btn--specifications">Характеристики</div>
-            <div class="product-tab-btn product-tab-btn--responds">Отзывы <span>23</span></div>
+            <div id="respondsTab" class="product-tab-btn product-tab-btn--responds">Отзывы <span>23</span></div>
             <div class="product-tab-btn product-tab-btn--questions">Вопросы <span>6</span></div>
             <div class="product-tab-btn product-tab-btn--reviews">Обзоры <span>4</span></div>
             <div class="product-tab product-tab--description">

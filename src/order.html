@@ -108,9 +108,15 @@
                   <span class="input-icon"></span>
                 </div>
               </div>
-              <div class="order-tabs tabs-cdek d-none">
+              <div class="order-tabs tabs-method d-none">
+                <label class="order-tab order-our-courier d-none">
+                  <input type="radio" name="delivery-type" value="our-courier">
+                  <span class="order-tab__btn">
+                    Наш курьер
+                  </span>
+                </label>
                 <label class="order-tab">
-                  <input type="radio" name="delivery-type" value="courier">
+                  <input type="radio" name="delivery-type" value="cdek-courier">
                   <span class="order-tab__btn">
                     <img src="images/logo-cdek.png" alt="CDEK">
                     Курьер
@@ -161,7 +167,7 @@
               <div class="order-tabs">
                 <label class="order-tab">
                   <input type="radio" name="pay-type" value="cash" checked>
-                  <span class="order-tab__btn">Наличными при получении</span>
+                  <span class="order-tab__btn">Наличными</span>
                 </label>
               </div>
               <div class="order-total d-none">

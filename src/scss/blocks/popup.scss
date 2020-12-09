@@ -283,30 +283,32 @@
   }
 }
 
-.popup--remind {
-  top: auto;
-  left: 65%;
-  bottom: 67px;
-}
-
-.popup--bonus {
-  top: auto;
-  bottom: 46px;
-}
-
-.popup--credit {
-  top: 30px;
-  left: auto;
-  right: 0;
-}
-
-// .popup--pickup {
+// .popup--credit {
+//   top: 30px;
 //   left: auto;
 //   right: 0;
-//   top: 30px;
-
-//   width: 1170px;
 // }
+
+.popup--one-click,
+.popup--gift,
+.popup--delivery-free,
+.popup--delivery-city,
+.popup--delivery-pickup,
+.popup--bonus,
+.popup--remind,
+.popup--credit,
+.popup--garant,
+.popup--delivery {
+  position: fixed;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+
+  animation: 'bottom-to-center' 0.6s;
+}
 
 .popup--delivery-city,
 .popup--delivery-pickup {
@@ -370,20 +372,6 @@
   .tabs-view {
     display: none;
   }
-}
-
-.popup--one-click.popup--open,
-.popup--gift.popup--open,
-.popup--delivery-free.popup--open,
-.popup--delivery-city.popup--open,
-.popup--delivery-pickup.popup--open {
-  position: fixed;
-
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  transform: translateY(-50%);
 }
 
 .price-old {
@@ -460,10 +448,6 @@
       border-bottom: 1px solid #DAE1E7;
       border-bottom-left-radius: 10px;
 
-    }
-
-    &__title {
-      font-size: 16px;
     }
 
     &__inner {
@@ -598,5 +582,16 @@
     top: 0;
 
     padding: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .popup {
+
+    &__title {
+      font-size: 16px;
+    }
   }
 }

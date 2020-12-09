@@ -97,6 +97,7 @@
   max-width: 370px;
   margin-right: 30px;
   float: left;
+  z-index: 2;
 
   .slick-arrow {
     border-radius: 50%;
@@ -177,6 +178,7 @@
   background-color: #fff;
   border: 1px solid #DAE1E7;
   border-radius: 10px;
+    cursor: pointer;
 
   img {
     // width: 100%;
@@ -210,11 +212,11 @@
     position: relative;
 
     max-width: 390px;
-    padding: 30px 20px 0;
+    padding: 30px 0 0 20px;
   }
 
   &__col:first-child {
-    padding-left: 0;
+    padding: 30px 20px 0 0;
     border-right: 1px solid #DAE1E7;
   }
   
@@ -260,9 +262,20 @@
   border: none;
 
   &__title {
+    position: relative;
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 10px;
+
+    svg {
+      vertical-align: middle;
+      opacity: 0.5;
+    }
+
+    .popup {
+      right: 0;
+      left: auto;
+    }
   }
 
   &__text {
@@ -283,6 +296,12 @@
   input[type="radio"]:checked + &__text {
     background: #DAE1E7;
   }
+}
+
+.product-parameter-info {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .product-region {
@@ -342,10 +361,10 @@
 
   svg {
     margin-left: 10px;
+    opacity: 0.6;
 
     path {
-      fill: #025BB1;
-      opacity: 1;
+      fill: #808080;
     }
   }
 }
@@ -379,14 +398,6 @@
     height: 20px;
 
     background: url("../images/icon-check.svg") no-repeat center;
-  }
-
-  li:hover .popup {
-    display: block;
-  }
-
-  .popup {
-    top: 30px;
   }
 }
 
@@ -708,6 +719,10 @@
   .product-card {
     .title {
       font-size: 24px;
+    }
+
+    .popup {
+      width: auto;
     }
   }
 

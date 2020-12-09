@@ -125,10 +125,10 @@
           <div class="popup__block">
             <p class="popup__title">Обратитесь к нам с любым вопросом</p>
             <ol class="popup__list">
+              <li>Консультация по товарам и услугам</li>
               <li>Оформление заказа</li>
-              <li>Доставка, самовывоз и оплата</li>
-              <li>Гарантия и возврат</li>
-              <li>Любые другие вопросы</li>
+              <li>Гарантийное обслуживание и возврат</li>
+              <li>Другие вопросы о работе магазина</li>
             </ol>
             <button class="button button--stroke">Обратный звонок</button>
           </div>
@@ -632,7 +632,7 @@
               <div class="product-rating">
                 <div class="value" style="width: 80%;"></div>
               </div>
-              <span class="product-votes">23 отзыва</span>
+              <a href="#respondsTab" class="product-votes">23 отзыва</a>
             </div>
             <div class="user-nav">
               <a href="#" class="user-link user-link--fav">
@@ -690,7 +690,15 @@
               </div>
             </fieldset>
             <fieldset class="product-parameter product-region">
-              <legend class="product-parameter__title">Регион</legend>
+              <legend class="product-parameter__title">
+                Регион
+                <button class="product-parameter-info"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".5" d="M7.5 0C3.365 0 0 3.365 0 7.5S3.365 15 7.5 15 15 11.635 15 7.5 11.635 0 7.5 0zm1.25 12.188c0 .172-.14.312-.313.312H6.563a.312.312 0 01-.313-.313V7.5h-.313a.312.312 0 01-.312-.313v-1.25c0-.172.14-.312.312-.312h2.5c.173 0 .313.14.313.312v6.25zM7.5 5a1.251 1.251 0 010-2.5 1.251 1.251 0 010 2.5z" fill="#000"/></svg></button>
+                <div class="popup">
+                  <button class="popup__close"></button>
+                  <p class="popup__title">Что за параметр «Регион»?</p>
+                  <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+              </legend>
               <label>
                 <input type="radio" name="product-region" checked>
                 <span class="product-region__button" style="background-image: url('/images/regions/russia.svg');"></span>
@@ -727,12 +735,6 @@
                     <div class="product-bonus">
                       <span class="product-bonus__title">AT-Бонус</span>
                       <strong class="product-bonus__value">149 <span class="ruble">₽</span></strong>
-                    </div>
-                    <div class="popup popup--bonus">
-                      <button class="popup__close">Закрыть</button>
-                      <h4 class="popup__title">АТ-Бонус</h4>
-                      <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                      <a href="#" class="button button--fill">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -784,8 +786,8 @@
                 <ul class="product-card-info">
                   <li class="product-card-info__item product-card-pickups">Доступен для самовывоза <span class="underline">в 2 точках</span>
                   </li>
-                  <li class="product-card-info__item">Доставка по СПб <span class="underline">от 100 ₽</span>
-                    <div class="popup">
+                  <li class="product-card-info__item">Доставка по СПб <span class="product-card-delivery underline">от 100 ₽</span>
+                    <div class="popup popup--delivery">
                       <button class="popup__close">Закрыть</button>
                       <p class="popup__title">Курьером</p>
                       <p class="popup__text">290 ₽ • Завтра 14 августа</p>
@@ -795,11 +797,17 @@
                       <p class="popup__text">От 500 ₽ • До 14 дней</p>
                     </div>
                   </li>
-                  <li class="product-card-info__item">Гарантия <span class="underline">производителя</span>: 12 месяцев
-                    <div class="popup">
+                  <li class="product-card-info__item">
+                    <!-- Гарантия <span class="product-card-garant underline">производителя</span>: 12 месяцев -->
+                    Гарантия <span class="product-card-garant underline">магазина</span>: <span class="nowrap">12 месяцев</span>
+                    <div class="popup popup--garant">
                       <button class="popup__close">Закрыть</button>
-                      <p class="popup__title">Гарантия производителя: 12 месяцев</p>
-                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p>
+                      <!-- <p class="popup__title">Гарантия производителя: 12 месяцев</p>
+                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p> -->
+
+                      <p class="popup__title">Гарантия магазина: 12 месяцев</p>
+                      <p class="popup__text">Наш магазин Advanced Tech берет на себя обязательства по ремонту приобретенного устройства</p>
+
                     </div>
                   </li>
                 </ul>
@@ -852,7 +860,7 @@
           <div class="product-tabs">
             <div class="product-tab-btn product-tab-btn--description">Описание</div>
             <div class="product-tab-btn product-tab-btn--specifications">Характеристики</div>
-            <div class="product-tab-btn product-tab-btn--responds">Отзывы <span>23</span></div>
+            <div id="respondsTab" class="product-tab-btn product-tab-btn--responds">Отзывы <span>23</span></div>
             <div class="product-tab-btn product-tab-btn--questions">Вопросы <span>6</span></div>
             <div class="product-tab-btn product-tab-btn--reviews">Обзоры <span>4</span></div>
             <div class="product-tab product-tab--description">
@@ -1105,19 +1113,20 @@
         </div>
 
         <div class="accessories">
-  <!-- <h2 class="title title--underline">С аксессуарами дешевле</h2> -->
-  <h3 class="title">Скидка 10% на все аксессуары</h3>
+  <h3 class="title">Скидка на аксессуары 10%</h3>
   <span class="promo-data">Длительность акции: 7 – 31 августа</span>
-  <p class="promo-text">При единовременной покупке устройства (смартфоны, планшеты, ноутбуки и так далее) и аксессуаров, на аксессуары стоимостью до 3000 ₽ распространяется скидка 10%.</p>
-
-  <ul class="accessories-tabs-list">
-    <li>Все аксессуары</li>
-    <li class="active">Наушники и гарнитуры</li>
-    <li>Док станции и кабели</li>
-    <li>Bluetooth-гарнитуры</li>
-    <li>Зарядные устройства</li>
-    <li>Портативные колонки</li>
-  </ul>
+  <p class="promo-text">При покупке устройства вместе с аксессуарами дарим скидку 10% на все аксессуары дешевле 3000 руб</p>
+  <div class="dropdown">
+    <button class="dropdown-toggle dropdown-toggle--open">Все аксессуары</button>
+    <ul class="dropdown-menu accessories-tabs-list">
+      <li>Все аксессуары</li>
+      <li class="active">Наушники и гарнитуры</li>
+      <li>Док станции и кабели</li>
+      <li>Bluetooth-гарнитуры</li>
+      <li>Зарядные устройства</li>
+      <li>Портативные колонки</li>
+    </ul>
+  </div>
   <div class="accessories-tabs-container">
     <div class="accessories-tab">
       <div class="product-list">
@@ -1145,11 +1154,38 @@
                 <span class="product-bonus__title">AT-Бонус</span>
                 <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
-              <div class="popup popup--bonus">
-                <button class="popup__close">Закрыть</button>
-                <h4 class="popup__title">АТ-Бонус</h4>
-                <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                <a href="#" class="button button--fill">Подробнее</a>
+            </div>
+            <div class="product-item__bottom">
+              <p class="product-item__price">
+                24 640 <span class="ruble">₽</span>
+              </p>
+              <button class="button button--basket">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="product-item__img">
+            <a class="product-item-img-link" href="#">
+              <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
+            </a>
+          </div>
+          <div class="product-item__inner">
+            <div class="product-rating">
+              <div class="value" style="width: 80%;"></div>
+            </div>
+            <span class="product-votes">34 отзыва</span>
+            <a href="#" class="product-item__title">Беспроводные наушники Xiaomi Redmi AirDots</a>
+            <div class="product-color">
+              Цвета:
+              <label>
+                <input type="radio" name="product-color">
+                <span class="product-color__button" style="background-image: url('/images/color/black.svg');"></span>
+              </label>
+            </div>
+            <div class="product-bonus-wrapper">
+              <div class="product-bonus">
+                <span class="product-bonus__title">AT-Бонус</span>
+                <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
             </div>
             <div class="product-item__bottom">
@@ -1184,11 +1220,38 @@
                 <span class="product-bonus__title">AT-Бонус</span>
                 <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
-              <div class="popup popup--bonus">
-                <button class="popup__close">Закрыть</button>
-                <h4 class="popup__title">АТ-Бонус</h4>
-                <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                <a href="#" class="button button--fill">Подробнее</a>
+            </div>
+            <div class="product-item__bottom">
+              <p class="product-item__price">
+                24 640 <span class="ruble">₽</span>
+              </p>
+              <button class="button button--basket">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="product-item__img">
+            <a class="product-item-img-link" href="#">
+              <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
+            </a>
+          </div>
+          <div class="product-item__inner">
+            <div class="product-rating">
+              <div class="value" style="width: 80%;"></div>
+            </div>
+            <span class="product-votes">34 отзыва</span>
+            <a href="#" class="product-item__title">Беспроводные наушники Xiaomi Redmi AirDots</a>
+            <div class="product-color">
+              Цвета:
+              <label>
+                <input type="radio" name="product-color">
+                <span class="product-color__button" style="background-image: url('/images/color/black.svg');"></span>
+              </label>
+            </div>
+            <div class="product-bonus-wrapper">
+              <div class="product-bonus">
+                <span class="product-bonus__title">AT-Бонус</span>
+                <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
             </div>
             <div class="product-item__bottom">
@@ -1223,11 +1286,38 @@
                 <span class="product-bonus__title">AT-Бонус</span>
                 <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
-              <div class="popup popup--bonus">
-                <button class="popup__close">Закрыть</button>
-                <h4 class="popup__title">АТ-Бонус</h4>
-                <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                <a href="#" class="button button--fill">Подробнее</a>
+            </div>
+            <div class="product-item__bottom">
+              <p class="product-item__price">
+                24 640 <span class="ruble">₽</span>
+              </p>
+              <button class="button button--basket">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="product-item__img">
+            <a class="product-item-img-link" href="#">
+              <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
+            </a>
+          </div>
+          <div class="product-item__inner">
+            <div class="product-rating">
+              <div class="value" style="width: 80%;"></div>
+            </div>
+            <span class="product-votes">34 отзыва</span>
+            <a href="#" class="product-item__title">Беспроводные наушники Xiaomi Redmi AirDots</a>
+            <div class="product-color">
+              Цвета:
+              <label>
+                <input type="radio" name="product-color">
+                <span class="product-color__button" style="background-image: url('/images/color/black.svg');"></span>
+              </label>
+            </div>
+            <div class="product-bonus-wrapper">
+              <div class="product-bonus">
+                <span class="product-bonus__title">AT-Бонус</span>
+                <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
             </div>
             <div class="product-item__bottom">
@@ -1262,11 +1352,38 @@
                 <span class="product-bonus__title">AT-Бонус</span>
                 <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
-              <div class="popup popup--bonus">
-                <button class="popup__close">Закрыть</button>
-                <h4 class="popup__title">АТ-Бонус</h4>
-                <p class="popup__text">Копите АТ-Бонусы и расплачивайтесь ими как реальными деньгами по курсу 1 бонус = 1 ₽.</p>
-                <a href="#" class="button button--fill">Подробнее</a>
+            </div>
+            <div class="product-item__bottom">
+              <p class="product-item__price">
+                24 640 <span class="ruble">₽</span>
+              </p>
+              <button class="button button--basket">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="product-item__img">
+            <a class="product-item-img-link" href="#">
+              <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
+            </a>
+          </div>
+          <div class="product-item__inner">
+            <div class="product-rating">
+              <div class="value" style="width: 80%;"></div>
+            </div>
+            <span class="product-votes">34 отзыва</span>
+            <a href="#" class="product-item__title">Беспроводные наушники Xiaomi Redmi AirDots</a>
+            <div class="product-color">
+              Цвета:
+              <label>
+                <input type="radio" name="product-color">
+                <span class="product-color__button" style="background-image: url('/images/color/black.svg');"></span>
+              </label>
+            </div>
+            <div class="product-bonus-wrapper">
+              <div class="product-bonus">
+                <span class="product-bonus__title">AT-Бонус</span>
+                <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
               </div>
             </div>
             <div class="product-item__bottom">
@@ -1374,8 +1491,80 @@
     </div>
   </div>
 </footer>
+
+<!-- попап at-бонус -->
+<div class="popup popup--bonus">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">at-бонус</h4>
+  <p class="popup__text">Копите at-бонусы и расплачивайтесь ими по курсу 1 бонус = 1 ₽</p>
+  <a href="#" class="button">Подробнее</a>
+</div>
+
+<!-- попап Купить в 1 клик -->
+<div class="popup popup--one-click">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Купить в 1 клик</h4>
+  <p class="popup__text">Заполните данные и мы перезвоним вам, чтобы подтвердить заказ.</p>
+  <p class="popup__text-info">При покупке в 1 клик at-бонусы не сохраняются</p>
+
+  <form>
+    <input type="email" class="input" placeholder="Введите ваше имя">
+    <input type="tel" class="input" placeholder="Введите ваш телефон">
+    <a href="#" class="button button--fill">Купить в 1 клик</a>
+
+    <div class="popup__product-line">
+      <img class="product-img" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+      <div class="">
+        <a target="_blank" href="#" class="product-name">Смарт-часы Amazfit GTS A1914</a>
+        <span class="product-price">
+          8 570 <span class="ruble">₽</span>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- попап Подарок при покупке-->
+<div class="popup popup--gift">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Подарок при покупке</h4>
+  <div class="popup__product-line">
+    <img class="product-img" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+    <div class="">
+      <a target="_blank" href="#" class="product-name">Смарт-часы Amazfit GTS A1914</a>
+      <span class="product-price"><span class="price-old">
+        <span class="bk_price">2 990</span>
+          <span class="ruble">₽</span>
+          <span class="price-sale">-100%</span>
+        </span>
+        0 <span class="ruble">₽</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- попап Бесплaтная доставка -->
+<div class="popup popup--delivery-free">
+  <button class="popup__close">Закрыть</button>
+  <h4 class="popup__title">Бесплaтная доставка по Санкт-Петербургу</h4>
+  <p class="popup__text">Для данного товара</p>
+</div>
+
+<!-- попап Уведомить о поступлении товара -->
+<div class="popup popup--remind">
+  <form>
+    <button class="popup__close">Закрыть</button>
+    <h4 class="popup__title">Напомним о поступлении товара</h4>
+    <p class="popup__text">Как только товар будет доступен для заказа, вы получите уведомление на email</p>
+    <input type="email" class="input" placeholder="Введите Email">
+    <button type="submit" class="button button--fill">Уведомить</button>
+  </form>
+</div>
   <script src="js/libs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
 
 <script src="js/main.min.js" async></script>
 </body>
