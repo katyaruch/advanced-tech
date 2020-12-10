@@ -40,7 +40,9 @@
   }
 
   td:nth-child(4) {
-    width: 152px;
+    // width: 152px;
+    max-width: 130px;
+    min-width: 130px;
     text-align: right;
   }
 
@@ -155,6 +157,10 @@
 
     font-size: 12px;
     opacity: 0.6;
+
+    .underline {
+      vertical-align: top;
+    }
 
     .underline:after {
       border-top: 1px dotted #000000;
@@ -449,6 +455,8 @@
 
     td:nth-child(4) {
       width: 100%;
+      max-width: 100%;
+
       padding-top: 10px;
       text-align: inherit;
     }
