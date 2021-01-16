@@ -84,7 +84,7 @@
               <li>Гарантийное обслуживание и возврат</li>
               <li>Другие вопросы о работе магазина</li>
             </ol>
-            <button class="button button--stroke">Обратный звонок</button>
+            <button class="button button--stroke" data-toggle="popup" data-target="popup--recall">Обратный звонок</button>
           </div>
         </div>
       </div>
@@ -716,4 +716,14 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="popup popup--recall">
+  <button class="popup__close"></button>
+  <p class="popup__title">Обратный звонок</p>
+  <form>
+    <!-- <input type="email" class="input" placeholder="Введите ваше имя"> -->
+    <input type="tel" class="input" placeholder="Введите ваш телефон">
+    <a href="#" class="button button--fill">Заказать звонок</a>
+  </form>
 </div>

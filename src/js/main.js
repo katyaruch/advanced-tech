@@ -1,115 +1,114 @@
 $(function () {
 
-//////////////// скрыть верхнюю навигацию при скролле вниз
+// Шапка
 
-  if ($(window).width() > 768) { //только на десктопе
-    var scrollPos = 0;
-    $(window).scroll(function(){
-       var st = $(this).scrollTop();
-       if (st > scrollPos){
-         $('.menu').addClass('hide');
-       } else {
-         $('.menu').removeClass('hide');
-       }
-       scrollPos = st;
-    });
-  }
+  //////////////// скрыть верхнюю навигацию при скролле вниз
 
-//////////////// выпадающее полное меню
-
-  $('.menu__btn').click(function(e) {
-    e.preventDefault();
-    $('.full-menu').toggleClass('full-menu--open')
-  });
-
-  $(document).click(function(e){
-    if (!$('.menu__btn').is(e.target) // если наведение не по кнопке
-        && !$('.full-menu').is(e.target) // если наведение не по меню
-        && $('.full-menu').has(e.target).length === 0) { // и не по его дочерним элементам
-      $('.full-menu').removeClass('full-menu--open');
+    if ($(window).width() > 768) { //только на десктопе
+      var scrollPos = 0;
+      $(window).scroll(function(){
+         var st = $(this).scrollTop();
+         if (st > scrollPos){
+           $('.menu').addClass('hide');
+         } else {
+           $('.menu').removeClass('hide');
+         }
+         scrollPos = st;
+      });
     }
-  });
 
-  $(window).keydown(function(e) {
-    if (e.keyCode === 27) { //клавиша ESC
-      e.preventDefault();
-      $('.full-menu').removeClass('full-menu--open');
-      
-    }
-  });
-
-  if ($(window).width() <= 768) { // на мобильном
+  //////////////// выпадающее полное меню
 
     $('.menu__btn').click(function(e) {
-      $('body').toggleClass('overflow-h');
-    });
-
-    $('.full-menu__cat').click(function(e) {
       e.preventDefault();
-      if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $('.full-menu__list').find('.full-menu__cat').show();
-        $('.full-menu__sublist').find('.full-menu__link').show();
-        $('.full-menu .site-nav').show();
-      }
-      else {
-        $('.full-menu__list').find('.full-menu__cat').not(this).hide();
-        $('.full-menu .site-nav').hide();
-        $('.full-menu__list').find('.active').removeClass('active');
-        $(this).addClass('active');
-      } 
+      $('.full-menu').toggleClass('full-menu--open')
     });
 
-    $('.full-menu__link').click(function(e) {
-      if ($(this).next().is('ul')) {
+    $(document).click(function(e){
+      if (!$('.menu__btn').is(e.target) // если наведение не по кнопке
+          && !$('.full-menu').is(e.target) // если наведение не по меню
+          && $('.full-menu').has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.full-menu').removeClass('full-menu--open');
+      }
+    });
+
+    $(window).keydown(function(e) {
+      if (e.keyCode === 27) { //клавиша ESC
+        e.preventDefault();
+        $('.full-menu').removeClass('full-menu--open');
+        
+      }
+    });
+
+    if ($(window).width() <= 768) { // на мобильном
+
+      $('.menu__btn').click(function(e) {
+        $('body').toggleClass('overflow-h');
+      });
+
+      $('.full-menu__cat').click(function(e) {
         e.preventDefault();
         if ($(this).hasClass('active')) {
           $(this).removeClass('active');
-          $('.full-menu__link').show();
+          $('.full-menu__list').find('.full-menu__cat').show();
+          $('.full-menu__sublist').find('.full-menu__link').show();
+          $('.full-menu .site-nav').show();
         }
         else {
-          $('.full-menu__link').not(this).hide();
-          $('.full-menu__sublist').find('.active').removeClass('active');
+          $('.full-menu__list').find('.full-menu__cat').not(this).hide();
+          $('.full-menu .site-nav').hide();
+          $('.full-menu__list').find('.active').removeClass('active');
           $(this).addClass('active');
+        } 
+      });
+
+      $('.full-menu__link').click(function(e) {
+        if ($(this).next().is('ul')) {
+          e.preventDefault();
+          if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.full-menu__link').show();
+          }
+          else {
+            $('.full-menu__link').not(this).hide();
+            $('.full-menu__sublist').find('.active').removeClass('active');
+            $(this).addClass('active');
+          }
         }
-      }
+      });
+    }
+
+  //////////////// выпадающая навигация на мобильном
+
+    $('.site-nav__btn').click(function(e) {
+      e.preventDefault();
+      $('.site-nav').toggleClass('site-nav--open')
     });
-  }
 
-//////////////// выпадающая навигация на мобильном
+  //////////////// помошник поиска https://jqueryui.com/autocomplete/
 
-  $('.site-nav__btn').click(function(e) {
-    e.preventDefault();
-    $('.site-nav').toggleClass('site-nav--open')
-  });
+    var products = [
+      "Смартфон Apple iPhone 7 32GB (3 товара)",
+      "Смартфон Apple iPhone 7 128GB (2 товара)",
+      "Смартфон Apple iPhone 7 Plus 32GB (золотой)",
+      "Смартфон Apple iPhone 8 Plus 64GB (серебряный)",
+      "Смартфон Apple iPhone 8 Plus 128GB (3 товара)",
+      "Смартфон Apple iPhone 8 128GB (3 товара)"
+    ];
 
-//////////////// помошник поиска https://jqueryui.com/autocomplete/
+    // var categories = [
+    //   "Мобильные телефоны Apple (279 товаров)",
+    //   "Смартфоны Apple (279 товаров)",
+    //   "Защитные пленки и стекла для телефонов (87 товаров)",
+    //   "Защитные пленки для iPhone (82 товара)",
+    //   "Чехлы и сумки для телефонов (344 товара)",
+    //   "Автомобильные зарядные устройства (2 товара)"
+    // ];
 
-  var products = [
-    "Смартфон Apple iPhone 7 32GB (3 товара)",
-    "Смартфон Apple iPhone 7 128GB (2 товара)",
-    "Смартфон Apple iPhone 7 Plus 32GB (золотой)",
-    "Смартфон Apple iPhone 8 Plus 64GB (серебряный)",
-    "Смартфон Apple iPhone 8 Plus 128GB (3 товара)",
-    "Смартфон Apple iPhone 8 128GB (3 товара)"
-  ];
-
-  // var categories = [
-  //   "Мобильные телефоны Apple (279 товаров)",
-  //   "Смартфоны Apple (279 товаров)",
-  //   "Защитные пленки и стекла для телефонов (87 товаров)",
-  //   "Защитные пленки для iPhone (82 товара)",
-  //   "Чехлы и сумки для телефонов (344 товара)",
-  //   "Автомобильные зарядные устройства (2 товара)"
-  // ];
-
-  $('#search').autocomplete({
-    source: products,
-    autoFocus: true,
-  });
-
-
-// всплывающие окна
+    $('#search').autocomplete({
+      source: products,
+      autoFocus: true,
+    });
 
   //////////////// popup при наведении на телефон
 
@@ -127,20 +126,8 @@ $(function () {
       }
     });
 
-  //////////////// popup при наведении на преимущества
 
-    $('.main__benefit').mouseover(function(e) {
-      e.preventDefault();
-      $(this).find('.popup').addClass('popup--open');
-    });
-    
-    $(document).mouseover(function(e) {
-      if (!$('.main__benefit').is(e.target) // если наведение не по блоку
-          && $('.main__benefit').has(e.target).length === 0 // и не по его дочерним элементам
-          ) {
-        $('.popup--benefit').removeClass('popup--open');
-      }
-    });
+// Всплывающие окна
 
   //////////////// popup при клике на кнопки с атрибутами data-toggle="popup" и data-toggle="modal"
 
@@ -159,14 +146,22 @@ $(function () {
       }
     });
 
-    // $(document).click(function(e){
-    //   var btns = $('[data-toggle="popup"]');
-    //   var div = $('.popup--open');
-    //    if (!$(btns) || !div.is(e.target) // если клик был не по нашему блоку
-    //     && div.has(e.target).length === 0) { // и не по его дочерним элементам
-    //     div.removeClass('popup--open').removeClass('modal--open');
-    //   }
-    // });
+    $(document).click(function(e){
+
+      var btns = $('[data-toggle="popup"], [data-toggle="modal"]');
+      var popup = $('.popup--open, .modal--open');
+
+       if (!btns.is(e.target) // если клик был не по нашему блоку
+        && !popup.is(e.target) && popup.has(e.target).length === 0) { // и не по его дочерним элементам
+        popup.removeClass('popup--open').removeClass('modal--open');
+      }
+
+      if ( $('.popup--delivery-pickup, .popup--delivery-city, .popup--delivery-city-all').hasClass('popup--open') == true ) {
+        $('body').addClass('overflow-h');
+      } else {
+        $('body').removeClass('overflow-h');
+      }
+    });
 
   //////////////// закрыть popup
 
@@ -178,37 +173,54 @@ $(function () {
     });
 
 
-//////////////// слайдер акций
+// Главная
 
-  $('.main__card-gallery').slick({
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    lazyLoad: 'progressive',
-  });
+  //////////////// слайдер акций
 
-//////////////// слайдер брендов
+    $('.main__card-gallery').slick({
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      lazyLoad: 'progressive',
+    });
 
-  $('.about-shop__brands').slick({
-    // autoplay: true,
-    slidesToShow: 6,
-    slidesToScroll: 3,
-    dots: true,
-    lazyLoad: 'progressive',
-    // variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-          slidesToScroll: 3,
+  //////////////// popup при наведении на преимущества
+
+      $('.main__benefit').mouseover(function(e) {
+        e.preventDefault();
+        $(this).find('.popup').addClass('popup--open');
+      });
+      
+      $(document).mouseover(function(e) {
+        if (!$('.main__benefit').is(e.target) // если наведение не по блоку
+            && $('.main__benefit').has(e.target).length === 0 // и не по его дочерним элементам
+            ) {
+          $('.popup--benefit').removeClass('popup--open');
         }
-      }
-    ]
-  });
+      });
+
+  //////////////// слайдер брендов
+
+    $('.about-shop__brands').slick({
+      // autoplay: true,
+      slidesToShow: 6,
+      slidesToScroll: 3,
+      dots: true,
+      lazyLoad: 'progressive',
+      // variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        }
+      ]
+    });
 
 
 // Фильтры каталога
@@ -273,7 +285,6 @@ $(function () {
 
   //////////////// фото-слайдер товара
 
-
     $('.product-big-photo').magnificPopup({
       delegate: 'a',
       type: 'image',
@@ -316,12 +327,6 @@ $(function () {
       ]
     });
 
-    $(".product-parameter-info").click(function(e) {
-      e.preventDefault();
-
-      $(this).next().addClass('popup--open')
-    });
-
   //////////////// вкладки товара
     $('.product-votes').click(function() {
       $('.product-tab-btn').removeClass('active');
@@ -351,7 +356,7 @@ $(function () {
       });
     }
 
-  //////////////// вкладки точек самовывоза
+  //////////////// вкладки точек самовывоза [также на странице Контакты]
 
     if ($(window).width() > 768) { //только на десктопе
       $('.popup__buttons').slick({
@@ -456,7 +461,7 @@ $(function () {
       }
     });
 
-  //////////////// Если выбран Способ получения
+  //////////////// выбор способа получения
 
     $(".tabs-delivery input[name='delivery-type']").on('change', function() {
       $('.tabs-method, .fields-address').addClass('d-none');
@@ -478,17 +483,11 @@ $(function () {
       }
     });
 
-  //////////////// Popup выбора города получения
-
-    // $(".select-city").click(function(e) {
-    //   e.preventDefault();
-    //   $('body').addClass('overflow-h');
-    //   $('.popup--delivery-city').toggleClass('popup--open');
-    // });
+  //////////////// Выбор города получения
 
     $(".search-help a, .delivery-city").click(function(e) {
       e.preventDefault();
-      var city = $(this).text();
+      var city = $(this).text(); //сохраняем выбранный город
       if (city == 'Санкт-Петербург') {
         $('.order-our-courier').removeClass('d-none');
       }
@@ -499,9 +498,9 @@ $(function () {
       $('.popup--delivery-city').removeClass('popup--open');
     });
 
-  //////////////// Если выбрана доставка курьером
+  //////////////// выбор способа получения в городе (курьер/самовывоз)
 
-    $(".tabs-method input[name='delivery-type']").on('change', function() {
+    $(".tabs-method input[name='city-delivery-type']").on('change', function() {
       if ($("[value='our-courier'],[value='cdek-courier']").is(':checked')) {
         $('.field-pickup').addClass('d-none');
         $('.fields-address').removeClass('d-none');
@@ -512,13 +511,7 @@ $(function () {
       }
     });
 
-  //////////////// Popup выбора пункта самовывоза
-
-    $(".select-pickup").click(function(e) {
-      e.preventDefault();
-      $('body').addClass('overflow-h');
-      $('.popup--delivery-pickup').toggleClass('popup--open');
-    });
+  //////////////// выбор пункта самовывоза
 
     $(".pickup__button").click(function() {
       var address = $(this).find(".pickup__button-address").text();
@@ -526,9 +519,8 @@ $(function () {
       $('.select-pickup-address').removeClass('d-none').empty();
       $(this).clone().appendTo('.select-pickup-address');
       $('.order-total').removeClass('d-none');
-      $('.buton-confirm').removeAttr('disabled')
+      $('.buton-confirm').removeAttr('disabled');
 
-      $('body').removeClass('overflow-h');
       $(".popup--delivery-pickup").removeClass('popup--open');
     });
 
@@ -552,13 +544,17 @@ $(function () {
       }
     });
 
-  //////////////// Popup корзина на странице оформлении заказа
+  //////////////// popup корзина
     $(".order__btn-cart").click(function(e) {
       e.preventDefault();
       $(this).toggleClass('open');
-      $(".popup--cart").toggleClass('popup--open');
-    });
+      if ($(this).hasClass('open') == true) {
+        $(".popup--cart").removeClass('popup--open');
+      } else {
+        $(".popup--cart").addClass('popup--open');
+      }
 
+    });
 
 // Контакты
 

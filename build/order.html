@@ -130,7 +130,7 @@
               <li>Гарантийное обслуживание и возврат</li>
               <li>Другие вопросы о работе магазина</li>
             </ol>
-            <button class="button button--stroke">Обратный звонок</button>
+            <button class="button button--stroke" data-toggle="popup" data-target="popup--recall">Обратный звонок</button>
           </div>
         </div>
       </div>
@@ -851,6 +851,16 @@
   </div>
 </div>
 
+<div class="popup popup--recall">
+  <button class="popup__close"></button>
+  <p class="popup__title">Обратный звонок</p>
+  <form>
+    <!-- <input type="email" class="input" placeholder="Введите ваше имя"> -->
+    <input type="tel" class="input" placeholder="Введите ваш телефон">
+    <a href="#" class="button button--fill">Заказать звонок</a>
+  </form>
+</div>
+
     <div class="section order">
       <div class="container">
         <nav class="page-nav">
@@ -859,7 +869,7 @@
         </nav>
         <div class="order__top-line">
           <h1 class="title">Оформление заказа</h1>
-          <button class="order__btn-cart open">
+          <button class="order__btn-cart open" data-toggle="popup" data-target="popup--cart">
             Товаров: 3 • На сумму: 43 230 ₽
           </button>
         </div>
@@ -976,20 +986,20 @@
               </div>
               <div class="order-tabs tabs-method d-none">
                 <label class="order-tab order-our-courier d-none">
-                  <input type="radio" name="delivery-type" value="our-courier">
+                  <input type="radio" name="city-delivery-type" value="our-courier">
                   <span class="order-tab__btn">
                     Наш курьер
                   </span>
                 </label>
                 <label class="order-tab">
-                  <input type="radio" name="delivery-type" value="cdek-courier">
+                  <input type="radio" name="city-delivery-type" value="cdek-courier">
                   <span class="order-tab__btn">
                     <img src="images/logo-cdek.png" alt="CDEK">
                     Курьер
                   </span>
                 </label>
                 <label class="order-tab">
-                  <input type="radio" name="delivery-type" value="pickup">
+                  <input type="radio" name="city-delivery-type" value="pickup">
                   <span class="order-tab__btn">
                     <img src="images/logo-cdek.png" alt="CDEK">
                     Самовывоз
@@ -1020,7 +1030,7 @@
               </div>
               <div class="order-fields field-pickup d-none">
                 <div class="order-field order-field-100">
-                  <input class="input input-empty input-select select-pickup" placeholder="Выберите пункт самовывоза" required>
+                  <input class="input input-empty input-select select-pickup" data-toggle="popup" data-target="popup--delivery-pickup" placeholder="Выберите пункт самовывоза" required>
                   <label class="input-label">Пункт самовывоза</label>
                   <span class="input-icon"></span>
                 </div>

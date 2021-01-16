@@ -107,12 +107,12 @@
             <fieldset class="product-parameter product-region">
               <legend class="product-parameter__title">
                 Регион
-                <button class="product-parameter-info">@@include('images/icon-info.svg')</button>
-                <div class="popup">
+                <div class="popup popup--parameter-info">
                   <button class="popup__close"></button>
                   <p class="popup__title">Что за параметр «Регион»?</p>
                   <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                 </div>
+                <button class="product-parameter-info" data-toggle="popup" data-target="popup--parameter-info">@@include('images/icon-info.svg')</button>
               </legend>
               <label>
                 <input type="radio" name="product-region" checked>
@@ -219,37 +219,180 @@
               <button class="popup__close"></button>
               <p class="popup__title-b">Точки, доступные для самовывоза данного товара</p>
               <div class="popup__inner">
-                <div class="popup__buttons">
-                  <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
-                  <button class="button">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
-                </div>
-                <div class="popup__info">
-                  <p class="popup__title">Режим работы пункта самовывоза</p>
-                  <div class="popup__info-list">
-                    <div class="popup__info-item">
-                      <div class="popup__col">
-                        <span class="popup__days">Будние дни</span>
-                        <span class="popup__time">10:00 – 20:00</span>
-                      </div>
-                      <div class="popup__col">
-                        <span class="popup__days">Выходные и праздники</span>
-                        <span class="popup__time">11:00 – 19:00</span>
-                      </div>
-                      <div class="popup__map">
-                        <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
-                      </div>
+                <div class="pickup">
+                  <div class="pickup__inner">
+                    <div class="pickup__buttons">
+                      <button class="button" id="pickup-1">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</button>
+                      <button class="button" id="pickup-2">Загородный проспект, дом 30/3, напротив ресторана Mama Roma</button>
+                      <button class="button" id="pickup-3">Загородный проспект, дом 30/4, напротив ресторана Mama Roma</button>
+                      <button class="button" id="pickup-4">Загородный проспект, дом 30/5, напротив ресторана Mama Roma</button>
                     </div>
-                    <div class="popup__info-item">
-                      <div class="popup__col">
-                        <span class="popup__days">Будние дни</span>
-                        <span class="popup__time">10:00 – 20:00</span>
-                      </div>
-                      <div class="popup__col">
-                        <span class="popup__days">Выходные и праздники</span>
-                        <span class="popup__time">11:00 – 19:00</span>
-                      </div>
-                      <div class="popup__map">
-                        <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                    <div class="pickup__info">
+                      <div class="pickup__info-list">
+                        <div class="pickup__info-item pickup-1">
+                          <button class="popup__close">Закрыть</button>
+                          <p class="pickup__subtitle">Точка самовывоза</p>
+                          <p class="pickup__address">Загородный проспект, дом 30/2, напротив ресторана Mama Roma</p>
+                          <p class="pickup__title">Режим работы пункта самовывоза</p>
+                          <div class="pickup__line">
+                            <div class="pickup__col">
+                              <span class="pickup__days">Будние дни</span>
+                              <span class="pickup__time">10:00 – 20:00</span>
+                            </div>
+                            <div class="pickup__col">
+                              <span class="pickup__days">Выходные и праздники</span>
+                              <span class="pickup__time">11:00 – 19:00</span>
+                            </div>
+                          </div>
+                          <div class="pickup__line">
+                            <div class="pickup__map">
+                              <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                            </div>
+                            <div class="pickup__photos">
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/3.png">
+                                <img src="images/points-pickups/3.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/4.png">
+                                <img src="images/points-pickups/4.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pickup__info-item pickup-2">
+                          <button class="popup__close">Закрыть</button>
+                          <p class="pickup__subtitle">Точка самовывоза</p>
+                          <p class="pickup__address">Загородный проспект, дом 30/3, напротив ресторана Mama Roma</p>
+                          <p class="pickup__title">Режим работы пункта самовывоза</p>
+                          <div class="pickup__line">
+                            <div class="pickup__col">
+                              <span class="pickup__days">Будние дни</span>
+                              <span class="pickup__time">10:00 – 20:00</span>
+                            </div>
+                            <div class="pickup__col">
+                              <span class="pickup__days">Выходные и праздники</span>
+                              <span class="pickup__time">11:00 – 19:00</span>
+                            </div>
+                          </div>
+                          <div class="pickup__line">
+                            <div class="pickup__map">
+                              <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                            </div>
+                            <div class="pickup__photos">
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/3.png">
+                                <img src="images/points-pickups/3.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/4.png">
+                                <img src="images/points-pickups/4.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pickup__info-item pickup-3">
+                          <button class="popup__close">Закрыть</button>
+                          <p class="pickup__subtitle">Точка самовывоза</p>
+                          <p class="pickup__address">Загородный проспект, дом 30/4, напротив ресторана Mama Roma</p>
+                          <p class="pickup__title">Режим работы пункта самовывоза</p>
+                          <div class="pickup__line">
+                            <div class="pickup__col">
+                              <span class="pickup__days">Будние дни</span>
+                              <span class="pickup__time">10:00 – 20:00</span>
+                            </div>
+                            <div class="pickup__col">
+                              <span class="pickup__days">Выходные и праздники</span>
+                              <span class="pickup__time">11:00 – 19:00</span>
+                            </div>
+                          </div>
+                          <div class="pickup__line">
+                            <div class="pickup__map">
+                              <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                            </div>
+                            <div class="pickup__photos">
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/3.png">
+                                <img src="images/points-pickups/3.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/4.png">
+                                <img src="images/points-pickups/4.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pickup__info-item pickup-4">
+                          <button class="popup__close">Закрыть</button>
+                          <p class="pickup__subtitle">Точка самовывоза</p>
+                          <p class="pickup__address">Загородный проспект, дом 30/5, напротив ресторана Mama Roma</p>
+                          <p class="pickup__title">Режим работы пункта самовывоза</p>
+                          <div class="pickup__line">
+                            <div class="pickup__col">
+                              <span class="pickup__days">Будние дни</span>
+                              <span class="pickup__time">10:00 – 20:00</span>
+                            </div>
+                            <div class="pickup__col">
+                              <span class="pickup__days">Выходные и праздники</span>
+                              <span class="pickup__time">11:00 – 19:00</span>
+                            </div>
+                          </div>
+                          <div class="pickup__line">
+                            <div class="pickup__map">
+                              <img class="lazyload" data-src="images/map-2.png" alt="Загородный проспект, дом 30/2,  напротив ресторана Mama Roma">
+                            </div>
+                            <div class="pickup__photos">
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/3.png">
+                                <img src="images/points-pickups/3.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/4.png">
+                                <img src="images/points-pickups/4.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/1.png">
+                                <img src="images/points-pickups/1.png" alt="">
+                              </a>
+                              <a href="images/points-pickups/2.png">
+                                <img src="images/points-pickups/2.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

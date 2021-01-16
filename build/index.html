@@ -136,7 +136,7 @@
               <li>Гарантийное обслуживание и возврат</li>
               <li>Другие вопросы о работе магазина</li>
             </ol>
-            <button class="button button--stroke">Обратный звонок</button>
+            <button class="button button--stroke" data-toggle="popup" data-target="popup--recall">Обратный звонок</button>
           </div>
         </div>
       </div>
@@ -857,6 +857,16 @@
   </div>
 </div>
 
+<div class="popup popup--recall">
+  <button class="popup__close"></button>
+  <p class="popup__title">Обратный звонок</p>
+  <form>
+    <!-- <input type="email" class="input" placeholder="Введите ваше имя"> -->
+    <input type="tel" class="input" placeholder="Введите ваш телефон">
+    <a href="#" class="button button--fill">Заказать звонок</a>
+  </form>
+</div>
+
     <section class="section main">
       <div class="container">
         <div class="main__inner">
@@ -904,7 +914,7 @@
               <div class="popup__map">
                 <img class="lazyload" data-src="images/map.png" alt="Карта">
               </div>
-              <a href="#" class="button">Подробнее</a>
+              <a href="/contacts.html" class="button">Подробнее</a>
             </div>
           </li>
           <li class="main__benefit main__benefit--delivery">Доставка по всей России
@@ -916,7 +926,7 @@
               <p class="popup__text">Через 2-3 дня</p>
               <h4 class="popup__title">Доставка по России</h4>
               <p class="popup__text">До 14 дней</p>
-              <a href="#" class="button">Подробнее</a>
+              <a href="/delivery.html" class="button">Подробнее</a>
             </div>
           </li>
           <li class="main__benefit main__benefit--service">Собственный сервисный центр
@@ -926,7 +936,7 @@
               <p class="popup__text">Бесплатно</p>
               <h4 class="popup__title">Гарантия на все виды работ</h4>
               <p class="popup__text">От 30 дней</p>
-              <a href="#" class="button">Подробнее</a>
+              <a href="/garant.html" class="button">Подробнее</a>
             </div>
           </li>
           <li class="main__benefit main__benefit--original">Оригинальная продукция
@@ -938,7 +948,7 @@
               <p class="popup__text">Дает возможность отремонтировать устройство в авторизованном сервисном центре оригинальными запчастями.</p>
               <h4 class="popup__title">Никаких «серых устройств»</h4>
               <p class="popup__text">Читали про случай с Самсунгом, когда бренд удаленно отключил «серые телевизоры»?<br>С нашими устройствами этого не произойдет.</p>
-              <a href="#" class="button">Подробнее</a>
+              <a href="/about.html" class="button">Подробнее</a>
             </div>
           </li>
         </ul>

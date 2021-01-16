@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
 
-  // display: none;
+  display: none;
   width: 570px;
   padding: 30px;
 
@@ -11,15 +11,16 @@
   border: 1px solid #DAE1E7;
   border-radius: 20px;
   
-  z-index: 15;
+  z-index: -1;
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-  // animation: 'right-to-left' 0.6s;
+  animation: 'show' 0.6s;
 
   &.popup--open {
-    // display: block;
+    display: block;
     opacity: 1;
+    z-index: 15;
     pointer-events: auto;
   }
 
@@ -304,7 +305,8 @@
 .popup--remind,
 .popup--credit,
 .popup--garant,
-.popup--delivery {
+.popup--delivery,
+.popup--recall {
   position: fixed;
 
   top: 50%;
@@ -445,6 +447,7 @@
     .popup {
       opacity: 1;
       pointer-events: auto;
+      z-index: 15;
     }
   }
 

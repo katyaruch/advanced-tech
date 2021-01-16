@@ -1,18 +1,10 @@
 @keyframes show {
   0% {
-    transform: translateX(-2000px);
-  }
-
-  70% {
-    transform: translateX(30px);
-  }
-
-  90% {
-    transform: translateX(-10px);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 
