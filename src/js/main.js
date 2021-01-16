@@ -389,6 +389,7 @@ $(function () {
         // variableWidth: true,
         focusOnSelect: true,
         asNavFor: '.pickup__buttons',
+        autoplay: true,
       });
     }
 

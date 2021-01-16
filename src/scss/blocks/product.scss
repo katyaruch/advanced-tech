@@ -139,6 +139,7 @@
 
   &__title {
     font-weight: 500;
+    pointer-events: none;
   }
 
   &__title:after {
@@ -160,6 +161,7 @@
     float: right;
 
     font-weight: bold;
+    pointer-events: none;
   }
 }
 
