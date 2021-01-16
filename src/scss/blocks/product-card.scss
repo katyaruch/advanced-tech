@@ -90,106 +90,110 @@
 
 /////////////////////////////// Слайдер товара
 
-.product-photos-slider {
-  position: relative;
-  display: inline-block; 
-  width: 100%;
-  max-width: 370px;
-  margin-right: 30px;
-  float: left;
-  z-index: 2;
+  .product-photos-slider {
+    position: relative;
+    display: inline-block; 
+    width: 100%;
+    max-width: 370px;
+    margin-right: 30px;
+    float: left;
+    z-index: 2;
 
-  .slick-arrow {
-    border-radius: 50%;
-    background-image: url("../images/icon-arrow-prev.svg");
-    filter: saturate(0) opacity(0.6);
-    z-index: 1;
-  }
+    .slick-arrow {
+      border-radius: 50%;
+      background-image: url("../images/icon-arrow-prev.svg");
+      filter: saturate(0) opacity(0.6);
+      z-index: 1;
+    }
 
-  &::after { 
-    content: "";
-    display: table;
-    clear: both;
-  }
+    &::after { 
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-  .label-delivery-free {
-    bottom: 111px;
-  }
-}
-
-.product-big-photo {
-  // width: 370px;
-  // height: 370px;
-  padding: 23px;
-
-  text-align: center;
-  
-  border: 1px solid #DAE1E7;
-  border-radius: 20px;
-  margin-bottom: 15px;
-
-  .slick-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      width: 100%;
+    .label-delivery-free {
+      bottom: 111px;
     }
   }
 
-  .slick-prev {
-    left: 10px;
-    transform: rotate(0);
+  .product-big-photo {
+    // width: 370px;
+    // height: 370px;
+    padding: 23px;
+
+    text-align: center;
+    
+    border: 1px solid #DAE1E7;
+    border-radius: 20px;
+    margin-bottom: 15px;
+
+    .slick-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .slick-prev {
+      left: 10px;
+      transform: rotate(0);
+    }
+
+    .slick-next {
+      right: 10px;
+      transform: rotate(180deg);
+    }
   }
 
-  .slick-next {
-    right: 10px;
-    transform: rotate(180deg);
+  .product-small-photos {
+    padding: 0 56px;
+
+    .slick-slide {
+      margin-right: 15px;
+    }
+
+    .slick-prev {
+      left: 0;
+      transform: rotate(0);
+    }
+
+    .slick-next {
+      right: 0;
+      transform: rotate(180deg);
+    }
   }
-}
 
-.product-small-photos {
-  padding: 0 56px;
-
-  .slick-slide {
+  .product-small-photo {
+    width: 76px;
+    height: 76px;
+    padding: 5px;
     margin-right: 15px;
+
+    text-align: center;
+    
+    background-color: #fff;
+    border: 1px solid #DAE1E7;
+    border-radius: 10px;
+      cursor: pointer;
+
+    img {
+      // width: 100%;
+      margin: auto;
+    }
   }
-
-  .slick-prev {
-    left: 0;
-    transform: rotate(0);
-  }
-
-  .slick-next {
-    right: 0;
-    transform: rotate(180deg);
-  }
-}
-
-.product-small-photo {
-  width: 76px;
-  height: 76px;
-  padding: 5px;
-  margin-right: 15px;
-
-  text-align: center;
-  
-  background-color: #fff;
-  border: 1px solid #DAE1E7;
-  border-radius: 10px;
-    cursor: pointer;
-
-  img {
-    // width: 100%;
-    margin: auto;
-  }
-}
 
 /////////////////////////////// Параметры и цена
 
 .product-rating-wrap {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
+
+  vertical-align: middle;
 }
 
 .product-content {
@@ -201,6 +205,13 @@
     right: 0;
     top: -64px;
     justify-content: flex-end;
+
+    .popup {
+      position: absolute;
+      top: 100%;
+      margin: 0 0 0 auto;
+      transform: none;
+    }
   }
 
   &__bottom {
@@ -260,6 +271,8 @@
   padding: 0;
   margin: 0 30px 20px 0;
   border: none;
+
+  vertical-align: top;
 
   &__title {
     position: relative;
@@ -352,14 +365,23 @@
 
 .product-card-credit {
   position: relative;
+  padding: 0;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
-  margin-bottom: 10px;
   line-height: 1.25;
+  background-color: #fff;
+  border: none;
   cursor: pointer;
 
+  &:hover, &:focus {
+    font-weight: bold;
+  }
+
   svg {
+    display: inline-block;
+    vertical-align: middle;
     margin-left: 10px;
     opacity: 0.6;
 

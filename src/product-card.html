@@ -17,14 +17,14 @@
         <div class="product-card">
           <h2 class="title">Apple iPhone 11 128 GB Фиолетовый Россия</h2>
           <div class="product-photos-slider">
-            <a class="product-big-photo" href="#">
-              <img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-              <img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-              <img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-              <img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-              <img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-              <img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB">
-            </a>
+            <div class="product-big-photo">
+              <a href="images/products/iphone11-grey.png"><img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+              <a href="images/products/iphone11-grey-2.png"><img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+              <a href="images/products/iphone11-grey-3.png"><img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+              <a href="images/products/iphone11-grey.png"><img class="lazyload" data-src="images/products/iphone11-grey.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+              <a href="images/products/iphone11-grey-2.png"><img class="lazyload" data-src="images/products/iphone11-grey-2.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+              <a href="images/products/iphone11-grey-3.png"><img class="lazyload" data-src="images/products/iphone11-grey-3.png" alt="Купить Смартфон Apple iPhone 11 32GB" title="Смартфон Apple iPhone 11 32GB"></a>
+            </div>
             <div class="product-small-photos">
               <button class="product-small-photo">
                 <img class="lazyload" data-src="images/products/iphone11-grey-small-1.png" alt="">
@@ -49,9 +49,9 @@
           </div>
           <div class="product-content">
             <div class="product-rating-wrap">
-              <div class="product-rating">
+              <a href="#respondsTab" class="product-rating">
                 <div class="value" style="width: 80%;"></div>
-              </div>
+              </a>
               <a href="#respondsTab" class="product-votes">23 отзыва</a>
             </div>
             <div class="user-nav">
@@ -63,9 +63,29 @@
                 @@include('images/icon-compare.svg')
                 Добавить к сравнению
               </a>
-              <a href="#" class="user-link user-link--gift">
+              <a href="#" class="user-link user-link--gift" data-toggle="popup" data-target="popup--gift">
                 @@include('images/icon-gift.svg')
               </a>
+
+              <!-- попап Подарок при покупке-->
+              <div class="popup popup--gift">
+                <button class="popup__close">Закрыть</button>
+                <h4 class="popup__title">Подарок при покупке</h4>
+                <div class="popup__product-line">
+                  <img class="product-img" src="images/products/amazfit-thumb.png" alt="Смарт-часы Amazfit GTS A1914">
+                  <div class="">
+                    <a target="_blank" href="#" class="product-name">Смарт-часы Amazfit GTS A1914</a>
+                    <span class="product-price"><span class="price-old">
+                      <span class="bk_price">2 990</span>
+                        <span class="ruble">₽</span>
+                        <span class="price-sale">-100%</span>
+                      </span>
+                      0 <span class="ruble">₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- // -->
             </div>
             <fieldset class="product-parameter">
               <legend class="product-parameter__title">Объем памяти</legend>
@@ -127,14 +147,14 @@
                     <span class="ruble">₽</span>
                   </div>
                   <div class="product-bonus-wrapper">
-                    <div class="product-bonus">
-                      <span class="product-bonus__title">AT-Бонус</span>
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
                       <strong class="product-bonus__value">149 <span class="ruble">₽</span></strong>
-                    </div>
+                    </button>
                   </div>
                 </div>
-                <a class="button button--basket" href="#">Добавить в корзину</a>
-                <a class="button button--one-click" href="#">Купить в 1 клик</a>
+                <button class="button button--basket">Добавить в корзину</button>
+                <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
               </div>
               <div class="product-content__col">
                 <p class="product-card-article">Артикул: 1394855032</p>
@@ -152,10 +172,10 @@
                     @@include('images/icon-quantity.svg')
                   </span> -->
                 </p>
-                <div class="product-card-credit">
+                <button class="product-card-credit" data-toggle="popup" data-target="popup--credit">
                   Кредит онлайн за 15 минут
                   @@include('images/icon-info.svg')
-                </div>
+                </button>
                 <div class="popup popup--credit">
                   <button class="popup__close"></button>
                   <p class="popup__title">Как купить в кредит онлайн?</p>
@@ -164,9 +184,9 @@
                 </div>
                 <p class="product-card-credit-sum">5 849 ₽ в месяц</p>
                 <ul class="product-card-info">
-                  <li class="product-card-info__item product-card-pickups">Доступен для самовывоза <span class="underline">в 2 точках</span>
+                  <li class="product-card-info__item">Доступен для самовывоза <button class="link underline product-card-pickups" data-toggle="modal" data-target="modal--pickup">в 2 точках</button>
                   </li>
-                  <li class="product-card-info__item">Доставка по СПб <span class="product-card-delivery underline">от 100 ₽</span>
+                  <li class="product-card-info__item">Доставка по СПб <button class="product-card-delivery link underline" data-toggle="popup" data-target="popup--delivery">от 100 ₽</button>
                     <div class="popup popup--delivery">
                       <button class="popup__close">Закрыть</button>
                       <p class="popup__title">Курьером</p>
@@ -178,15 +198,15 @@
                     </div>
                   </li>
                   <li class="product-card-info__item">
-                    <!-- Гарантия <span class="product-card-garant underline">производителя</span>: 12 месяцев -->
-                    Гарантия <span class="product-card-garant underline">магазина</span>: <span class="nowrap">12 месяцев</span>
+                    <!-- Гарантия <span class="product-card-garant underline" data-toggle="popup" data-target="popup--garant">производителя</span>: 12 месяцев -->
+                    Гарантия <button class="product-card-garant link underline" data-toggle="popup" data-target="popup--garant">магазина</button>: <span class="nowrap">12 месяцев</span>
                     <div class="popup popup--garant">
                       <button class="popup__close">Закрыть</button>
                       <!-- <p class="popup__title">Гарантия производителя: 12 месяцев</p>
-                      <p class="popup__text">Дает вам возможность отремонтировать устройство в любом авторизованном сервисном центре производителя устройства</p> -->
+                      <p class="popup__text">Гарантийное обслуживание производится в авторизованных сервисных центрах производителя на территории РФ</p> -->
 
                       <p class="popup__title">Гарантия магазина: 12 месяцев</p>
-                      <p class="popup__text">Наш магазин Advanced Tech берет на себя обязательства по ремонту приобретенного устройства</p>
+                      <p class="popup__text">Гарантийное обслуживание производится в сервисном центре магазина</p>
 
                     </div>
                   </li>

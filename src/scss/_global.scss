@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -167,11 +168,17 @@ input:focus {
   opacity: 0.7;
 }
 
+.link {
+  padding: 0;
+  background-color: #fff;
+  border: none;
+}
+
 .underline {
   position: relative;
   cursor: pointer;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -181,6 +188,11 @@ input:focus {
     width: 100%;
     height: 1px;
     border-top: 1px solid #025BB1;
+    transition: 0.5s;
+  }
+
+  &:hover::after, &:focus::after {
+    width: 0;
   }
 }
 
@@ -374,6 +386,21 @@ input:focus {
 
     &::-webkit-scrollbar {
       width: 0;
+    }
+  }
+
+
+  .search-help {
+    min-height: 200px;
+
+    &__text {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 20px 15px 0;
     }
   }
 }

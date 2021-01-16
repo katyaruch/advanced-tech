@@ -69,7 +69,7 @@
 
     list-style: none;
 
-    li a {
+    >li>a {
       position: relative;
       display: flex;
       align-items: center;
@@ -84,9 +84,9 @@
       border-right: 1px solid #DAE1E7;
       background-color: #025BB1;
 
-      // &:hover {
-      //   color: rgba(#fff, 0.5);
-      // }
+      &:hover {
+        background: #044787;
+      }
     }
 
     li a svg {
@@ -109,26 +109,93 @@
   }
 
   &__cat {
-    position: relative;
     cursor: pointer;
   }
 
-  &__cat-list {
+  // &__cat-list {
+  //   display: none;
+
+  //   position: absolute;
+
+  //   width: 100%;
+  //   padding-bottom: 10px;
+
+  //   background: #025BB1;
+  //   border-radius: 0 0 15px 15px;
+  //   overflow: hidden;
+
+  //   transition: 0.5s;
+  // }
+
+
+  &__sublist-wrapper {
     display: none;
 
     position: absolute;
+    // top: 0;
+    // left: 269px;
+    top: 52px;
+    left: 125px;
+    right: 0;
 
-    width: 100%;
-    padding-bottom: 10px;
-
-    background: #025BB1;
-    border-radius: 0 0 15px 15px;
-    overflow: hidden;
-
-    transition: 0.5s;
+    flex-grow: 1;
+    min-height: 424px;
   }
 
-  &__cat:hover &__cat-list {
+  &__sublist {
+    display: flex;
+    flex-flow: wrap row;
+    min-height: 424px;
+    padding: 30px 10px 0px 30px;
+
+    background: #FCFCFD;
+    border: 1px solid #DAE1E7;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    list-style: none;
+
+    >li {
+      width: 100%;
+      max-width: 195px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #025BB1;
+    }
+
+    li a:hover {
+      opacity: 0.5;
+    }
+
+    li ul {
+      margin: 10px 0 0;
+      list-style: none;
+    }
+
+    li ul li {
+      margin-bottom: 8px;
+
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #000000;
+      opacity: 0.8;
+
+      &:last-child {
+        color: #025BB1;
+      }
+    }
+  }
+
+  // &__cat:hover &__cat-list {
+  //   display: block;
+  // }
+
+  &__cat:hover .menu__sublist-wrapper {
     display: block;
   }
 }
@@ -238,6 +305,10 @@
       line-height: 17px;
 
       color: #025BB1;
+    }
+
+    li a:hover {
+      opacity: 0.5;
     }
 
     li ul {

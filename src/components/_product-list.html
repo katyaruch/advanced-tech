@@ -1,5 +1,15 @@
 <div class="product-list">
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image1.png" alt="Фитнес-браслет Xiaomi Mi Band 4">
@@ -31,31 +41,31 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">149 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           1 490 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
@@ -87,37 +97,37 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           14 390 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image3.png" alt="Беспроводные наушники Xiaomi Redmi AirDots">
       </a>
-      <a href="#" class="label-gift" title="Подарок при покупке"></a>
-      <a href="#" class="label-delivery-free" title="Бесплaтная доставка">Доставка 0₽</a>
+      <a href="#" class="label-gift" title="Подарок при покупке" data-toggle="popup" data-target="popup--gift"></a>
+      <a href="#" class="label-delivery-free" title="Бесплaтная доставка" data-toggle="popup" data-target="popup--delivery-free">Доставка 0₽</a>
     </div>
     <div class="product-item__inner">
       <div class="product-rating">
@@ -133,10 +143,10 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">125 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
@@ -147,22 +157,22 @@
           </span>
           24 640 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
@@ -186,36 +196,36 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           7 390 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket added" title="В корзине">В корзине</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image5.png" alt="Беспроводные наушники Realme Buds Air">
       </a>
-      <a href="#" class="label-delivery-free" title="Бесплaтная доставка">Доставка 0₽</a>
+      <a href="#" class="label-delivery-free" title="Бесплaтная доставка" data-toggle="popup" data-target="popup--delivery-free">Доставка 0₽</a>
     </div>
     <div class="product-item__inner">
       <div class="product-rating">
@@ -230,37 +240,38 @@
           <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
         </label>
       </div>
+      
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">128 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           4 290 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image6.png" alt="Электросамокat бiaomi Mi Electric Scooter 1S">
       </a>
-      <a href="#" class="label-gift" title="Подарок при покупке"></a>
+      <a href="#" class="label-gift" title="Подарок при покупке" data-toggle="popup" data-target="popup--gift"></a>
     </div>
     <div class="product-item__inner">
       <div class="product-rating">
@@ -280,31 +291,31 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">190 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           27 270 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket added" title="В корзине">В корзине</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image7.png" alt="Смартфон Xiaomi Mi 10 8/256Gb">
@@ -328,36 +339,36 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">386 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           55 170 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>
   <div class="product-item">
+    <div class="user-nav">
+      <a href="#" class="user-link user-link--compare">
+        @@include('../images/icon-compare.svg')
+        Добавить к сравнению
+      </a>
+      <a href="#" class="user-link user-link--fav">
+        @@include('../images/icon-fav.svg')
+        Добавить в избранное
+      </a>
+    </div>
     <div class="product-item__img">
       <a class="product-item-img-link" href="/product-card.html">
         <img class="lazyload" data-src="images/products/image8.png" alt="Смарт-часы Amazfit GTS A1914">
       </a>
-      <a href="#" class="label-gift" title="Подарок при покупке"></a>
+      <a href="#" class="label-gift" title="Подарок при покупке" data-toggle="popup" data-target="popup--gift"></a>
     </div>
     <div class="product-item__inner">
       <div class="product-rating">
@@ -389,27 +400,17 @@
         </label>
       </div>
       <div class="product-bonus-wrapper">
-        <div class="product-bonus">
+        <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
           <span class="product-bonus__title">at-бонус</span>
           <strong class="product-bonus__value">85 <span class="ruble">₽</span></strong>
-        </div>
+        </button>
       </div>
       <div class="product-item__bottom">
         <p class="product-item__price">
           8 570 <span class="ruble">₽</span>
         </p>
-        <div class="user-nav">
-          <a href="#" class="user-link user-link--compare">
-            @@include('../images/icon-compare.svg')
-            Добавить к сравнению
-          </a>
-          <a href="#" class="user-link user-link--fav">
-            @@include('../images/icon-fav.svg')
-            Добавить в избранное
-          </a>
-        </div>
         <button class="button button--basket added" title="В корзине">В корзинe</button>
-        <a class="button button--one-click" href="#">Купить в 1 клик</a>
+        <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
       </div>
     </div>
   </div>

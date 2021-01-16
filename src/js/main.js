@@ -142,73 +142,31 @@ $(function () {
       }
     });
 
-  //////////////// popup напомнить о дате анонса
+  //////////////// popup при клике на кнопки с атрибутами data-toggle="popup" и data-toggle="modal"
 
-    $('.button--remind').click(function(e) {
+    $('[data-toggle="popup"],[data-toggle="modal"]').click(function(e) {
       e.preventDefault();
-      $('.popup--remind').toggleClass('popup--open');
+      $('.popup').removeClass('popup--open');
+      $('.modal').removeClass('modal--open');
+
+      var toggle = $(this).attr("data-toggle");
+      var target = $(this).attr("data-target");
+      if ( toggle == 'popup') {
+        $('.'+target).addClass('popup--open');
+      }
+      if ( toggle == 'modal') {
+        $('.'+target).addClass('modal--open');
+      }
     });
 
-  //////////////// popup at-бонус
-
-    $('.product-bonus').click(function(e) {
-      e.preventDefault();
-      $('.popup--bonus').toggleClass('popup--open');
-    });
-
-  //////////////// popup--credit
-
-    $('.product-card-credit').click(function(e) {
-      e.preventDefault();
-      $('.popup--credit').toggleClass('popup--open');
-    });
-
-  //////////////// popup Точки для самовывоза
-
-    $('.product-card-pickups').click(function(e) {
-      e.preventDefault();
-      $('.modal--pickup').toggleClass('modal--open');
-    });
-
-    $('.available').click(function(e) {
-      e.preventDefault();
-      $(this).next('.modal--pickup').addClass('modal--open');
-    });
-
-  //////////////// popup Подарок при покупке
-
-    $(".label-gift, .user-link--gift").click(function(e) {
-      e.preventDefault();
-        $('.popup--gift').toggleClass('popup--open');
-    });
-
-  //////////////// popup доставка
-
-    $(".product-card-delivery").click(function(e) {
-      e.preventDefault();
-      $('.popup--delivery').toggleClass('popup--open');
-    });
-
-  //////////////// popup Бесплатная доставка
-
-    $(".label-delivery-free").click(function(e) {
-      e.preventDefault();
-      $('.popup--delivery-free').toggleClass('popup--open');
-    });
-
-  //////////////// popup Гарантия производителя
-
-    $(".product-card-garant").click(function(e) {
-      e.preventDefault();
-      $('.popup--garant').toggleClass('popup--open');
-    });
-
-  //////////////// popup Купить в 1 клик
-
-    $(".button--one-click").click(function(e) {
-      e.preventDefault();
-        $('.popup--one-click').toggleClass('popup--open');
-    });
+    // $(document).click(function(e){
+    //   var btns = $('[data-toggle="popup"]');
+    //   var div = $('.popup--open');
+    //    if (!$(btns) || !div.is(e.target) // если клик был не по нашему блоку
+    //     && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    //     div.removeClass('popup--open').removeClass('modal--open');
+    //   }
+    // });
 
   //////////////// закрыть popup
 
@@ -257,10 +215,16 @@ $(function () {
 
   //////////////// Выбрать тег
 
-    $(".catalog__tag").click(function(e) {
+    $('.catalog__tag').click(function(e) {
       e.preventDefault();
-      $('.catalog__tag').not(this).removeClass('active');
       $(this).toggleClass('active');
+      $('.catalog__tag-reset').removeClass('hide');
+    });
+
+    $('.catalog__tag-reset .btn').click(function(e) {
+      e.preventDefault();
+      $('.catalog__tag-reset').addClass('hide');
+      $('.catalog__tag').removeClass('active');
     });
 
   //////////////// свернуть/раскрыть группу фильтра
@@ -308,6 +272,23 @@ $(function () {
 // Страница товара
 
   //////////////// фото-слайдер товара
+
+
+    $('.product-big-photo').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Загрузка #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1],
+        tCounter: '',
+      },
+      image: {
+        tError: '<a href="%url%">Изображение не загрузилось'
+      }
+    });
 
     $('.product-big-photo').slick({
       asNavFor: '.product-small-photos',
@@ -418,21 +399,22 @@ $(function () {
       });
     }
 
+  //////////////// селект (поле выбора)
 
-  $(".dropdown-toggle").click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass('dropdown-toggle--open');
-  });
+    $(".dropdown-toggle").click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('dropdown-toggle--open');
+    });
 
-  $(".dropdown-menu li").click(function(e) {
-    e.preventDefault();
-    var select = $(this).text();
-    $(this).parents(".dropdown").find(".dropdown-toggle").text(select);
+    $(".dropdown-menu li").click(function(e) {
+      e.preventDefault();
+      var select = $(this).text();
+      $(this).parents(".dropdown").find(".dropdown-toggle").text(select);
 
-    $(".dropdown-menu li").removeClass('active');
-    $(this).addClass('active');
-    $(".dropdown-toggle").removeClass('dropdown-toggle--open');
-  });
+      $(".dropdown-menu li").removeClass('active');
+      $(this).addClass('active');
+      $(".dropdown-toggle").removeClass('dropdown-toggle--open');
+    });
 
 // Корзина
 
@@ -447,10 +429,12 @@ $(function () {
 
     $('.cart-remove').click(function(e) {
       e.preventDefault();
-      $(this).parents('.bk_product').remove();
+      $(this).parents('.cart-table-row').remove();
     });
 
-  //////////////// Очистить избранное
+
+// Избранное
+  //////////////// Очистить список
 
     $('.catalog-fav-clear').click(function(e) {
       e.preventDefault();
@@ -472,13 +456,35 @@ $(function () {
       }
     });
 
+  //////////////// Если выбран Способ получения
+
+    $(".tabs-delivery input[name='delivery-type']").on('change', function() {
+      $('.tabs-method, .fields-address').addClass('d-none');
+
+      if ($(this).val() == 'pickup-spb') {
+        $('.field-pickup').removeClass('d-none');
+      } else {
+        $('.field-pickup').addClass('d-none');
+      }
+      if ($(this).val() == 'delivery-spb') {
+        $('.tabs-city').removeClass('d-none');
+      } else {
+        $('.tabs-city').addClass('d-none');
+      }
+      if ($(this).val() == 'delivery-rus') {
+        $('.tabs-city-all').removeClass('d-none');
+      } else {
+        $('.tabs-city-all').addClass('d-none');
+      }
+    });
+
   //////////////// Popup выбора города получения
 
-    $(".select-city").click(function(e) {
-      e.preventDefault();
-      $('body').addClass('overflow-h');
-      $('.popup--delivery-city').toggleClass('popup--open');
-    });
+    // $(".select-city").click(function(e) {
+    //   e.preventDefault();
+    //   $('body').addClass('overflow-h');
+    //   $('.popup--delivery-city').toggleClass('popup--open');
+    // });
 
     $(".search-help a, .delivery-city").click(function(e) {
       e.preventDefault();
@@ -564,7 +570,8 @@ $(function () {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0,1], // Will preload 0 - before current, and 1 after the current image
+      tCounter: ''
     },
     image: {
       tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось'

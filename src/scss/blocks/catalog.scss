@@ -24,7 +24,6 @@
     border-top: 1px solid #DAE1E7;
     
     .catalog__tag {
-      padding: 15px 20px;
       margin: 0 10px 10px 0;
 
       font-weight: 500;
@@ -39,7 +38,28 @@
         border: 1px solid #025BB1;
         box-shadow: 0 0 0 1px #025BB1;
       }
+
+      a {
+        display: inline-block;
+        padding: 15px 20px;
+      }
     }
+  }
+
+  &__tag-reset {
+
+    .btn {
+      display: inline-block;
+      padding: 15px 20px;
+      background: #DAE1E7;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(#DAE1E7, 0.5);
+        // opacity: .5;
+      }
+    } 
   }
 
   &__wrapper {

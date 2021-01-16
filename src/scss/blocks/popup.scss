@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
 
-  display: none;
+  // display: none;
   width: 570px;
   padding: 30px;
 
@@ -11,11 +11,16 @@
   border: 1px solid #DAE1E7;
   border-radius: 20px;
   
-  z-index: 10;
-  animation: 'right-to-left' 0.6s;
+  z-index: 15;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  // animation: 'right-to-left' 0.6s;
 
   &.popup--open {
-    display: block;
+    // display: block;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   &__close {
@@ -293,6 +298,7 @@
 .popup--gift,
 .popup--delivery-free,
 .popup--delivery-city,
+.popup--delivery-city-all,
 .popup--delivery-pickup,
 .popup--bonus,
 .popup--remind,
@@ -307,14 +313,36 @@
   margin: auto;
   transform: translateY(-50%);
 
-  animation: 'bottom-to-center' 0.6s;
+  // animation: 'bottom-to-center' 0.6s;
 }
+
 
 .popup--delivery-city,
 .popup--delivery-pickup {
+  height: calc(100% - 40px);
+}
+
+
+.popup--delivery-pickup {
+  .pickup__line {
+    flex-direction: column;
+  }
+
+  .pickup__photos {
+    flex-direction: row;
+    margin: 0;
+
+    a:nth-child(-n+6) {
+      display: block;
+    }
+  }
+}
+
+.popup--delivery-city,
+.popup--delivery-city-all,
+.popup--delivery-pickup {
   width: calc(100% - 40px);
   max-width: 1290px;
-  height: calc(100% - 40px);
   padding: 59px;
   overflow-y: scroll;
 
@@ -413,6 +441,11 @@
 
   &--open {
     display: block;
+
+    .popup {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   .popup {
