@@ -336,7 +336,7 @@ $(function () {
     });
 
   //////////////// вкладки товара
-    $('.product-votes').click(function() {
+    $('.product-votes, .product-rating').click(function() {
       $('.product-tab-btn').removeClass('active');
       $('.product-tab-btn--responds').addClass('active');
     });
@@ -536,7 +536,7 @@ $(function () {
       var address = $(this).find(".pickup__button-address").text();
       $('.select-pickup').removeClass('input-empty').val(address);
       $('.select-pickup-address').removeClass('d-none').empty();
-      $(this).clone().appendTo('.select-pickup-address');
+      $(this).clone().appendTo('.select-pickup');
       $('.order-total').removeClass('d-none');
       $('.buton-confirm').removeAttr('disabled');
 

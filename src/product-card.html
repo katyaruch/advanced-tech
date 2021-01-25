@@ -399,12 +399,17 @@
             </div>
           </div>
           <div class="product-tabs">
+            <div class="product-tab-btn product-tab-btn--accessories" data-toggle="popup" data-target="product-tab--accessories">Аксессуары</div>
             <div class="product-tab-btn product-tab-btn--description" data-toggle="popup" data-target="product-tab--description">Описание</div>
             <div class="product-tab-btn product-tab-btn--specifications" data-toggle="popup" data-target="product-tab--specifications">Характеристики</div>
             <div id="respondsTab" class="product-tab-btn product-tab-btn--responds" data-toggle="popup" data-target="product-tab--responds">Отзывы <span>23</span></div>
             <div class="product-tab-btn product-tab-btn--questions" data-toggle="popup" data-target="product-tab--questions">Вопросы <span>6</span></div>
             <div class="product-tab-btn product-tab-btn--reviews" data-toggle="popup" data-target="product-tab--reviews">Обзоры <span>4</span></div>
 
+            <div class="product-tab product-tab--accessories">
+              <button class="popup__close">Закрыть</button>
+              @@include('components/_accessories.html')
+            </div>
             <div class="product-tab product-tab--description">
               <button class="popup__close">Закрыть</button>
               <h2 class="title title--underline">Описание</h2>
@@ -663,7 +668,6 @@
           </div>
         </div>
 
-        @@include('components/_accessories.html')
       </div>
     </section>
   </div>

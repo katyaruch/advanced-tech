@@ -171,14 +171,11 @@
   display: inline-block;
   margin: 8px 6px;
 
-  // &:last-child {
-  //   margin-right: 0;
-  // }
-
   .input {
     width: 100%;
     padding: 48px 20px 20px;
     margin-bottom: 0;
+    text-align: left;
 
     border-radius: 15px;
   }
@@ -256,23 +253,20 @@
 
   .input.select-pickup {
     color: rgba(#000,0);
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
-}
 
-.select-pickup-address {
-  position: relative;
-  top: -45px;
-  width: 100%;
-  padding-bottom: 10px;
-  margin: 0 6px;
-
-  background: #FCFCFD;
-  border: 1px solid #DAE1E7;
-  border-top: none;
-  border-radius: 0 0 15px 15px;
+  .input-empty.select-pickup {
+    color: rgba(0,0,0,.7);
+  }
 
   .pickup__button {
-    margin-left: 20px;
+    float: left;
     width: auto;
   }
 }
@@ -494,17 +488,6 @@
 
   .input-select~.input-icon:after {
     top: 34px;
-  }
-
-  .select-pickup-address {
-    position: static;
-    padding: 0;
-    border: none;
-    background: transparent;
-
-    .pickup__button {
-      margin: 5px 0 0 0;
-    }
   }
 
   .order-confirm {
