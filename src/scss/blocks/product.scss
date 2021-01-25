@@ -292,49 +292,12 @@
     background-size: 19px;
   }
 }
+.product-item .user-toggle.active {
+  display: flex;
+}
 
 .product-item .user-link {
   display: none;
-  width: 44px;
-  height: 44px;
-  margin-left: 5px;
-
-  border: 1px solid #DAE1E7;
-  background-color: #fff;
-  border-radius: 50%;
-  background-size: 18px;
-
-  svg {
-    width: 18px;
-    height: 18px;
-    filter: saturate(0);
-  }
-
-  &:hover{
-    border: none;
-    background-color: #74CA5E;
-
-    svg {
-      path {
-        fill: #fff;
-      }
-
-      rect {
-        stroke: #fff;
-        fill: transparent;
-      }
-    }
-  }
-}
-
-.product-item .product-fav {
-  display: block;
-  background: #74CA5E;
-  border: none;
-
-  svg path {
-    fill: #fff;
-  }
 }
 
 .product-item .button--one-click {
@@ -387,44 +350,33 @@
   background: #74CA5E url("../images/icon-fav.svg") no-repeat center / 18px;
 }
 
-@media (min-width: 1024px) {
 
-  .product-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 30px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    transition: 0.5s;
-    z-index: 5;
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 30px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: 0.5s;
+  z-index: 5;
 
-    .product-item__bottom {
-      flex-wrap: wrap;
-      border: 1px solid #DAE1E7;
-      border-top: none;
-      background-color: #fff;
-      box-shadow: 0px 30px 30px rgba(255, 255, 255, 0.25), 0px 30px 30px rgba(0, 0, 0, 0.15);
-    }
+  .product-item__bottom {
+    flex-wrap: wrap;
+    border: 1px solid #DAE1E7;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0px 30px 30px rgba(255, 255, 255, 0.25), 0px 30px 30px rgba(0, 0, 0, 0.15);
+  }
 
-    .user-link,
-    .button--one-click {
-      display: block;
-    }
+  .user-link {
+    display: flex;
+  }
 
-    // .button--basket {
-    //   width: 100%;
-    //   padding: 14px 50px 15px 15px;
-    //   margin: 20px 0 10px;
-
-    //   font-size: 14px;
-    //   line-height: 15px;
-    // }
-
-    .button--one-click {
-      width: 100%;
-      padding: 12px 15px 13px 15px;
-      margin-top: 15px;
-      font-size: 14px;
-      line-height: 15px;
-    }
+  .button--one-click {
+    display: block;
+    width: 100%;
+    padding: 12px 15px 13px 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 15px;
   }
 }
 

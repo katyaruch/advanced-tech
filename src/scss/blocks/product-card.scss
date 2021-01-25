@@ -14,51 +14,8 @@
   }
 
   .user-link {
-    width: 44px;
-    height: 44px;
     margin-left: 15px;
     margin-bottom: 20px;
-
-    border: 1px solid #DAE1E7;
-    border-radius: 50%;
-    background-size: 18px;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  .user-link--fav,
-  .user-link--compare {
-    svg {
-      filter: saturate(0);
-    }
-
-    &:hover{
-      border: none;
-      background-color: #74CA5E;
-
-      svg {
-        path {
-          fill: #fff;
-        }
-
-        rect {
-          stroke: #fff;
-          fill: transparent;
-        }
-      }
-    }
-  }
-
-  .user-link--gift {
-    background: #E9587B;
-    border: none;
-
-    svg path {
-      fill: #fff;
-    }
   }
 }
 
@@ -97,7 +54,7 @@
     max-width: 370px;
     margin-right: 30px;
     float: left;
-    z-index: 2;
+    z-index: 1;
 
     .slick-arrow {
       border-radius: 50%;
@@ -132,6 +89,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      a:hover,
+      a:focus {
+        outline: none;
+      }
 
       img {
         width: 100%;
@@ -286,10 +248,10 @@
       pointer-events: none;
     }
 
-    .popup {
-      right: 0;
-      left: auto;
-    }
+    // .popup {
+    //   right: 0;
+    //   left: auto;
+    // }
   }
 
   &__text {
@@ -317,6 +279,10 @@
   background: transparent;
   cursor: pointer;
   z-index: 2;
+
+  svg {
+    pointer-events: none;
+  }
 }
 
 .product-region {
@@ -530,7 +496,7 @@
     margin-bottom: 10px;
   }
 
-  .popup__close {
+  >.popup__close {
     display: none;
   }
 }
@@ -541,6 +507,9 @@
 .product-tab-btn--questions.active ~ .product-tab--questions,
 .product-tab-btn--reviews.active ~ .product-tab--reviews {
   display: block;
+  opacity: 1;
+  z-index: 15;
+  pointer-events: auto;
 }
 
 .product-props-table {
@@ -748,6 +717,10 @@
 
     .popup {
       width: auto;
+
+      // position: fixed;
+      // top: 50%;
+      // transform: translateY(-50%);
     }
   }
 
@@ -792,6 +765,14 @@
       top: 0;
     }
 
+    .user-nav .popup {
+      position: fixed;
+      top: 50%;
+      margin: auto;
+
+      transform: translateY(-50%);
+    }
+
     &__title {
       font-size: 14px;
     }
@@ -834,9 +815,6 @@
     margin: 0 0 10px 0;
   }
 
-  .product-tab-btn.active ~ .product-tab {
-  }
-
   .product-tab {
     display: none;
     padding-bottom: 0;
@@ -846,6 +824,7 @@
     right: 0;
     left: 0;
     bottom: 0;
+    transform: none;
     overflow: scroll;
 
     img {

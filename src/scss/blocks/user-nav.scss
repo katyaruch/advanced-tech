@@ -9,49 +9,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 70px;
-  height: 70px;
+  width: 44px;
+  height: 44px;
+  margin-left: 5px;
 
   font-size: 0;
   text-align: center;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  border-left: 1px solid #DAE1E7;
+
+  background-color: #fff;
+  border: 1px solid #DAE1E7;
+  border-radius: 50%;
+  background-size: 18px;
+  cursor: pointer;
 
   svg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    // display: block;
-    width: 30px;
-    height: 30px;
-    margin: auto;
-
-    path {
-      fill: #74CA5E;
-    }
+    width: 18px;
+    height: 18px;
+    filter: saturate(0);
+    pointer-events: none;
   }
 
-  &__count {
-    position: absolute;
-    left: 39px;
-    top: 10px;
+  svg path {
+    fill: #74CA5E;
+  }
+}
 
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #74CA5E;
+.user-toggle:hover, {
+  border: 1px solid #74CA5E;
+}
 
-    font-weight: 900;
-    font-size: 12px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-    z-index: 1;
+.product-fav,
+.user-toggle.active {
+  display: flex;
+  background: #74CA5E;
+  border: none;
+
+  svg {
+    path {
+      fill: #fff;
+    }
+
+    rect {
+      stroke: #fff;
+      fill: transparent;
+    }
+  }
+}
+
+.user-link--gift {
+  background: #E9587B;
+  border: none;
+
+  svg path {
+    fill: #fff;
   }
 }
 
@@ -106,20 +116,6 @@
 
 @media (max-width: 425px) {
 
-  .user-link {
-    width: 60px;
-    height: 60px;
-
-    &__count {
-      left: 31px;
-    }
-
-    svg {
-      width: 26px;
-      height: 26px;
-    }
-  }
-
   .user-cart {
     display: flex;
     justify-content: center;
@@ -167,7 +163,6 @@
 
 
 @media (max-width: 320px) {
-  .user-link,
   .user-cart {
     width: 55px;
     border: none;

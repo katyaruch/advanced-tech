@@ -34,7 +34,7 @@
           <a class="header__search-btn" href="/search.html">Поиск</a>
         </form>
         <div class="header__user-nav user-nav">
-          <a href="#" class="header__tel user-link user-link--tel">
+          <a href="tel:+78127704799" class="header__tel user-link user-link--tel" data-toggle="popup" data-target="popup--about-tel">
             @@include('../images/icon-tel.svg')
             <span class="header__tel-text">По всем вопросам</span>
             +7 (812) 770-47-99
@@ -721,9 +721,10 @@
 <div class="popup popup--recall">
   <button class="popup__close"></button>
   <p class="popup__title">Обратный звонок</p>
+  <p class="popup__text">Оставьте свои контакты и мы вам перезвоним</p>
   <form>
-    <!-- <input type="email" class="input" placeholder="Введите ваше имя"> -->
+    <input type="email" class="input" placeholder="Введите ваше имя">
     <input type="tel" class="input" placeholder="Введите ваш телефон">
-    <a href="#" class="button button--fill">Заказать звонок</a>
+    <button type="submit" class="button button--fill">Заказать звонок</button>
   </form>
 </div>

@@ -129,37 +129,46 @@ $(function () {
 
 // Всплывающие окна
 
-  //////////////// popup при клике на кнопки с атрибутами data-toggle="popup" и data-toggle="modal"
+  //////////////// popup при клике на кнопки с атрибутами data-toggle="popup"
 
-    $('[data-toggle="popup"],[data-toggle="modal"]').click(function(e) {
+    $('[data-toggle="popup"]').click(function(e) {
       e.preventDefault();
       $('.popup').removeClass('popup--open');
-      $('.modal').removeClass('modal--open');
 
       var toggle = $(this).attr("data-toggle");
       var target = $(this).attr("data-target");
       if ( toggle == 'popup') {
         $('.'+target).addClass('popup--open');
       }
-      if ( toggle == 'modal') {
-        $('.'+target).addClass('modal--open');
-      }
     });
 
     $(document).click(function(e){
 
-      var btns = $('[data-toggle="popup"], [data-toggle="modal"]');
-      var popup = $('.popup--open, .modal--open');
+      var btns = $('[data-toggle="popup"]');
+      var popup = $('.popup--open');
+      var mfp = $('.mfp-zoom-out-cur');
 
-       if (!btns.is(e.target) // если клик был не по нашему блоку
-        && !popup.is(e.target) && popup.has(e.target).length === 0) { // и не по его дочерним элементам
-        popup.removeClass('popup--open').removeClass('modal--open');
+       if (!btns.is(e.target) // если клик был не по кнопкам
+        && !popup.is(e.target) && popup.has(e.target).length === 0 //не по нашему блоку и не по его дочерним элементам
+        && !mfp.is(e.target) && mfp.has(e.target).length === 0) {  //не по magnific popup
+        popup.removeClass('popup--open');
       }
 
-      if ( $('.popup--delivery-pickup, .popup--delivery-city, .popup--delivery-city-all').hasClass('popup--open') == true ) {
+      // if ($('body').hasClass('mfp-zoom-out-cur')) {}
+
+      if ( $('.popup--delivery-pickup, .popup--delivery-city, .popup--delivery-city-all, .popup--pickup').hasClass('popup--open') == true ) {
         $('body').addClass('overflow-h');
       } else {
         $('body').removeClass('overflow-h');
+      }
+
+
+      if ($(window).width() <= 768) {
+        if ( $('.popup').hasClass('popup--open') == true ) {
+          $('body').addClass('overflow-h');
+        } else {
+          $('body').removeClass('overflow-h');
+        }
       }
     });
 
@@ -168,7 +177,6 @@ $(function () {
     $('.popup__close').click(function(e) {
       e.preventDefault();
       $('body').removeClass('overflow-h');
-      $(this).parents('.modal').removeClass('modal--open');
       $(this).parents('.popup').removeClass('popup--open');
     });
 
@@ -359,21 +367,6 @@ $(function () {
   //////////////// вкладки точек самовывоза [также на странице Контакты]
 
     if ($(window).width() > 768) { //только на десктопе
-      $('.popup__buttons').slick({
-        slidesToShow: 5,
-        vertical: true,
-        variableWidth: true,
-        focusOnSelect: true,
-        asNavFor: '.popup__info-list',
-      });
-
-      $('.popup__info-list').slick({
-        arrows: false,
-        slidesToShow: 1,
-        variableWidth: true,
-        focusOnSelect: true,
-        asNavFor: '.popup__buttons',
-      });
 
       $('.pickup__buttons').slick({
         slidesToShow: 5,
@@ -390,6 +383,25 @@ $(function () {
         focusOnSelect: true,
         asNavFor: '.pickup__buttons',
         autoplay: true,
+      });
+
+      $('[data-target="popup--pickup"]').click(function(e) {
+        $('.pickup__info-list').slick('refresh');
+        $('.pickup__photos').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Загрузка #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1], // Will preload 0 - before current, and 1 after the current image
+            tCounter: ''
+          },
+          image: {
+            tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось'
+          }
+        });
       });
     }
 
@@ -440,6 +452,12 @@ $(function () {
 
 
 // Избранное
+  //////////////// Добавить в избранное
+    $('.user-toggle').click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+    });
+
   //////////////// Очистить список
 
     $('.catalog-fav-clear').click(function(e) {
@@ -496,7 +514,7 @@ $(function () {
       $('.select-city, .search-city').val(city).removeClass('input-empty');
       $('body').removeClass('overflow-h');
       $('.tabs-method').removeClass('d-none');
-      $('.popup--delivery-city').removeClass('popup--open');
+      $('.popup--delivery-city, .popup--delivery-city-all').removeClass('popup--open');
     });
 
   //////////////// выбор способа получения в городе (курьер/самовывоз)
