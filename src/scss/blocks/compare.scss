@@ -8,6 +8,141 @@
   &__count {
     color: #103861;
   }
+
+  &-area {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .compare-button {
+      background: #FFFFFF;
+      border: 1px solid #DAE1E7;
+      box-sizing: border-box;
+      border-radius: 1000px;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: .5;
+      }
+    }
+
+    .compare-button_back,
+    .compare-button_next {
+      position: absolute;
+      top: 126px;
+
+      svg {
+        margin-left: 3px;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .compare-button_next {
+      right: -75px;
+    }
+    .compare-button_back {
+      left: -75px;
+      transform: rotate(180deg);
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__item {
+      width: 270px;
+      margin: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      &:not(&:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &__section {
+      margin: 15px 0;
+
+      &:not(&:first-child),{
+        margin-top: 30px;
+      }
+
+      &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 165%;
+        margin-bottom: 10px;
+      }
+
+      &-row {
+        position: relative;
+        padding: 0 20px 0px 20px;
+        margin: 0 -20px 0 -20px;
+
+        &__title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 165%;
+          opacity: 0.8;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: -11px;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #025bb1;
+            border-radius: 50%;
+          }
+        }
+
+        &:nth-child(even) {
+          background: rgba(0, 0, 0, 0.02);
+          border-radius: 10px;
+          min-height: 77px;
+        }
+
+        .compare-area__item {
+          padding: 41px 0 10px 0;
+          width: 285px;
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-right: 15px !important;
+
+          &__content {
+            max-width: 270px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 165%;
+            color: #000000;
+            opacity: 0.8;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
 }
 
 .checkbox {
