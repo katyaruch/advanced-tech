@@ -58,8 +58,10 @@
     &__row {
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
       position: relative;
       overflow: hidden;
+      height: 600px;
     }
 
     &__item {
@@ -70,6 +72,10 @@
 
       &:not(&:last-child) {
         margin-right: 30px;
+      }
+      &:hover,
+      &:hover .product-item__bottom {
+        box-shadow: unset;
       }
     }
 
@@ -92,6 +98,7 @@
         position: relative;
         padding: 0 20px 0px 20px;
         margin: 0 -20px 0 -20px;
+        height: auto;
 
         &__title {
           font-style: normal;
