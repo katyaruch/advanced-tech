@@ -29,545 +29,495 @@
             @@include('./images/icon-arrow-2.svg')
           </button>
 
-          <div class="compare-area__row compare-area__row_product">
-            <div class="compare-area__item product-item" data-product-id="1" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 80%;"></div>
-                </div>
-                <span class="product-votes">12 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+          <div class="compare-area__wrapper">
+            <div class="compare-area__row compare-area__row_product">
+              <div class="compare-area__item product-item" data-product-id="1" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    14 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 80%;"></div>
+                  </div>
+                  <span class="product-votes">12 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      14 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="2" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 40%;"></div>
-                </div>
-                <span class="product-votes">8 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item product-item" data-product-id="2" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    7 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket added" title="В корзине">В корзине</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 40%;"></div>
+                  </div>
+                  <span class="product-votes">8 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      7 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket added" title="В корзине">В корзине</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="3" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 80%;"></div>
-                </div>
-                <span class="product-votes">12 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item compare-area__item_pinned product-item" data-product-id="3" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    14 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 80%;"></div>
+                  </div>
+                  <span class="product-votes">12 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      14 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="4" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 40%;"></div>
-                </div>
-                <span class="product-votes">8 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item product-item" data-product-id="4" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    7 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket added" title="В корзине">В корзине</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 40%;"></div>
+                  </div>
+                  <span class="product-votes">8 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      7 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket added" title="В корзине">В корзине</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="5" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 40%;"></div>
-                </div>
-                <span class="product-votes">8 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item product-item" data-product-id="5" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    7 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket added" title="В корзине">В корзине</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 40%;"></div>
+                  </div>
+                  <span class="product-votes">8 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      7 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket added" title="В корзине">В корзине</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="6" >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 80%;"></div>
-                </div>
-                <span class="product-votes">12 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item product-item" data-product-id="6" >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    14 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image2.png" alt="Смартфон Huawei Honor 20 Lite 4/128Gb">
+                  </a>
+                </div>
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 80%;"></div>
+                  </div>
+                  <span class="product-votes">12 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон Huawei Honor 20 Lite 4/128Gb</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/white.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/violet.svg');"></span>
+                    </label>
+                  </div>
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">143 <span class="ruble">₽</span></strong>
+                    </button>
+                  </div>
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      14 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket" title="Добавить в корзину">Добавить в корзину</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="compare-area__item product-item" data-product-id="7"  >
-              <div class="user-nav">
-                <button class="user-link user-toggle user-link--compare active">
-                  @@include('images/icon-compare.svg')
-                  Добавить к сравнению
-                </button>
-                <button class="user-link user-toggle user-link--fav">
-                  @@include('images/icon-fav.svg')
-                  Добавить в избранное
-                </button>
-              </div>
-              <div class="product-item__img">
-                <a class="product-item-img-link" href="/product-card.html">
-                  <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
-                </a>
-              </div>
-              <div class="product-item__inner">
-                <div class="product-rating">
-                  <div class="value" style="width: 40%;"></div>
-                </div>
-                <span class="product-votes">8 отзывов</span>
-                <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
-                <div class="product-color">
-                  Цвета:
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="product-color">
-                    <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
-                  </label>
-                </div>
-                <div class="product-bonus-wrapper">
-                  <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
-                    <span class="product-bonus__title">at-бонус</span>
-                    <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+              <div class="compare-area__item product-item" data-product-id="7"  >
+                <div class="user-nav">
+                  <button class="user-link user-toggle user-link--compare active">
+                    @@include('images/icon-compare.svg')
+                    Добавить к сравнению
+                  </button>
+                  <button class="user-link user-toggle compare-pin">
+                    @@include('images/icon-pin.svg')
+                    Закрепить
+                  </button>
+                  </button>
+                  <button class="user-link user-toggle user-link--fav">
+                    @@include('images/icon-fav.svg')
+                    Добавить в избранное
                   </button>
                 </div>
-                <div class="product-item__bottom">
-                  <p class="product-item__price">
-                    7 390 <span class="ruble">₽</span>
-                  </p>
-                  <button class="button button--basket added" title="В корзине">В корзине</button>
-                  <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
+                <div class="product-item__img">
+                  <a class="product-item-img-link" href="/product-card.html">
+                    <img class="lazyload" data-src="images/products/image4.png" alt="Смартфон ZTE Blade A7 (2020)">
+                  </a>
                 </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="sections-container">
-            <div class="compare-area__section">
-              <div class="compare-area__section__title">
-                Общие параметры
-              </div>
-
-              <div class="compare-area__row compare-area__section-row">
-                <div class="compare-area__section-row__title">
-                  Код производителя
-                </div>
-                <div class="compare-area__item" data-product-id="1">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
+                <div class="product-item__inner">
+                  <div class="product-rating">
+                    <div class="value" style="width: 40%;"></div>
                   </div>
-                </div>
-                <div class="compare-area__item" data-product-id="2">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
+                  <span class="product-votes">8 отзывов</span>
+                  <a href="#" class="product-item__title">Смартфон ZTE Blade A7 (2020)</a>
+                  <div class="product-color">
+                    Цвета:
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/black.svg');"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="product-color">
+                      <span class="product-color__button" title="Цвет: " style="background-image: url('/images/color/blue.svg');"></span>
+                    </label>
                   </div>
-                </div>
-                <div class="compare-area__item" data-product-id="3">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
+                  <div class="product-bonus-wrapper">
+                    <button class="product-bonus" data-toggle="popup" data-target="popup--bonus">
+                      <span class="product-bonus__title">at-бонус</span>
+                      <strong class="product-bonus__value">73 <span class="ruble">₽</span></strong>
+                    </button>
                   </div>
-                </div>
-                <div class="compare-area__item" data-product-id="4">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="5">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="6">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="7">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-              </div>
-              <div class="compare-area__row compare-area__section-row">
-                <div class="compare-area__section-row__title">
-                  Год выпуска
-                </div>
-                <div class="compare-area__item" data-product-id="1">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="2">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="3">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="4">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="5">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="6">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="7">
-                  <div class="compare-area__item__content">
-                    2019
+                  <div class="product-item__bottom">
+                    <p class="product-item__price">
+                      7 390 <span class="ruble">₽</span>
+                    </p>
+                    <button class="button button--basket added" title="В корзине">В корзине</button>
+                    <button class="button button--one-click" data-toggle="popup" data-target="popup--one-click">Купить в 1 клик</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="compare-area__section">
-              <div class="compare-area__section__title">
-                Общие параметры
-              </div>
 
-              <div class="compare-area__row compare-area__section-row">
-                <div class="compare-area__section-row__title">
-                  Код производителя
+            <div class="sections-container">
+              <div class="compare-area__section">
+                <div class="compare-area__section__title">
+                  Общие параметры
                 </div>
-                <div class="compare-area__item" data-product-id="1">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
+
+                <div class="compare-area__row compare-area__section-row">
+                  <div class="compare-area__section-row__title">
+                    Код производителя
+                  </div>
+                  <div class="compare-area__section-row__wrapper">
+                    <div class="compare-area__item" data-product-id="1">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="2">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="3">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="4">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="5">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="6">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="7">
+                      <div class="compare-area__item__content">
+                        MWLU2RU/A
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="compare-area__item" data-product-id="2">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
+
+                <div class="compare-area__row compare-area__section-row">
+                  <div class="compare-area__section-row__title">
+                    Год выпуска
                   </div>
-                </div>
-                <div class="compare-area__item" data-product-id="3">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="4">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="5">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="6">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="7">
-                  <div class="compare-area__item__content">
-                    MWLU2RU/A
-                  </div>
-                </div>
-              </div>
-              <div class="compare-area__row compare-area__section-row">
-                <div class="compare-area__section-row__title">
-                  Год выпуска
-                </div>
-                <div class="compare-area__item" data-product-id="1">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="2">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="3">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="4">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="5">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="6">
-                  <div class="compare-area__item__content">
-                    2019
-                  </div>
-                </div>
-                <div class="compare-area__item" data-product-id="7">
-                  <div class="compare-area__item__content">
-                    2019
+
+                  <div class="compare-area__section-row__wrapper">
+                    <div class="compare-area__item" data-product-id="1">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="2">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="3">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="4">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="5">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="6">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
+                    <div class="compare-area__item" data-product-id="7">
+                      <div class="compare-area__item__content">
+                        2019
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
