@@ -12,7 +12,7 @@ class Compare {
     this.productRowEl =  this.compareAreaEl.querySelector('.compare-area__row_product');
 
     this.productsEls = Array.from(this.productRowEl.querySelectorAll('.compare-area__item'));
-    this.offsets = this.productsIds.map((val, index) => index + 1); // Заполнение "карты" смещений (магия закрепа)
+    this.pinOffsetsFill()
     this.pinned = null;
 
     this.backBtn =  this.compareAreaEl.querySelector('.compare-button_back');
@@ -22,16 +22,20 @@ class Compare {
     this.nextBtn.addEventListener('click', () => { this.moveHandler(1) });
 
     this._hammer = new Hammer.Manager(this.compareAreaEl);
-    this._hammer.add( new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 }) );
+    this._hammer.add( new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, pointers: 1, threshold: 10 }) );
     this._hammer.on('pan', this.panHandler.bind(this));
 
-    this.pinHandlerAssignment()
-
+    this.pinHandlerAssignment();
     this.render();
+
+    window.addEventListener('resize', () => {
+      this.render();
+    })
   }
 
   get productWidth() {
-    return (this.productsEls[0].getBoundingClientRect().width
+    return (
+      this.productsEls[0].getBoundingClientRect().width
       + Number(
         window.getComputedStyle(this.productsEls[0]).marginRight.replace(/[^0-9]/g, '')
       )
@@ -70,7 +74,7 @@ class Compare {
 
   get currentOffsetWidth() {
     if (!this._currentOffsetWidth) this._currentOffsetWidth = 0
-    return this._currentOffsetWidth
+    return Math.round(this._currentOffsetWidth)
   }
 
   set currentOffsetWidth(val) {
@@ -104,12 +108,17 @@ class Compare {
   }
 
   panHandler(e) {
+    if(e.eventType === 2) {
+      this.compareAreaEl.classList.add('pan')
+    }
+
     if(!this.startOffset)
       this.startOffset = this.currentOffsetWidth;
 
-    this.currentOffsetWidth += -e.velocityX * 15;
+    this.currentOffsetWidth += -e.velocityX * 20;
 
     if(e.eventType === 4 || Math.abs(this.offsetDelta) > this.productWidth) {
+      this.compareAreaEl.classList.remove('pan')
       this.compareOffset = Math.round(
         this.currentOffsetWidth / this.productWidth
       )
@@ -117,105 +126,125 @@ class Compare {
     }
   }
 
-  pinHandler(id = null) {
-    if(id === this.pinned)
+  pinHandler(id = null, ev) {
+    if(id === this.pinned) {
       this.pinned = null
-    else
+    } else if (id) {
+      this._pinStartOffset = this.compareOffset
       this.pinned = id
+    }
 
     if (this.pinned) {
       this.offsets[this.productsIds.findIndex(productID => productID === this.pinned)] += this.compareOffset
-    }
+    } else
+      this.dropTransforms()
+
+    ev.target.classList.toggle('active', !this.pinned)
 
     this.render()
   }
 
   offsetHandler() {
-    let currentOffset = this.currentOffsetWidth
+    this.productRowEl.style.transform = `translateX(${-this.currentOffsetWidth}px)`
 
-    this.productRowEl.style.transform = `translateX(${-currentOffset}px)`
-
-    Array.from(this.compareAreaEl.querySelectorAll(`.compare-area__section-row__wrapper`))
+    Array
+      .from(this.compareAreaEl.querySelectorAll(`.compare-area__section-row__wrapper`))
+      .filter( el => Boolean(el) )
       .forEach((el) => {
-        if(!el) return;
-
-        el.style.transform = `translateX(${-currentOffset}px)`
+        el.style.transform = `translateX(${-this.currentOffsetWidth}px)`
       })
 
     this.productsIds
+      .filter( el => Boolean(el) )
       .filter((productID) => productID === this.pinned)
       .forEach((productID) => {
         Array.from(this.compareAreaEl.querySelectorAll(`[data-product-id="${productID}"]`))
           .forEach((el) => {
-            if(!el) return;
-
-            el.style.transform = `translateX(${currentOffset}px)`
+            el.style.transform =
+              `translateX(${this.currentOffsetWidth - ((this._pinStartOffset || 0) * this.productWidth)}px)`
           })
       })
   }
 
   arrange() {
     if(Math.abs(this.offsetDelta) > 100) {
-      const dirLeft = this.offsetDelta < 0;
+      const isDirLeft = this.offsetDelta < 0;
 
       const neighIndex = this.offsets.findIndex((val) =>
-        Number(val) === this.pinnedOffset + (dirLeft ? 1 : -1)
-      )
+        Number(val) === ((this.pinnedOffset - this._pinStartOffset) + (isDirLeft ? 1 : -1)
+      ))
 
       const neighID = this.productsIds[neighIndex]
 
       if(this.productsEls[neighIndex] && neighIndex >= 0) {
         let mod = 0;
 
-        if (dirLeft) {
+        if (isDirLeft) {
           mod = -this.productWidth
           this.offsets[neighIndex] -= 1
         } else {
+          mod = +this.productWidth
           this.offsets[neighIndex] += 1
         }
 
-        Array.from(this.compareAreaEl.querySelectorAll(`[data-product-id="${neighID}"]`))
-          .forEach((el) => {
-            if(!el) return;
-
-            el.style.transform = `translateX(${mod}px)`
+        Array
+          .from(this.compareAreaEl.querySelectorAll(`[data-product-id="${neighID}"]`))
+          .filter( el => Boolean(el) )
+          .forEach( el => {
+            const curr = Number(el.style.transform.replace(/([^0-9-.])/g, ''))
+            el.style.transform = `translateX(${curr + mod}px)`
           })
+
+        this.pinnedOffset = isDirLeft ? 1 : -1;
       }
 
-      this.pinnedOffset = dirLeft ? 1 : -1;
-
-      console.log(this.offsets, this.productsEls)
 
       delete this.startOffset;
     }
   }
 
+  dropTransforms() {
+    Array
+      .from(this.compareAreaEl.querySelectorAll(`[data-product-id]`))
+      .forEach((el) => {
+        if(!el) return;
+
+        el.style.transform = null;
+      })
+    this.pinOffsetsFill()
+  }
+
+  pinOffsetsFill() {
+    this.offsets = this.productsIds.map((val, index) => index + 1); // Заполнение "карты" смещений (магия закрепа)
+  }
+
   pinHandlerAssignment() {
     this.productsEls
       .forEach((el) => {
-        console.log(el)
-        el.querySelector('.compare-pin').addEventListener('click', () => {
-          this.pinHandler(el.getAttribute('data-product-id'))
+        el.querySelector('.compare-pin').addEventListener('click', (ev) => {
+          this.pinHandler(el.getAttribute('data-product-id'), ev)
         })
       })
   }
 
   render() {
-    if (this.productsIds.length - this.availableCount - 1 <= this.compareOffset) {
+    if (this.productsIds.length - this.availableCount - 1 <= this.compareOffset)
       this.nextBtn.setAttribute('disabled', 'disabled')
-    } else {
+    else
       this.nextBtn.removeAttribute('disabled', 'disabled')
-    }
-    if (this.compareOffset === 0) {
+
+    if (this.compareOffset === 0)
       this.backBtn.setAttribute('disabled', 'disabled')
-    } else {
+    else
       this.backBtn.removeAttribute('disabled', 'disabled')
-    }
+
 
     Array
       .from(this.compareAreaEl.querySelectorAll('.compare-area__item_pinned'))
       .filter((el) => el.getAttribute('data-product-id') !== this.pinned)
       .forEach((el) => el.classList.remove('compare-area__item_pinned'))
+
+
 
     if(this.pinned) {
       const pinnedEl = this.productRowEl.querySelector(`[data-product-id="${this.pinned}"]`)
