@@ -54,7 +54,7 @@ class Compare {
   set compareOffset(value) {
     let newOffset = value;
 
-    const maxOffset = this.productsIds.length - this.availableCount
+    const maxOffset = this.productsIds.length - this.availableCount - 1
 
     if(newOffset > maxOffset) newOffset = maxOffset
     if(newOffset < 0) newOffset = 0
@@ -79,7 +79,7 @@ class Compare {
 
   set currentOffsetWidth(val) {
     let newOffset = val
-    const maxOffset = (this.productsIds.length - this.availableCount ) * this.productWidth
+    const maxOffset = (this.productsIds.length - this.availableCount - 1 ) * this.productWidth
 
     if(newOffset > maxOffset + 100) newOffset = maxOffset + 100
     if(newOffset < -100) newOffset = -100
