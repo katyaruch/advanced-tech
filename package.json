@@ -9,7 +9,8 @@
     "lazysizes": "^5.2.2",
     "mkdir": "0.0.2",
     "normalize.css": "^8.0.1",
-    "update": "^0.7.4"
+    "update": "^0.7.4",
+    "zingtouch": "^1.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",

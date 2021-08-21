@@ -31,6 +31,14 @@ class Compare {
     window.addEventListener('resize', () => {
       this.render();
     })
+
+    this.scrollHandler()
+    window.addEventListener('touchmove', () => {
+      this.scrollHandler()
+    })
+    window.addEventListener('scroll', () => {
+      this.scrollHandler()
+    })
   }
 
   get productWidth() {
@@ -102,6 +110,7 @@ class Compare {
   }
 
   moveHandler(mod = 0) {
+    console.log(this.mod)
     this.startOffset = this.currentOffsetWidth;
     this.compareOffset += mod;
     this.arrange()
@@ -124,6 +133,12 @@ class Compare {
       )
       this.arrange()
     }
+  }
+
+  scrollHandler() {
+    const compareAreaRect = this.compareAreaEl.getBoundingClientRect()
+
+    this.productRowEl.classList.toggle('small', compareAreaRect.top < -250)
   }
 
   pinHandler(id = null, ev) {
